@@ -1,0 +1,291 @@
+info:
+  name: Get Exchange Rate
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{individual_host}}/other-services/exchange-rate?isShowLogin=true"
+  headers:
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Accept-Language
+      value: en-US,en;q=0.9
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Device-Name
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+    - name: Language
+      value: vi
+    - name: Origin
+      value: https://dgb-uat.indovinabank.com.vn
+    - name: Platform
+      value: WEB
+    - name: Referer
+      value: https://dgb-uat.indovinabank.com.vn/corporate/transaction/fund-transfer/transfer/create
+    - name: Sec-Fetch-Dest
+      value: empty
+    - name: Sec-Fetch-Mode
+      value: cors
+    - name: Sec-Fetch-Site
+      value: same-origin
+    - name: Time
+      value: "1763955516079"
+    - name: User-Agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+    - name: sec-ch-ua
+      value: '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+  params:
+    - name: isShowLogin
+      value: "true"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260513
+    request:
+      url: "{{individual_host}}/other-services/exchange-rate"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json, text/plain, */*
+        - name: Accept-Language
+          value: en-US,en;q=0.9
+        - name: Connection
+          value: keep-alive
+        - name: Content-Type
+          value: application/json
+        - name: Device-Name
+          value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+        - name: Language
+          value: vi
+        - name: Origin
+          value: https://dgb-uat.indovinabank.com.vn
+        - name: Platform
+          value: WEB
+        - name: Referer
+          value: https://dgb-uat.indovinabank.com.vn/corporate/transaction/fund-transfer/transfer/create
+        - name: Request-Id
+          value: bf3a15c8-be68-4089-8e70-a1c8aafee452
+        - name: Sec-Fetch-Dest
+          value: empty
+        - name: Sec-Fetch-Mode
+          value: cors
+        - name: Sec-Fetch-Site
+          value: same-origin
+        - name: Time
+          value: "1763955516079"
+        - name: User-Agent
+          value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+        - name: sec-ch-ua
+          value: '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"'
+        - name: sec-ch-ua-mobile
+          value: ?0
+        - name: sec-ch-ua-platform
+          value: '"macOS"'
+        - name: time
+          value: "1770014796305"
+        - name: request-id
+          value: d7775e14-5100-45ec-adee-5173a9e1a21b
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: transfer-encoding
+          value: chunked
+        - name: x-request-id
+          value: e787ee5b-cc25-44e8-9a7d-ec2dc6837394
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: strict-transport-security
+          value: max-age=31536000 ; includeSubDomains
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: date
+          value: Wed, 13 May 2026 04:03:00 GMT
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": [
+              {
+                "baseCcy": "THB",
+                "buyRate": 679.3,
+                "centralRate": 679.3,
+                "maxBuyRate": 713.26500,
+                "maxCentralRate": 713.26500,
+                "maxSaleRate": 744.4500,
+                "minBuyRate": 645.33500,
+                "minCentralRate": 645.33500,
+                "minSaleRate": 673.5500,
+                "rateType": "STANDARD",
+                "saleRate": 709,
+                "targetCcy": "VND"
+              },
+              {
+                "baseCcy": "SGD",
+                "buyRate": 17953,
+                "centralRate": 17953,
+                "maxBuyRate": 18850.6500,
+                "maxCentralRate": 18850.6500,
+                "maxSaleRate": 19397.7000,
+                "minBuyRate": 17055.3500,
+                "minCentralRate": 17055.3500,
+                "minSaleRate": 17550.3000,
+                "rateType": "STANDARD",
+                "saleRate": 18474,
+                "targetCcy": "VND"
+              },
+              {
+                "baseCcy": "GBP",
+                "buyRate": 30442,
+                "centralRate": 30442,
+                "maxBuyRate": 31964.1000,
+                "maxCentralRate": 31964.1000,
+                "maxSaleRate": 32590.9500,
+                "minBuyRate": 28919.9000,
+                "minCentralRate": 28919.9000,
+                "minSaleRate": 29487.0500,
+                "rateType": "STANDARD",
+                "saleRate": 31039,
+                "targetCcy": "VND"
+              },
+              {
+                "baseCcy": "CHF",
+                "buyRate": 27169,
+                "centralRate": 27169,
+                "maxBuyRate": 28527.4500,
+                "maxCentralRate": 28527.4500,
+                "maxSaleRate": 30478.3500,
+                "minBuyRate": 25810.5500,
+                "minCentralRate": 25810.5500,
+                "minSaleRate": 27575.6500,
+                "rateType": "STANDARD",
+                "saleRate": 29027,
+                "targetCcy": "VND"
+              },
+              {
+                "baseCcy": "CAD",
+                "buyRate": 17628,
+                "centralRate": 17628,
+                "maxBuyRate": 18509.4000,
+                "maxCentralRate": 18509.4000,
+                "maxSaleRate": 19494.3000,
+                "minBuyRate": 16746.6000,
+                "minCentralRate": 16746.6000,
+                "minSaleRate": 17637.7000,
+                "rateType": "STANDARD",
+                "saleRate": 18566,
+                "targetCcy": "VND"
+              },
+              {
+                "baseCcy": "USD",
+                "buyRate": 23954,
+                "centralRate": 23954,
+                "maxBuyRate": 25151.7000,
+                "maxCentralRate": 25151.7000,
+                "maxSaleRate": 25714.5000,
+                "minBuyRate": 22756.3000,
+                "minCentralRate": 22756.3000,
+                "minSaleRate": 23265.5000,
+                "rateType": "STANDARD",
+                "saleRate": 24490,
+                "targetCcy": "VND"
+              },
+              {
+                "baseCcy": "AUD",
+                "buyRate": 15698,
+                "centralRate": 15698,
+                "maxBuyRate": 16482.9000,
+                "maxCentralRate": 16482.9000,
+                "maxSaleRate": 17242.0500,
+                "minBuyRate": 14913.1000,
+                "minCentralRate": 14913.1000,
+                "minSaleRate": 15599.9500,
+                "rateType": "STANDARD",
+                "saleRate": 16421,
+                "targetCcy": "VND"
+              },
+              {
+                "baseCcy": "TWD",
+                "buyRate": 770,
+                "centralRate": 770,
+                "maxBuyRate": 808.5000,
+                "maxCentralRate": 808.5000,
+                "maxSaleRate": 877.8000,
+                "minBuyRate": 731.5000,
+                "minCentralRate": 731.5000,
+                "minSaleRate": 794.2000,
+                "rateType": "STANDARD",
+                "saleRate": 836,
+                "targetCcy": "VND"
+              },
+              {
+                "baseCcy": "JPY",
+                "buyRate": 162.4,
+                "centralRate": 162.4,
+                "maxBuyRate": 170.52000,
+                "maxCentralRate": 170.52000,
+                "maxSaleRate": 173.827500,
+                "minBuyRate": 154.28000,
+                "minCentralRate": 154.28000,
+                "minSaleRate": 157.272500,
+                "rateType": "STANDARD",
+                "saleRate": 165.55,
+                "targetCcy": "VND"
+              },
+              {
+                "baseCcy": "EUR",
+                "buyRate": 26005,
+                "centralRate": 26005,
+                "maxBuyRate": 27305.2500,
+                "maxCentralRate": 27305.2500,
+                "maxSaleRate": 27813.4500,
+                "minBuyRate": 24704.7500,
+                "minCentralRate": 24704.7500,
+                "minSaleRate": 25164.5500,
+                "rateType": "STANDARD",
+                "saleRate": 26489,
+                "targetCcy": "VND"
+              },
+              {
+                "baseCcy": "HKD",
+                "buyRate": 3045,
+                "centralRate": 3045,
+                "maxBuyRate": 3197.2500,
+                "maxCentralRate": 3197.2500,
+                "maxSaleRate": 3339.0000,
+                "minBuyRate": 2892.7500,
+                "minCentralRate": 2892.7500,
+                "minSaleRate": 3021.0000,
+                "rateType": "STANDARD",
+                "saleRate": 3180,
+                "targetCcy": "VND"
+              }
+            ],
+            "count": 11,
+            "message": "GET_EXCHANGE_RATE_SUCCESSFULLY"
+          }

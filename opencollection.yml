@@ -1,0 +1,108 @@
+opencollection: 1.0.0
+
+info:
+  name: IVB Indiviual Bank
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  scripts:
+    - type: before-request
+      code: |-
+        const CryptoJS = require("crypto-js");
+
+        const CHECKSUM_URL_PREFIXES = [
+            "api",
+            "other-services"
+        ];
+
+        function normalizeUrl(url) {
+            return CHECKSUM_URL_PREFIXES.reduce((resultUrl, prefix) => {
+                const normalizedPrefix = `/${prefix}`;
+
+                if (resultUrl === normalizedPrefix) {
+                    return "/";
+                }
+
+                return resultUrl.startsWith(`${normalizedPrefix}/`)
+                    ? resultUrl.slice(normalizedPrefix.length)
+                    : resultUrl;
+            }, url);
+        }
+
+        function generateChecksum(method, url, timestamp, requestId, body) {
+            const normalizedUrl = normalizeUrl(url);
+
+            const rawCheckSumStr =
+                method.toUpperCase() +
+                "\n" +
+                normalizedUrl +
+                "\n" +
+                timestamp +
+                "\n" +
+                requestId +
+                "\n" +
+                (body ? JSON.stringify(body) : "");
+
+            return CryptoJS.SHA256(rawCheckSumStr)
+                .toString(CryptoJS.enc.Hex);
+        }
+
+        try {
+            const method = req.getMethod();
+
+            const fullUrl = req.getUrl();
+
+            // Remove domain from full URL
+            const url = fullUrl.replace(/^https?:\/\/[^/]+/, "");
+
+            // Generate timestamp
+            const timestamp = Date.now().toString();
+
+            // Generate request id
+            const requestId = CryptoJS.lib.WordArray.random(16).toString();
+
+            let body = null;
+
+            try {
+                body = req.getBody();
+            } catch (_) {
+                // Ignore body parsing errors
+            }
+
+            // Generate checksum
+            const checksum = generateChecksum(
+                method,
+                url,
+                timestamp,
+                requestId,
+                body
+            );
+
+            // Set request headers
+            req.setHeader("X-Request-Timestamp", timestamp);
+            req.setHeader("X-Request-Id", requestId);
+            req.setHeader("X-Checksum", checksum);
+
+            console.log("X-Request-Timestamp:", timestamp);
+            console.log("X-Request-Id:", requestId);
+            console.log("X-Checksum:", checksum);
+
+        } catch (err) {
+            console.log("Skip checksum generation:", err.message);
+        }
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git
