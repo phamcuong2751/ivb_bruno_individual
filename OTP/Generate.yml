@@ -1,0 +1,40 @@
+info:
+  name: Generate
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{individual_host}}/other-services/other-services/otp/create"
+  headers:
+    - name: accept
+      value: application/json, text/plain, */*
+    - name: content-type
+      value: application/json
+    - name: time
+      value: "1761123656488"
+    - name: request-id
+      value: 10e9167e-d409-46d5-b185-eb50b6b7bbe5
+    - name: device-name
+      value: sdk_gphone64_arm64
+    - name: language
+      value: en
+    - name: Authorization
+      value: Bearer {{Token}}
+    - name: Platform
+      value: WEB
+  body:
+    type: json
+    data: |-
+      {
+          "userId": "a0523550-24d3-4d69-b0c0-8dc5a93bd009",
+          "otpAction": "FORGET_PASSWORD",
+          "isSms": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

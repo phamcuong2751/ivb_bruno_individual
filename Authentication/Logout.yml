@@ -1,0 +1,60 @@
+info:
+  name: Logout
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{individual_host}}/auth-services/auth/logout"
+  headers:
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Accept-Language
+      value: vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5
+    - name: Authorization
+      value: Bearer {{Token}}
+    - name: Cache-Control
+      value: no-cache
+    - name: Checksum
+      value: 8a0a02b0abcc394ffac16ad06f6f645706fa198915b73b28ae70f2779596f2b9
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Device-Name
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+    - name: Language
+      value: vi
+    - name: Origin
+      value: https://dgb-uat.indovinabank.com.vn
+    - name: Platform
+      value: WEB
+    - name: Pragma
+      value: no-cache
+    - name: Referer
+      value: https://dgb-uat.indovinabank.com.vn/ivbbizplus
+    - name: Request-Id
+      value: f0c1bc47-d2a2-4e4f-b91b-ba8ce68905ae
+    - name: Sec-Fetch-Dest
+      value: empty
+    - name: Sec-Fetch-Mode
+      value: cors
+    - name: Sec-Fetch-Site
+      value: same-origin
+    - name: Time
+      value: "1769410637367"
+    - name: User-Agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+    - name: sec-ch-ua
+      value: '"Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"Windows"'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

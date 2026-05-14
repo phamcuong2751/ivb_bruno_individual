@@ -1,0 +1,32 @@
+info:
+  name: Encrypt
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{individual_host}}/auth-services/setting/encrypt"
+  headers:
+    - name: device-name
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15
+    - name: request-id
+      value: 95ec32ad-17c5-4dae-865f-43693755f095
+    - name: language
+      value: vi
+    - name: user-agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+          "data": "Aa@123321"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
