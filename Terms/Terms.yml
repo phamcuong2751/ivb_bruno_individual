@@ -1,0 +1,38 @@
+info:
+  name: Terms
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{individual_host}}/other-servces/terms?lstFeatureKey=LOG_IN"
+  headers:
+    - name: Language
+      value: vi
+    - name: sec-ch-ua-platform
+      value: '"Windows"'
+    - name: Referer
+      value: https://dgb-uat.indovinabank.com.vn/ivbbizplus/login
+    - name: sec-ch-ua
+      value: '"Google Chrome";v="147", "Not.A/Brand";v="8", "Chromium";v="147"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: Request-Id
+      value: ccbb8710-53ae-4622-bce2-5d1c7eb04c00
+    - name: User-Agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+    - name: Platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{Token}}
+  params:
+    - name: lstFeatureKey
+      value: LOG_IN
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

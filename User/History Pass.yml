@@ -1,0 +1,65 @@
+info:
+  name: History Pass
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{individual_host}}/other-services/user/history-password"
+  headers:
+    - name: accept
+      value: application/json, text/plain, */*
+    - name: accept-language
+      value: vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5
+    - name: cache-control
+      value: no-cache
+    - name: content-type
+      value: application/json
+    - name: device-name
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+    - name: language
+      value: en
+    - name: origin
+      value: http://192.168.50.137:4002
+    - name: platform
+      value: WEB
+    - name: pragma
+      value: no-cache
+    - name: priority
+      value: u=1, i
+    - name: referer
+      value: http://192.168.50.137:4002/
+    - name: request-id
+      value: 66de2640-d18c-4b9b-8d6d-c21137822e96
+    - name: sec-ch-ua
+      value: '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"Windows"'
+    - name: sec-fetch-dest
+      value: empty
+    - name: sec-fetch-mode
+      value: cors
+    - name: sec-fetch-site
+      value: cross-site
+    - name: time
+      value: "1764208998208"
+    - name: user-agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+    - name: Authorization
+      value: Bearer null
+  body:
+    type: json
+    data: |-
+      {
+        "userId": "a0523550-24d3-4d69-b0c0-8dc5a93bd069",
+        "password": "ZJ8AZKP0NfG1WH4Lm6ds+4FjGUaGaYrNcK8UrdPSj+mZROq9iKIMDl6FAOaz6hkfkb2Zni1OQrqV6VPD+2PuhdvCLJNYt87OCMRlJAAQDFwkHoyI9KA1jPMb8s4WlfX1hkcNSrn9ak/JrM5bv1q3Bxha9ninMcYnx9Q/Dk5lW5DfHueRajD7aP2QaLlmd8Kb8dchtnwtG56wLCvYIu1bcOdasQOywTDyzOK9qJc53NpX0gdXIDUQgUOWMJGOkt0SyaNFd6823/T0f5IN4uO1XRUHxPlQTPmXptHGLtLJTBZjdDKmYIBU5xTG6M13bCIVaZb2N6UEBhlslmG84LADmOKqP8/0rqrJxMLje4uryVeOpqEQdny0H726ABVuRAV5Uplgm+DPaOxw9WQGmOdaV5/nSNAgRKPKxj/ECcJs2cSRBokT//W5okAoxiGOUbu9brmnfnhxI8g3Db88GDoicOjNpIxLBjJbMhFlkUqaqe9Mb/FoGShprAbft8lFLvxrct925xsiKi0x3hfjhaJM2Tsu0Rd04N5pedx+6VG5JcmJW2Bzyw=="
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

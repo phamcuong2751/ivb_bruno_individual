@@ -1,0 +1,60 @@
+info:
+  name: Accept Terms
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{individual_host}}/other-services/other-services/user/accept-terms"
+  headers:
+    - name: accept
+      value: application/json, text/plain, */*
+    - name: accept-language
+      value: vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5
+    - name: content-type
+      value: application/json
+    - name: device-name
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+    - name: language
+      value: en
+    - name: origin
+      value: http://192.168.50.137:4002
+    - name: priority
+      value: u=1, i
+    - name: referer
+      value: http://192.168.50.137:4002/
+    - name: request-id
+      value: 21f08109-e4df-40b5-a33d-6cae193312ab
+    - name: sec-ch-ua
+      value: '"Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"Windows"'
+    - name: sec-fetch-dest
+      value: empty
+    - name: sec-fetch-mode
+      value: cors
+    - name: sec-fetch-site
+      value: cross-site
+    - name: time
+      value: "1761704342083"
+    - name: user-agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+    - name: Authorization
+      value: Bearer {{Token}}
+    - name: Platform
+      value: WEB
+  body:
+    type: json
+    data: |-
+      {
+          "termsId": "69332846-4fbe-4c59-a39c-a6498ecf9161"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
