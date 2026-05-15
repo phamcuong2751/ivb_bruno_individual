@@ -1,7 +1,7 @@
 opencollection: 1.0.0
 
 info:
-  name: IVB Indiviual Bank
+  name: IVB NEX Project
 config:
   proxy:
     inherit: true
