@@ -1,0 +1,19 @@
+info:
+  name: Get Individual User IVB All Cif Accs
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/individual-user-account/ivb/4009017/list"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

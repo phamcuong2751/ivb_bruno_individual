@@ -1,11 +1,11 @@
 info:
   name: Get Individual User List
   type: http
-  seq: 2
+  seq: 3
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-user/list?pageSize=5&numPage=0&username=individualuser1&email=ray.tran@tpisoftware.com&idNumber=123456789123&mobileContact=84347631603&cifCore=1509200&status=PENDING_ACTIVE&branchId=1"
+  url: "{{individual_admin_host}}/individual-user/list?pageSize=5&numPage=0&cifCore=4009017"
   headers:
     - name: platform
       value: WEB
@@ -18,27 +18,37 @@ http:
     - name: numPage
       value: "0"
       type: query
-    - name: username
-      value: individualuser1
+    - name: customerName
+      value: đạt
       type: query
+      disabled: true
     - name: email
       value: ray.tran@tpisoftware.com
       type: query
+      disabled: true
     - name: idNumber
       value: "123456789123"
       type: query
+      disabled: true
     - name: mobileContact
       value: "84347631603"
       type: query
+      disabled: true
     - name: cifCore
       value: "1509200"
+      type: query
+      disabled: true
+    - name: cifCore
+      value: "4009017"
       type: query
     - name: status
       value: PENDING_ACTIVE
       type: query
+      disabled: true
     - name: branchId
       value: "1"
       type: query
+      disabled: true
 
 settings:
   encodeUrl: true

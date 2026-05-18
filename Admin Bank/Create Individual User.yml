@@ -1,0 +1,66 @@
+info:
+  name: Create Individual User
+  type: http
+  seq: 7
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-user"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: "{\r
+
+      \  \"id\": \"9337b2c3-0667-4607-abe9-d20c63fe4348\",\r
+
+      \  \"cif\": \"1509201\",\r
+
+      \  \"fullName\": \"Individual User 4\",\r
+
+      \  \"birthday\": \"1990-11-05\",\r
+
+      \  \"gender\": \"MALE\",\r
+
+      \  \"idNumber\": \"123456789126\",\r
+
+      \  \"idType\": \"CCCD\",\r
+
+      \  \"passport\": null,\r
+
+      \  \"nationality\": \"VNM\",\r
+
+      \  \"issueDate\": \"2015-01-05\",\r
+
+      \  \"issuePlace\": \"CCS\",\r
+
+      \  \"mobileContact\": \"+84347631603\",\r
+
+      \  \"email\": \"ray.tran@tpisoftware.com\",\r
+
+      \  \"resident\": true,\r
+
+      \  \"permanentAdr\": \"89 DUONG SO 59 P AN HOI TAY TPHCM\",\r
+
+      \  \"currentAdr\": \"97 NGUYEN VAN TROI P PHU NHUAN TPHCM\",\r
+
+      \  \"username\": \"individualuser3\",\r
+
+      \  \"role\": 1,\r
+
+      \  \"branch\": \"1\",\r
+
+      \  \"channel\": \"BANK_ADMIN\",\r
+
+      \  \"makerId\": \"string\"\r
+
+      }"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
