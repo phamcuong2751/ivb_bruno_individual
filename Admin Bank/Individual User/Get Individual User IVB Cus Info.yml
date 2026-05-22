@@ -1,7 +1,7 @@
 info:
   name: Get Individual User IVB Cus Info
   type: http
-  seq: 6
+  seq: 3
 
 http:
   method: GET

@@ -1,11 +1,11 @@
 info:
-  name: Info
+  name: Account Favortie Register
   type: http
-  seq: 5
+  seq: 4
 
 http:
-  method: GET
-  url: "{{individual_host}}/other-services/other-services/user/info"
+  method: POST
+  url: "{{individual_host}}/other-services/other-services/account/favorite?isAdd=true"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -49,6 +49,17 @@ http:
       value: "1770014796305"
     - name: request-id
       value: d7775e14-5100-45ec-adee-5173a9e1a21b
+  params:
+    - name: isAdd
+      value: "true"
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "id": "123",
+        "accountNumber": "123"
+      }
 
 settings:
   encodeUrl: true

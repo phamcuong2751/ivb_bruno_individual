@@ -1,7 +1,7 @@
 info:
   name: Approve Individual User Request
   type: http
-  seq: 12
+  seq: 1
 
 http:
   method: post

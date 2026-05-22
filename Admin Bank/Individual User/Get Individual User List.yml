@@ -1,7 +1,7 @@
 info:
   name: Get Individual User List
   type: http
-  seq: 3
+  seq: 1
 
 http:
   method: GET
@@ -17,6 +17,9 @@ http:
       type: query
     - name: numPage
       value: "0"
+      type: query
+    - name: branchCode
+      value: "150"
       type: query
     - name: customerName
       value: luan
@@ -50,9 +53,6 @@ http:
       value: PENDING_ACTIVE
       type: query
       disabled: true
-    - name: branchCode
-      value: "150"
-      type: query
 
 settings:
   encodeUrl: true
