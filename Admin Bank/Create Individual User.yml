@@ -7,57 +7,195 @@ http:
   method: post
   url: "{{individual_admin_host}}/individual-user"
   headers:
-    - name: Content-Type
-      value: application/json
+    - name: platform
+      value: WEB
     - name: Authorization
       value: Bearer {{individual_admin_token}}
   body:
     type: json
-    data: "{\r
+    data: |-
+      // {
+      //   "cifCore": "1023909",
+      //   "customerName": "NGUYEN THI KIM ANH",
+      //   "birthDate": "1990-11-05",
+      //   "gender": "MALE",
+      //   "idNumber": "068300007727",
+      //   "idType": "CCCD",
+      //   "passport": null,
+      //   "nationality": "VNM",
+      //   "issueDate": null,
+      //   "issuePlace": null,
+      //   "expiredDate": null,
+      //   "mobileContact": "0344135640",
+      //   "email": "anh.nguyen@alpaca.vn",
+      //   "resident": true,
+      //   "permanentAddress": null,
+      //   "currentAddress": "97A NGUYEN VAN TROI 11 PHU NHUAN HO CHI MINH",
+      //   "username": "nguyenthikimanh19901105",
+      //   "roleName": "CUSTOMER",
+      //   "branchCode": "100",
+      //   "branchName": "BUSINESS CENTER",
+      //   "channel": "AT_COUNTER",
+      //   "makerId": "admin",
+      //   "passwordDelivery": "EMAIL",
+      //   "accounts": [
+      //     "06963f85-72b1-4080-a7f4-89c0e5002272",
+      //     "b46916c4-b09b-4c09-8de5-933c1cd1570f",
+      //     "11997752-1188-436e-b26c-0a4dce8f6823",
+      //     "94b2aa44-69e6-4a50-9718-313e81c6dc34",
+      //     "3cace66d-5682-42a4-b51a-d6c0322450e3",
+      //     "0b9355bf-adc8-450e-a439-24ddc986c3ec",
+      //     "109427df-880e-4196-999e-f35df7efa20e",
+      //     "3471ff46-823e-40a5-a701-e7533e0d9867",
+      //     "b1319142-9564-4c85-9ab3-cc87a5d62ef9",
+      //     "d5af4f0c-dc2d-43d6-a541-5c7f32fdb3b0",
+      //     "add5f45e-5609-4128-8948-41406d50880a",
+      //     "4ef3f96a-83dd-4d71-986b-3daf984c2f94",
+      //     "5f026417-c0f8-493e-a165-5658450eae02",
+      //     "47829333-91c0-44d1-890c-cbadc0959d66",
+      //     "5c32aff2-b695-4aec-a066-4839ae71b73e",
+      //     "dc3b71a9-f58a-4f6b-a9d6-25b233028ae2",
+      //     "55938bc8-2158-47fd-85b0-ecea8475a096",
+      //     "6366abe0-47b6-45a3-8ef5-e53c4e470b88",
+      //     "36b0ae36-ddd1-461a-8217-33e8d03aeb84",
+      //     "c318d70b-da64-40d2-a4f8-acad87552f43",
+      //     "8fa0e338-7880-4647-b736-a3b086b9f9d1",
+      //     "c78141c6-de07-471e-838c-cd0f3f3c1cf5",
+      //     "80e92da3-907b-45b0-8476-8fa94b17a0c1",
+      //     "d30ce7f0-f982-4804-9b8f-4e1cc2783e4f"
+      //   ],
+      //   "mainAccount": "06963f85-72b1-4080-a7f4-89c0e5002272",
+      //   "features": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,221,241]
+      // }
 
-      \  \"id\": \"9337b2c3-0667-4607-abe9-d20c63fe4348\",\r
+      {
+        "cifCore": "1509300",
+        "customerName": "TRAN CONG LUAN",
+        "birthDate": "1997-09-15",
+        "gender": "MALE",
+        "idNumber": "072097009300",
+        "idType": "CCCD",
+        "passport": null,
+        "nationality": "VNM",
+        "issueDate": null,
+        "issuePlace": null,
+        "expiredDate": null,
+        "mobileContact": "0347631603",
+        "email": "ray.tran@alpaca.vn",
+        "mobileContactReceived": "0347631603",
+        "emailReceived": "ray.tran@alpaca.vn",
+        "resident": true,
+        "permanentAddress": null,
+        "currentAddress": "97A NGUYEN VAN TROI 11 PHU NHUAN HO CHI MINH",
+        "username": "trancongluan1509300",
+        "branchCode": "100",
+        "branchName": "HANOI BRANCH",
+        "roleName": "CUSTOMER",
+        "channel": "AT_COUNTER",
+        "makerId": "e0822a98-d4a0-4eeb-8881-ba18cd7b0541",
+        "passwordDelivery": "EMAIL",
+        "accounts": [],
+        "mainAccount": null,
+        "features": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,221,241]
+      }
 
-      \  \"cif\": \"1509201\",\r
-
-      \  \"fullName\": \"Individual User 4\",\r
-
-      \  \"birthday\": \"1990-11-05\",\r
-
-      \  \"gender\": \"MALE\",\r
-
-      \  \"idNumber\": \"123456789126\",\r
-
-      \  \"idType\": \"CCCD\",\r
-
-      \  \"passport\": null,\r
-
-      \  \"nationality\": \"VNM\",\r
-
-      \  \"issueDate\": \"2015-01-05\",\r
-
-      \  \"issuePlace\": \"CCS\",\r
-
-      \  \"mobileContact\": \"+84347631603\",\r
-
-      \  \"email\": \"ray.tran@tpisoftware.com\",\r
-
-      \  \"resident\": true,\r
-
-      \  \"permanentAdr\": \"89 DUONG SO 59 P AN HOI TAY TPHCM\",\r
-
-      \  \"currentAdr\": \"97 NGUYEN VAN TROI P PHU NHUAN TPHCM\",\r
-
-      \  \"username\": \"individualuser3\",\r
-
-      \  \"role\": 1,\r
-
-      \  \"branch\": \"1\",\r
-
-      \  \"channel\": \"BANK_ADMIN\",\r
-
-      \  \"makerId\": \"string\"\r
-
-      }"
+      // {
+      //   "birthDate": "1963-11-09",
+      //   "branchCode": "100",
+      //   "branchName": "BUSINESS CENTER",
+      //   "cifCore": "6304560",
+      //   "currentAddress": "ZP W31 EC 2PWHSS 7IEL PWOI GJOJ WPR RL EN2 VTLJ 7624A47DLU4J B9N2 5LIMMV",
+      //   "customerName": "F62G JTFL 5LMW",
+      //   "email": "james.pham@tpisoftware.com",
+      //   "idNumber": "010**********736",
+      //   "idType": "Other",
+      //   "isBankLock": false,
+      //   "isBiometricCollected": false,
+      //   "isIntegrated": false,
+      //   "issuePlace": "ZB ZVB",
+      //   "mobileContact": "+84898912890",
+      //   "nationality": "VNM",
+      //   "resident": true,
+      //   "username": "james.pham",
+      //   "passwordDelivery": "EMAIL",
+      //   "features": [
+      //     4,
+      //     43,
+      //     3,
+      //     5,
+      //     41,
+      //     221,
+      //     21,
+      //     33,
+      //     34,
+      //     23,
+      //     36,
+      //     32,
+      //     27,
+      //     6,
+      //     10,
+      //     12,
+      //     11,
+      //     9,
+      //     14,
+      //     7,
+      //     8,
+      //     1,
+      //     40,
+      //     18,
+      //     20,
+      //     17,
+      //     29,
+      //     16,
+      //     15,
+      //     2,
+      //     31,
+      //     13,
+      //     30,
+      //     28,
+      //     241,
+      //     22,
+      //     26,
+      //     39,
+      //     37,
+      //     38,
+      //     24,
+      //     35,
+      //     42,
+      //     19,
+      //     25
+      //   ],
+      //   "mainAccount": "9579065e-78fa-4ec9-a475-6d9e611d2a1a",
+      //   "accounts": [
+      //     "9579065e-78fa-4ec9-a475-6d9e611d2a1a",
+      //     "64c07297-7e55-499a-8e03-24205705bf80",
+      //     "965a19f4-8008-4caf-a0df-c6a6f9329168",
+      //     "27dc402d-75f1-45bb-87f8-051d97f6f74f",
+      //     "84be2097-7331-499c-8388-5c095aff4b06",
+      //     "25be0d8d-040b-4563-9fc2-7a7f80538019",
+      //     "5e45526d-47b3-4811-a9ff-fcec3f621cf8",
+      //     "80ed764b-ac55-428b-94a3-e2b0ab4566b8",
+      //     "0a1f888e-fce1-4334-825f-be7c61caeb13",
+      //     "8f0fa50e-6d88-4c9c-9deb-7744e0fde556",
+      //     "c516ef55-246c-419a-86a9-d04f196096e4",
+      //     "d81096a7-96da-42eb-aebd-a86ec6891a6d",
+      //     "87053b4a-5dad-485d-bb96-919161d8ec6f",
+      //     "48db1936-2ab8-462a-a746-8f74f0977763",
+      //     "66339e90-d435-4d28-a4c7-c2830f3fc8c6",
+      //     "d5d0d7d6-9e5f-4420-9f09-c10f2d5da590",
+      //     "0fbfb3a9-f32c-4418-82b3-323e1a5414f9",
+      //     "50fca3dd-224a-4df7-bb8f-c5de9649eed3",
+      //     "96a71961-a4e3-4f2d-81ff-19c59c01ad9a",
+      //     "6296c921-22a0-4374-82ff-d47d57004dca",
+      //     "ed3e2b4e-fed3-4362-82f4-9c41e334017c",
+      //     "51b4fe15-3fbf-4561-9065-95f1c1c99b1a",
+      //     "879270be-5fb0-42f7-8584-4557672f3a40",
+      //     "5904969d-566d-444a-bfe2-1a9a349ba68e"
+      //   ],
+      //   "cifCore": "6304560",
+      //   "makerId": "e0822a98-d4a0-4eeb-8881-ba18cd7b0541",
+      //   "roleName": "CUSTOMER"
+      // }
 
 settings:
   encodeUrl: false

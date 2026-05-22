@@ -1,0 +1,34 @@
+info:
+  name: Get Individual User Account List By CifCore
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{individual_admin_host}}/individual-user-account/cifCore/list"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  params:
+    - name: cifCore
+      value: "4009866"
+      type: query
+      disabled: true
+    - name: cifCore
+      value: "5037585"
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "cifCore": "1023909" // 4009866 5037585 2025586 1023909
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -5,7 +5,7 @@ info:
 
 http:
   method: get
-  url: "{{individual_admin_host}}/individual-user-account/user/183a9ee4-3ab2-47ff-b358-dbdbc2c37fbc/list?pageSize=5&numPage=0&search=1022774&status=ACTIVE"
+  url: "{{individual_admin_host}}/individual-user-account/user/183a9ee4-3ab2-47ff-b358-dbdbc2c37fbc/list?pageSize=5&numPage=0&status=ACTIVE"
   headers:
     - name: Cookie
       value: JSESSIONID=A27DA6558C1D26B8B89C85599858D025
@@ -19,9 +19,6 @@ http:
       type: query
     - name: numPage
       value: "0"
-      type: query
-    - name: search
-      value: "1022774"
       type: query
     - name: status
       value: ACTIVE

@@ -1,25 +1,19 @@
 info:
-  name: Get Individual User List
+  name: Get Individual User Detail
   type: http
-  seq: 3
+  seq: 13
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-user/list?pageSize=5&numPage=0&branchCode=150"
+  url: "{{individual_admin_host}}/individual-user/8743740c-b940-4b05-8327-1c9f5c174753"
   headers:
     - name: platform
       value: WEB
     - name: Authorization
       value: Bearer {{individual_admin_token}}
   params:
-    - name: pageSize
-      value: "5"
-      type: query
-    - name: numPage
-      value: "0"
-      type: query
     - name: customerName
-      value: luan
+      value: đạt
       type: query
       disabled: true
     - name: email
@@ -50,9 +44,10 @@ http:
       value: PENDING_ACTIVE
       type: query
       disabled: true
-    - name: branchCode
-      value: "150"
+    - name: branchId
+      value: "1"
       type: query
+      disabled: true
 
 settings:
   encodeUrl: true
