@@ -1,0 +1,28 @@
+info:
+  name: Update Individual User
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{individual_admin_host}}/individual-user/90966ac7-0625-4827-9941-52687e0985dc"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "emailReceived": "ray.tran@alpaca.vn",
+        "mobileContactReceived": "+84347631603",
+        "passwordDelivery": "SMS",
+        "mainAccount": "b707da06-36da-4b6a-897a-071e71e32375"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

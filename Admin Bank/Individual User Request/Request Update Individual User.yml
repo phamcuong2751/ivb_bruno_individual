@@ -1,0 +1,35 @@
+info:
+  name: Request Update Individual User
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{individual_admin_host}}/individual-user-request"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "cifCore": "2029734",
+        "userId": "ca7caec7-656f-42ab-924d-15cbc0c16b92",
+        "branchCode": "121",
+        "branchName": "DONG DA BRANCH",
+        "customerName": "76 9HK 2A80O",
+        "mobileContactReceived": "+84347631603",
+        "emailReceived": "ray.tran@alpaca.vn",
+        "passwordDelivery": "EMAIL",
+        "mainAccount": "b707da06-36da-4b6a-897a-071e71e32375",
+        "reason": "Request Update Individual User",
+        "requestType": "UPDATE"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

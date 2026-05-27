@@ -1,11 +1,11 @@
 info:
-  name: Get Individual User By Id
+  name: Cancel Individual User
   type: http
-  seq: 4
+  seq: 6
 
 http:
-  method: GET
-  url: "{{individual_admin_host}}/individual-user/8183199a-566c-4929-8353-5564d20b8802"
+  method: PUT
+  url: "{{individual_admin_host}}/individual-user/38a31978-d7ab-4624-ad87-9832d39d3d2a/cancel"
   headers:
     - name: platform
       value: WEB

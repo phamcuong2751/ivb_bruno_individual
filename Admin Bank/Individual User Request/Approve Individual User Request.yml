@@ -1,7 +1,7 @@
 info:
   name: Approve Individual User Request
   type: http
-  seq: 1
+  seq: 4
 
 http:
   method: post
@@ -15,9 +15,9 @@ http:
     type: json
     data: |
       {
-        "entityId": "7c96bd0c-22f1-4b09-9c62-f09959eab067",
-        "workflowId": "eafe9f3b-e9d1-4066-af3a-3e8f41e0c2df",
-        "comment": "comment"
+        "entityId": "8cdbb02a-a319-4194-9d14-3a21d2435204",
+        "workflowId": "8d91ed5d-a545-4d8f-9825-9f9943ab45b6",
+        "comment": "Approved"
       }
 
 settings:

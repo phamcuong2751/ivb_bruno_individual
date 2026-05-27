@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-user/list?pageSize=5&numPage=0&branchCode=150"
+  url: "{{individual_admin_host}}/individual-user/list?pageSize=5&numPage=0&cifCore=2029734"
   headers:
     - name: platform
       value: WEB
@@ -18,9 +18,13 @@ http:
     - name: numPage
       value: "0"
       type: query
+    - name: cifCore
+      value: "2029734"
+      type: query
     - name: branchCode
       value: "150"
       type: query
+      disabled: true
     - name: customerName
       value: luan
       type: query
@@ -31,6 +35,10 @@ http:
       disabled: true
     - name: idNumber
       value: "123456789123"
+      type: query
+      disabled: true
+    - name: status
+      value: PENDING_ACTIVE
       type: query
       disabled: true
     - name: mobileContact
@@ -49,8 +57,12 @@ http:
       value: "5037585"
       type: query
       disabled: true
-    - name: status
-      value: PENDING_ACTIVE
+    - name: fromDate
+      value: 2026-05-22T17:00:00.000Z
+      type: query
+      disabled: true
+    - name: toDate
+      value: 2026-05-25T16:59:59.999Z
       type: query
       disabled: true
 
