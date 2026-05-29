@@ -1,7 +1,7 @@
 info:
   name: Request Unlock Individual User
   type: http
-  seq: 7
+  seq: 6
 
 http:
   method: PUT
@@ -16,7 +16,7 @@ http:
     data: |-
       {
         "cifCore": "2029734",
-        "userId": "ca7caec7-656f-42ab-924d-15cbc0c16b92",
+        "userId": "d7f835df-3433-4cdf-97b9-9486e8975e09",
         "branchCode": "121",
         "branchName": "DONG DA BRANCH",
         "customerName": "76 9HK 2A80O",

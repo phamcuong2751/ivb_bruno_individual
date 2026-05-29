@@ -1,7 +1,7 @@
 info:
   name: Request Update Individual User
   type: http
-  seq: 5
+  seq: 4
 
 http:
   method: PUT
@@ -16,14 +16,14 @@ http:
     data: |-
       {
         "cifCore": "2029734",
-        "userId": "ca7caec7-656f-42ab-924d-15cbc0c16b92",
+        "userId": "9f665bba-13d6-441d-823d-eb9d56fa0639",
         "branchCode": "121",
         "branchName": "DONG DA BRANCH",
         "customerName": "76 9HK 2A80O",
-        "mobileContactReceived": "+84347631603",
+        "mobileContact": "+84347631603",
         "emailReceived": "ray.tran@alpaca.vn",
         "passwordDelivery": "EMAIL",
-        "mainAccount": "b707da06-36da-4b6a-897a-071e71e32375",
+        "defaultAccount": "8aac2864-c3ea-4317-b60c-c46f29faee58",
         "reason": "Request Update Individual User",
         "requestType": "UPDATE"
       }

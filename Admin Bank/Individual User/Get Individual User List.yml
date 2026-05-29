@@ -38,6 +38,10 @@ http:
       type: query
       disabled: true
     - name: status
+      value: CLOSED
+      type: query
+      disabled: true
+    - name: status
       value: PENDING_ACTIVE
       type: query
       disabled: true

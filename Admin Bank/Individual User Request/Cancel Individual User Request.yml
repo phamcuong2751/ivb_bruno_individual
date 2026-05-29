@@ -1,11 +1,11 @@
 info:
-  name: Approve Individual User Request
+  name: Cancel Individual User Request
   type: http
-  seq: 8
+  seq: 10
 
 http:
   method: post
-  url: "{{individual_admin_host}}/individual-user-request/approve"
+  url: "{{individual_admin_host}}/individual-user-request/cancel"
   headers:
     - name: platform
       value: WEB
@@ -15,9 +15,8 @@ http:
     type: json
     data: |
       {
-        "entityId": "0c96990e-6336-4c70-8d35-f0168332212f",
-        "workflowId": "9669269f-21a1-4e50-977e-4d5c6e25ab05",
-        "comment": "Approved"
+        "workflowId": "ab1d936e-d270-4a20-9fbf-d5d76c106bb6",
+        "comment": "Rejected"
       }
 
 settings:

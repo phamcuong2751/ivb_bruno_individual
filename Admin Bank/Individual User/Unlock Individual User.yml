@@ -1,11 +1,11 @@
 info:
-  name: Get Individual User Detail
+  name: Unlock Individual User
   type: http
-  seq: 4
+  seq: 9
 
 http:
-  method: GET
-  url: "{{individual_admin_host}}/individual-user/db4b1192-4a93-42f5-a2f7-627f4fc5784d"
+  method: PUT
+  url: "{{individual_admin_host}}/individual-user/d7f835df-3433-4cdf-97b9-9486e8975e09/unlock"
   headers:
     - name: platform
       value: WEB

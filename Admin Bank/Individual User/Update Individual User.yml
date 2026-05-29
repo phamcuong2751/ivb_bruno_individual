@@ -5,7 +5,7 @@ info:
 
 http:
   method: PUT
-  url: "{{individual_admin_host}}/individual-user/90966ac7-0625-4827-9941-52687e0985dc"
+  url: "{{individual_admin_host}}/individual-user/c09fee3d-e937-4d99-a0a1-bf80d0cca48c"
   headers:
     - name: platform
       value: WEB
@@ -16,9 +16,9 @@ http:
     data: |-
       {
         "emailReceived": "ray.tran@alpaca.vn",
-        "mobileContactReceived": "+84347631603",
-        "passwordDelivery": "SMS",
-        "mainAccount": "b707da06-36da-4b6a-897a-071e71e32375"
+        "mobileContact": "+84347631604",
+        "passwordDelivery": "EMAIL",
+        "mainAccount": "8aac2864-c3ea-4317-b60c-c46f29faee58"
       }
 
 settings:

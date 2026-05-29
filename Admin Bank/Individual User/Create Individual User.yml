@@ -26,9 +26,9 @@ http:
         "issueDate": null,
         "issuePlace": "46 1BS",
         "expiredDate": null,
-        "mobileContact": "+84909015594",
+        "phone": "+84909015594",
         "email": "truc.nguyen@tpisoftware.com",
-        "mobileContactReceived": "+84347631603",
+        "mobileContact": "+84347631603",
         "emailReceived": "ray.tran@alpaca.vn",
         "resident": true,
         "permanentAddress": "97A NGUYEN VAN TROI 11 PHU NHUAN HO CHI MINH",
@@ -43,11 +43,10 @@ http:
         "accounts": [
           "b707da06-36da-4b6a-897a-071e71e32375",
           "8aac2864-c3ea-4317-b60c-c46f29faee58",
-          "8aac2864-c3ea-4317-b60c-c46f29faee58",
           "20963b11-3e9c-48d9-ac78-daae40502af6",
           "4a93f547-3ecf-49b8-ab2a-ef76af34be24"
         ],
-        "mainAccount": "b707da06-36da-4b6a-897a-071e71e32375",
+        "defaultAccount": "b707da06-36da-4b6a-897a-071e71e32375",
         "features": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,221,241]
       }
 

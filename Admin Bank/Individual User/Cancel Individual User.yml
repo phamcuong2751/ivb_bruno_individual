@@ -5,12 +5,14 @@ info:
 
 http:
   method: PUT
-  url: "{{individual_admin_host}}/individual-user/38a31978-d7ab-4624-ad87-9832d39d3d2a/cancel"
+  url: "{{individual_admin_host}}/individual-user/c09fee3d-e937-4d99-a0a1-bf80d0cca48c/cancel"
   headers:
     - name: platform
       value: WEB
     - name: Authorization
       value: Bearer {{individual_admin_token}}
+    - name: Content-Type
+      value: application/json
 
 settings:
   encodeUrl: true
