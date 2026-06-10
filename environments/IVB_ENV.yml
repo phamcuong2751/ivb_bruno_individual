@@ -1,0 +1,4 @@
+name: IVB_ENV
+variables:
+  - name: individual_host
+    value: https://localhost:9090

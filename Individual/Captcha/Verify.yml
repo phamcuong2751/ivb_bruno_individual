@@ -52,13 +52,11 @@ http:
       value: d7775e14-5100-45ec-adee-5173a9e1a21h
   body:
     type: json
-    data: "{\r
-
-      \    \"uuid\": \"46efb1e1-5c3d-444e-865e-cc785c1fc06f\",\r
-
-      \    \"answer\": \"LGD%7\"\r
-
-      }"
+    data: |-
+      {
+          "uuid": "00855497-87d2-42a0-9f3e-08048c6e5f4e",
+          "answer": "Y@TN4"
+      }
 
 settings:
   encodeUrl: true

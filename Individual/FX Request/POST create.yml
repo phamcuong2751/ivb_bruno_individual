@@ -1,0 +1,221 @@
+info:
+  name: POST create
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{individual_host}}/fx-services/fx/request"
+  headers:
+    - name: Language
+      value: vi
+    - name: X-Request-Id
+      value: 91d7c3f5-eab5-417d-975b-21da4f8dcaba
+    - name: Cache-Control
+      value: no-cache
+      disabled: true
+    - name: X-Request-Timestamp
+      value: "1778645804159"
+    - name: Referer
+      value: http://localhost:3000/auth/login
+    - name: X-Checksum
+      value: e168cf0a86ea54eb473c8152c25842f581d3448a717ea6e53d3606a5da2d5ad9
+      disabled: true
+    - name: Pragma
+      value: no-cache
+    - name: sec-ch-ua
+      value: '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+    - name: User-Agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Platform
+      value: WEB
+  body:
+    type: json
+    data: |-
+      {
+          "fxType": "SELL",
+          "fxRequestType": "NEW_REQUEST",
+          "senderAccountId": "e218bd49-222a-4302-b2f2-8bb19ee5eca9",
+          "fromCcy": "USD",
+          "toAccountId":"f016b743-d73c-4481-9487-61f88c83c9a5",
+          "toCcy": "VND",
+          "amount": 500,
+          "toAmount": 12082500,
+          "requestedRate": 24165,
+          "exchangeRateType": "LISTED",
+          "purpose": "purpose_sell_1",
+          "description": "Ban 500.00 USD",
+          "authenticationMethod": "SMS_OTP",
+          "otp" : 832094
+      }
+  auth:
+    type: bearer
+    token: "{{individual_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260513
+    description: Error by ISSUER is not use https
+    request:
+      url: "{{individual_host}}/other-services/user/info"
+      method: GET
+      headers:
+        - name: Language
+          value: vi
+        - name: X-Request-Id
+          value: 91d7c3f5-eab5-417d-975b-21da4f8dcaba
+        - name: Cache-Control
+          value: no-cache
+          disabled: true
+        - name: X-Request-Timestamp
+          value: "1778645804159"
+        - name: Referer
+          value: http://localhost:3000/auth/login
+        - name: X-Checksum
+          value: e168cf0a86ea54eb473c8152c25842f581d3448a717ea6e53d3606a5da2d5ad9
+          disabled: true
+        - name: Pragma
+          value: no-cache
+        - name: sec-ch-ua
+          value: '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"'
+        - name: sec-ch-ua-mobile
+          value: ?0
+        - name: sec-ch-ua-platform
+          value: '"macOS"'
+        - name: User-Agent
+          value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+        - name: Accept
+          value: application/json, text/plain, */*
+        - name: Platform
+          value: WEB
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: transfer-encoding
+          value: chunked
+        - name: x-request-id
+          value: 91d7c3f5-eab5-417d-975b-21da4f8dcaba
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: strict-transport-security
+          value: max-age=31536000 ; includeSubDomains
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: date
+          value: Wed, 13 May 2026 06:42:32 GMT
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": {
+              "birthdate": "1990-11-05T00:00",
+              "createdDate": "2025-10-03T02:22:29.060468Z",
+              "currentAddress": "97 NGUYEN VAN TROI P PHU NHUAN TPHCM",
+              "customerName": "NGUYỄN THANH ĐẠT",
+              "email": "dat.pham@tpisoftware.com",
+              "expiredDate": "2045-01-05",
+              "id": "a0523550-24d3-4d69-b0c0-8dc5a93bd071",
+              "idNumber": "5016969696973",
+              "idType": "CCCD",
+              "isAcceptTerms": false,
+              "isBankLock": false,
+              "isOttBalance": true,
+              "isOttPromotion": true,
+              "isReceiveEmail": false,
+              "isSendSMS": true,
+              "isUseOTT": true,
+              "issueDate": "2015-01-05",
+              "loginAction": "NORMAL",
+              "nationality": "VNM",
+              "passport": "21226969",
+              "permanentAddress": "89 DUONG SO 59 P AN HOI TAY TPHCM",
+              "permissions": [
+                {
+                  "code": "VIEW",
+                  "description": "View",
+                  "id": 1,
+                  "name": "View"
+                },
+                {
+                  "code": "QUERY",
+                  "description": "Query",
+                  "id": 2,
+                  "name": "Query"
+                },
+                {
+                  "code": "DOWNLOAD",
+                  "description": "Download",
+                  "id": 3,
+                  "name": "Download"
+                },
+                {
+                  "code": "CREATE",
+                  "description": "Create new",
+                  "id": 4,
+                  "name": "Create new"
+                },
+                {
+                  "code": "UPDATE",
+                  "description": "Update",
+                  "id": 5,
+                  "name": "Update"
+                },
+                {
+                  "code": "REQUEST_TO_CANCEL_STOP",
+                  "description": "Request to cancel/Request to stop",
+                  "id": 6,
+                  "name": "Request to cancel/Request to stop"
+                },
+                {
+                  "code": "DELETE",
+                  "description": "Delete",
+                  "id": 7,
+                  "name": "Delete"
+                },
+                {
+                  "code": "APPROVE_REFUSE",
+                  "description": "Approve/Refuse to approve",
+                  "id": 8,
+                  "name": "Approve/Refuse to approve"
+                }
+              ],
+              "phoneNumber": "+84373331453",
+              "placeIssue": "CCS",
+              "position": "Legal Representative",
+              "registerChannel": "EMAIL",
+              "resident": true,
+              "role": {
+                "description": "User",
+                "id": 1,
+                "name": "USER"
+              },
+              "status": {
+                "id": 2,
+                "name": "ACTIVE"
+              },
+              "userName": "0373331453"
+            }
+          }
