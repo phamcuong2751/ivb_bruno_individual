@@ -1,0 +1,54 @@
+info:
+  name: List Individual Monitoring Level
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/monitoring-level?pageSize=5&numPage=0"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  params:
+    - name: pageSize
+      value: "5"
+      type: query
+    - name: numPage
+      value: "0"
+      type: query
+    - name: keyword
+      value: "200"
+      type: query
+      disabled: true
+    - name: type
+      value: MONITORING_TRANSACTION
+      type: query
+      disabled: true
+    - name: feature
+      value: INTERNAL
+      type: query
+      disabled: true
+    - name: feature
+      value: NAPAS247
+      type: query
+      disabled: true
+    - name: status
+      value: ACTIVE
+      type: query
+      disabled: true
+    - name: status
+      value: INACTIVE
+      type: query
+      disabled: true
+    - name: minimumTransactionCcy
+      value: USD
+      type: query
+      disabled: true
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

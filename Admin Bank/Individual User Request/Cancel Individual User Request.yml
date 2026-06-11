@@ -16,7 +16,7 @@ http:
     data: |
       {
         "workflowId": "ab1d936e-d270-4a20-9fbf-d5d76c106bb6",
-        "comment": "Rejected"
+        "comment": "Cancelled"
       }
 
 settings:

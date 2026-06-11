@@ -1,0 +1,38 @@
+info:
+  name: Update Individual Monitoring Level
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{individual_admin_host}}/monitoring-level/c4bd83f9-19a3-44fb-a945-f245c1da2fdf"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Rule chặn 200 triệu Updated",
+        "code": "IVB_LEVEL_200",
+        "type": "MONITORING_TRANSACTION",
+        "feature": "NAPAS247",
+        "minimumTransactionCcy": "VND",
+        "minimumTransactionAmount": 88888888,
+        "startTime": "05:11",
+        "endTime": "23:59",
+        "customerSegment": "INDIVIDUAL",
+        "alertMethod": "EMAIL",
+        "alertRecipientType": "ALL",
+        "internalRecipientIds": [
+          "cfdef0bc-db39-4fdc-877b-2f74109fb3b9"
+        ]
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,7 @@
+info:
+  name: Account Class Request
+  type: folder
+  seq: 7
+
+request:
+  auth: inherit

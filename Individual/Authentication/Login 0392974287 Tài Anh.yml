@@ -1,7 +1,7 @@
 info:
-  name: Login trancongluan2029734
+  name: Login 0392974287 Tài Anh
   type: http
-  seq: 7
+  seq: 9
 
 http:
   method: POST
@@ -51,11 +51,12 @@ http:
     type: json
     data: |-
       {
-        "username": "trancongluan2029734",
-        "password": "a8amqFiS9+m3TaI+HJIRwYHgtzrJaOC4970VBs3zKCatp3OHUKoCD385fRiS1GLpbxqsUmRao/KQgq3DEd7cxqczMB6YxmKpDME14uA2CM0g+wVCwae3wx6vy1Yh6M8C7OMUJmNL7wGszYLTCrOYb/E51K+2xy05gCbAR8Gmg0EbmTNeKgvi87uvtuO1esllxl6cbkogZeDN1uUGcHTQT5gki5vEPr0s0R1KX+hPN2Fw7+3a1Q6LAoNs57m4Ez1dDLcYUptR/p0rVQUZoOEz9E0rM+D0moFGxHsAK7isEqUTpHHdNi/xBiLgk2KfNV5PDpmAIEF8GMAltUOneSS1QagjwkP0kP5gETo8a9o0ycHP0lymN1fWLUpc75knb3uspqNtFbRlxmwpPbMIWmY4/HXEqRPbU8Z8e6Yu1xBmRycwf5K+fmn/hy7wSOgRZo8qPiMGeVLkmzKria8PedMCkJNw7agrzJ3/9BrNM7l/3b1Kl5jXoX21aaO6mUrgwSgBmUVkFWbgFHPDQH+RIustEs7XosaP5ZPkFzhgtigiwOfsLWRX",
+        "username": "0392974287",
+        "password": "hPip/Pp54WQHIJgopfqgQw4fLsy4XeAAa7r/Vz0NbbmmYLC/LupXgMR9Rmbwra71mrc+O/1OLceLwGLH1grZ9xcP0r7S8dtaEEzHfAXLVXsaSuFy0FhiBWdIZmPz7wpUz+LgQfEIQpyv4uOahY/0g/mQ4V/F6TOSEcdKhaiJ5rDRNLxpoy5nO0HQXH3GTUDjajCKVtBTbgW5hX76mmyF5M8XXxOYN6HHabDNywloRJ15ZP4SxPpgsvukWFX2Dogs5OIcN1vHYhRevXor+JMLbnDWxwlJRqsVil6kmWHY0JAwLkL80RvDFiLfVoqHMxggiMiyzKFlGH2sorF//2ZPU6esFCW3rrQRxSB7AneM4yT7zQEk4V/AW4DnFVxBAwzhqgzg1JdNdBQbPsGDjV0HKsHofl5fvilU+k9Xm1mPyKsaRoUzfoTsVBbXs9FEN/5r+FzHJ4p1SiQRYctKCi3Oy5DoqFER2KST1HVzkfjmn8burfALdSlnS0emwz0WD/hlKObOyd3NPy60qmTc8zjfRAluZ28FOlfsqxXm70Xp+D6iFRGpFw==",
         "loginType": "PASSWORD",
         "platform": "WEB",
-        "captchaVerify": "63e748868edd2096b37b6543e4e2bf69"
+        "captchaVerify": "63e748868edd2096b37b6543e4e2bf69",
+        "confirmLoginOtherDevice": true
       }
 
 runtime:

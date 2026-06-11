@@ -1,7 +1,7 @@
 info:
-  name: Login 0392974287
+  name: Login 0373331451
   type: http
-  seq: 9
+  seq: 10
 
 http:
   method: POST
@@ -51,11 +51,12 @@ http:
     type: json
     data: |-
       {
-        "username": "0392974287",
-        "password": "Jy+kHHyffRxqDzAKoNPy1ExZXcSpzhra0NEH+GlIuKR5zVNA6shOT8LqB2T04YnGuAFUAxaAfwjtpC1IxE4H9o9E8iTQ/SNkB3nCnLvvCJjXeaCLA3laBAuh3Jzl9EreGfREFvcLPjpdO+HtEWkPh990c5fnN8TnmKgjy9m3vc4QjvVYEwWiTV3Jp1wxfbanfy8bjyT/W3+GQPGEkAE8ZFLV49OVT2yqVnol+p4Cww/06OWeLZ2kk3xUzE3xTH9oAMs7iscZWUZ5p8+4XDTV4+T2jt8nNoqJNPUTQtpDL0S9la1a0fb+khLmwde3jsIObVmJo90cvNeWmkDfFqurDdmqKy6JWW0Dtc9yASx7eGrgsprlEwKApiT19UknL1JBdAQag1nIYf3mEByNgPcYuxhp18Bkg4GYv09ktYCBoDlq582fUmP0Dg0lH4FWjYdMG2yVYCVe0ht+K2HN+nKj/Zn1FeJphTsIjZen4WjfpVuekFj0IgHCRi3AsCeLn3/UybeVOvyNSqfUkKd5PLG7UAbQQ7/N7dMd4nfMikavCGCd4YDyVw==",
+        "username": "0373331451",
+        "password": "fLWW4RppAT7V9Eam6ymnFQubYjYvgx9M8bjxARKyvuKf4XkumtWnY5KuOixOwVv22TqBrAelj7sReopUeLo/kzLBprGTHOpZYy0e4WbBwDb/F/JzMLwAD/5zdPrS6CwX09tyx726sSR37H+yZwC4pJ/C5ZS+BAHNplI8zeVQgmiL2Kt06h/wPtclrCX+aa9P9IchJPOJf91K7UAv3GOvRtuZgplGqeQHGn2TBvUSZu3U1fZnmqsvO/p0ggZzgm7x1xMd9uCtFzLvDWc1p8mYU/vYWxTRnGEv7Thf6DEMoeR6BimTvXtFTUhxXOXuU8MMm8OBUd+XFUZmLeLTPIzU4zwyKJNY3CrMT/49II7A3AuO/0SwRlW2oQcLqMTbDyBKfpk1YoQo280fn4G9+w907VsohebFX333SncpoKH54NPWCs8B9DTugwPPJmky4wfh3q94mfyeVQfM3xDxV7T2qpwSvrexWFKmQu/FtPcQy8zQSD29qzPtiJceJFGhxJvrRIZvUlhhxZD4/tajbNNSxek41y/ERnkNzDuxZVFvSilGHYyyDQ==",
         "loginType": "PASSWORD",
         "platform": "WEB",
-        "captchaVerify": "63e748868edd2096b37b6543e4e2bf69"
+        "captchaVerify": "63e748868edd2096b37b6543e4e2bf69",
+        "confirmLoginOtherDevice": true
       }
 
 runtime:

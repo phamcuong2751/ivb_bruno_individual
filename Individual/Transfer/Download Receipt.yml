@@ -1,11 +1,11 @@
 info:
-  name: Account List
+  name: Download Receipt
   type: http
-  seq: 1
+  seq: 8
 
 http:
   method: GET
-  url: "{{individual_host}}/other-services/account/user?numPage=0&pageSize=1000"
+  url: "{{individual_host}}/transfer-services/transfer/cbf28109-38c0-4f94-add7-c19f36cdea79/export"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -49,21 +49,6 @@ http:
       value: "1770014796305"
     - name: request-id
       value: d7775e14-5100-45ec-adee-5173a9e1a21b
-  params:
-    - name: numPage
-      value: "0"
-      type: query
-    - name: pageSize
-      value: "1000"
-      type: query
-    - name: isForeignCurrency
-      value: "false"
-      type: query
-      disabled: true
-    - name: featureKey
-      value: EMAIL_SUBCRIBE
-      type: query
-      disabled: true
 
 runtime:
   variables:

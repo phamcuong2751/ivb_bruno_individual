@@ -1,11 +1,11 @@
 info:
-  name: Approve Individual User Request
+  name: Reject Individual Account Class Request
   type: http
-  seq: 8
+  seq: 5
 
 http:
   method: post
-  url: "{{individual_admin_host}}/individual-user-request/approve"
+  url: "{{individual_admin_host}}/individual-account-class-request/reject"
   headers:
     - name: platform
       value: WEB
@@ -15,9 +15,8 @@ http:
     type: json
     data: |
       {
-        "entityId": "46659841-73c7-4b1a-bf7b-28e33f65753e",
-        "workflowId": "d31ae5c9-d61b-4533-b730-ea2db354936f",
-        "comment": "Approved"
+        "workflowId": "95d2313a-96c6-4e4c-baf3-d816b46a0100",
+        "comment": "Rejected"
       }
 
 settings:

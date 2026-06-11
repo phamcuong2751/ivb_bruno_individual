@@ -1,0 +1,452 @@
+info:
+  name: Request Create Individual Account Class
+  type: http
+  seq: 1
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-account-class-request"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      // {
+      //   "requestType": "CREATE",
+      //   "name": "CURROF",
+      //   "description": null,
+      //   "code": "CURROF",
+      //   "isCreateUser": false,
+      //   "accountClassConfigs": [
+      //     {
+      //       "residencyStatus": "RESIDENT",
+      //       "nationality": "VIETNAM",
+      //       "currency": "VND",
+      //       "limitPercentage": 75,
+      //       "features": [
+      //         {
+      //           "featureKey": "NAPAS247"
+      //         }
+      //       ]
+      //     }
+      //   ]
+      // }
+      // {
+      //   "requestType": "CREATE",
+      //   "name": "CURNLA",
+      //   "code": "CURNLA",
+      //   "accountClassConfigs": [
+      //     {
+      //       "limitPercentage": "100",
+      //       "residencyStatus": "RESIDENT",
+      //       "currency": "VND",
+      //       "nationality": "VIETNAM",
+      //       "features": [
+      //         {
+      //           "id": 31,
+      //           "name": "Bill Payment",
+      //           "description": "Bill Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "BILL_PAYMENT"
+      //         },
+      //         {
+      //           "id": 11,
+      //           "name": "Payroll Payment",
+      //           "description": "Payroll Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "PAYROLL_PAYMENT"
+      //         },
+      //         {
+      //           "id": 9,
+      //           "name": "CITAD",
+      //           "description": "CITAD",
+      //           "isMonetary": true,
+      //           "featureKey": "CITAD"
+      //         },
+      //         {
+      //           "id": 12,
+      //           "name": "Foreign Currency Exchange",
+      //           "description": "Foreign Currency Exchange",
+      //           "isMonetary": true,
+      //           "featureKey": "FX_REQUEST"
+      //         },
+      //         {
+      //           "id": 7,
+      //           "name": "Internal Bank Transfer",
+      //           "description": "Internal Bank Transfer",
+      //           "isMonetary": true,
+      //           "featureKey": "INTERNAL"
+      //         },
+      //         {
+      //           "id": 10,
+      //           "name": "Batch Payment",
+      //           "description": "Batch Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "BATCH_PAYMENT"
+      //         },
+      //         {
+      //           "id": 8,
+      //           "name": "Napas247",
+      //           "description": "Napas247",
+      //           "isMonetary": true,
+      //           "featureKey": "NAPAS247"
+      //         },
+      //         {
+      //           "id": 221,
+      //           "name": "Other Card Payment Request",
+      //           "description": "Other Card Payment Request",
+      //           "isMonetary": false,
+      //           "featureKey": "OTHER_CARD_PAYMENT_REQUEST"
+      //         },
+      //         {
+      //           "id": 41,
+      //           "name": "Cards",
+      //           "description": "Cards",
+      //           "isMonetary": false,
+      //           "featureKey": "CARDS"
+      //         },
+      //         {
+      //           "id": 15,
+      //           "name": "Deposit Request",
+      //           "description": "Deposit Request",
+      //           "isMonetary": true,
+      //           "featureKey": "DEPOSIT_REQUEST"
+      //         },
+      //         {
+      //           "id": 17,
+      //           "name": "Loan Request",
+      //           "description": "Loan Request",
+      //           "isMonetary": false,
+      //           "featureKey": "LOAN_REQUEST"
+      //         },
+      //         {
+      //           "id": 20,
+      //           "name": "International Transfer",
+      //           "description": "International Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "INTERNATIONAL_TRANSFER"
+      //         },
+      //         {
+      //           "id": 241,
+      //           "name": "Email subcribe",
+      //           "description": "Email subcribe",
+      //           "isMonetary": false,
+      //           "featureKey": "EMAIL_SUBCRIBE"
+      //         }
+      //       ]
+      //     },
+      //     {
+      //       "limitPercentage": "100",
+      //       "residencyStatus": "RESIDENT",
+      //       "currency": "VND",
+      //       "nationality": "FOREIGNER",
+      //       "features": [
+      //         {
+      //           "id": 31,
+      //           "name": "Bill Payment",
+      //           "description": "Bill Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "BILL_PAYMENT"
+      //         },
+      //         {
+      //           "id": 11,
+      //           "name": "Payroll Payment",
+      //           "description": "Payroll Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "PAYROLL_PAYMENT"
+      //         },
+      //         {
+      //           "id": 9,
+      //           "name": "CITAD",
+      //           "description": "CITAD",
+      //           "isMonetary": true,
+      //           "featureKey": "CITAD"
+      //         },
+      //         {
+      //           "id": 12,
+      //           "name": "Foreign Currency Exchange",
+      //           "description": "Foreign Currency Exchange",
+      //           "isMonetary": true,
+      //           "featureKey": "FX_REQUEST"
+      //         },
+      //         {
+      //           "id": 7,
+      //           "name": "Internal Bank Transfer",
+      //           "description": "Internal Bank Transfer",
+      //           "isMonetary": true,
+      //           "featureKey": "INTERNAL"
+      //         },
+      //         {
+      //           "id": 10,
+      //           "name": "Batch Payment",
+      //           "description": "Batch Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "BATCH_PAYMENT"
+      //         },
+      //         {
+      //           "id": 8,
+      //           "name": "Napas247",
+      //           "description": "Napas247",
+      //           "isMonetary": true,
+      //           "featureKey": "NAPAS247"
+      //         },
+      //         {
+      //           "id": 221,
+      //           "name": "Other Card Payment Request",
+      //           "description": "Other Card Payment Request",
+      //           "isMonetary": false,
+      //           "featureKey": "OTHER_CARD_PAYMENT_REQUEST"
+      //         },
+      //         {
+      //           "id": 41,
+      //           "name": "Cards",
+      //           "description": "Cards",
+      //           "isMonetary": false,
+      //           "featureKey": "CARDS"
+      //         },
+      //         {
+      //           "id": 15,
+      //           "name": "Deposit Request",
+      //           "description": "Deposit Request",
+      //           "isMonetary": true,
+      //           "featureKey": "DEPOSIT_REQUEST"
+      //         },
+      //         {
+      //           "id": 17,
+      //           "name": "Loan Request",
+      //           "description": "Loan Request",
+      //           "isMonetary": false,
+      //           "featureKey": "LOAN_REQUEST"
+      //         },
+      //         {
+      //           "id": 20,
+      //           "name": "International Transfer",
+      //           "description": "International Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "INTERNATIONAL_TRANSFER"
+      //         },
+      //         {
+      //           "id": 241,
+      //           "name": "Email subcribe",
+      //           "description": "Email subcribe",
+      //           "isMonetary": false,
+      //           "featureKey": "EMAIL_SUBCRIBE"
+      //         }
+      //       ]
+      //     },
+      //     {
+      //       "limitPercentage": "75",
+      //       "residencyStatus": "NON_RESIDENT",
+      //       "currency": "VND",
+      //       "nationality": "FOREIGNER",
+      //       "features": [
+      //         {
+      //           "id": 31,
+      //           "name": "Bill Payment",
+      //           "description": "Bill Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "BILL_PAYMENT"
+      //         },
+      //         {
+      //           "id": 11,
+      //           "name": "Payroll Payment",
+      //           "description": "Payroll Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "PAYROLL_PAYMENT"
+      //         },
+      //         {
+      //           "id": 9,
+      //           "name": "CITAD",
+      //           "description": "CITAD",
+      //           "isMonetary": true,
+      //           "featureKey": "CITAD"
+      //         },
+      //         {
+      //           "id": 12,
+      //           "name": "Foreign Currency Exchange",
+      //           "description": "Foreign Currency Exchange",
+      //           "isMonetary": true,
+      //           "featureKey": "FX_REQUEST"
+      //         },
+      //         {
+      //           "id": 7,
+      //           "name": "Internal Bank Transfer",
+      //           "description": "Internal Bank Transfer",
+      //           "isMonetary": true,
+      //           "featureKey": "INTERNAL"
+      //         },
+      //         {
+      //           "id": 10,
+      //           "name": "Batch Payment",
+      //           "description": "Batch Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "BATCH_PAYMENT"
+      //         },
+      //         {
+      //           "id": 8,
+      //           "name": "Napas247",
+      //           "description": "Napas247",
+      //           "isMonetary": true,
+      //           "featureKey": "NAPAS247"
+      //         },
+      //         {
+      //           "id": 221,
+      //           "name": "Other Card Payment Request",
+      //           "description": "Other Card Payment Request",
+      //           "isMonetary": false,
+      //           "featureKey": "OTHER_CARD_PAYMENT_REQUEST"
+      //         },
+      //         {
+      //           "id": 41,
+      //           "name": "Cards",
+      //           "description": "Cards",
+      //           "isMonetary": false,
+      //           "featureKey": "CARDS"
+      //         },
+      //         {
+      //           "id": 15,
+      //           "name": "Deposit Request",
+      //           "description": "Deposit Request",
+      //           "isMonetary": true,
+      //           "featureKey": "DEPOSIT_REQUEST"
+      //         },
+      //         {
+      //           "id": 17,
+      //           "name": "Loan Request",
+      //           "description": "Loan Request",
+      //           "isMonetary": false,
+      //           "featureKey": "LOAN_REQUEST"
+      //         },
+      //         {
+      //           "id": 20,
+      //           "name": "International Transfer",
+      //           "description": "International Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "INTERNATIONAL_TRANSFER"
+      //         },
+      //         {
+      //           "id": 241,
+      //           "name": "Email subcribe",
+      //           "description": "Email subcribe",
+      //           "isMonetary": false,
+      //           "featureKey": "EMAIL_SUBCRIBE"
+      //         }
+      //       ]
+      //     },
+      //     {
+      //       "limitPercentage": "75",
+      //       "residencyStatus": "NON_RESIDENT",
+      //       "currency": "VND",
+      //       "nationality": "VIETNAM",
+      //       "features": [
+      //         {
+      //           "id": 31,
+      //           "name": "Bill Payment",
+      //           "description": "Bill Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "BILL_PAYMENT"
+      //         },
+      //         {
+      //           "id": 11,
+      //           "name": "Payroll Payment",
+      //           "description": "Payroll Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "PAYROLL_PAYMENT"
+      //         },
+      //         {
+      //           "id": 9,
+      //           "name": "CITAD",
+      //           "description": "CITAD",
+      //           "isMonetary": true,
+      //           "featureKey": "CITAD"
+      //         },
+      //         {
+      //           "id": 12,
+      //           "name": "Foreign Currency Exchange",
+      //           "description": "Foreign Currency Exchange",
+      //           "isMonetary": true,
+      //           "featureKey": "FX_REQUEST"
+      //         },
+      //         {
+      //           "id": 7,
+      //           "name": "Internal Bank Transfer",
+      //           "description": "Internal Bank Transfer",
+      //           "isMonetary": true,
+      //           "featureKey": "INTERNAL"
+      //         },
+      //         {
+      //           "id": 10,
+      //           "name": "Batch Payment",
+      //           "description": "Batch Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "BATCH_PAYMENT"
+      //         },
+      //         {
+      //           "id": 8,
+      //           "name": "Napas247",
+      //           "description": "Napas247",
+      //           "isMonetary": true,
+      //           "featureKey": "NAPAS247"
+      //         },
+      //         {
+      //           "id": 221,
+      //           "name": "Other Card Payment Request",
+      //           "description": "Other Card Payment Request",
+      //           "isMonetary": false,
+      //           "featureKey": "OTHER_CARD_PAYMENT_REQUEST"
+      //         },
+      //         {
+      //           "id": 41,
+      //           "name": "Cards",
+      //           "description": "Cards",
+      //           "isMonetary": false,
+      //           "featureKey": "CARDS"
+      //         },
+      //         {
+      //           "id": 15,
+      //           "name": "Deposit Request",
+      //           "description": "Deposit Request",
+      //           "isMonetary": true,
+      //           "featureKey": "DEPOSIT_REQUEST"
+      //         },
+      //         {
+      //           "id": 17,
+      //           "name": "Loan Request",
+      //           "description": "Loan Request",
+      //           "isMonetary": false,
+      //           "featureKey": "LOAN_REQUEST"
+      //         },
+      //         {
+      //           "id": 20,
+      //           "name": "International Transfer",
+      //           "description": "International Payment",
+      //           "isMonetary": true,
+      //           "featureKey": "INTERNATIONAL_TRANSFER"
+      //         }
+      //       ]
+      //     }
+      //   ]
+      // }
+      {
+        "requestType": "CREATE",
+        "name": "CURGOT",
+        "code": "CURGOT",
+        "accountClassConfigs": [
+          {
+            "limitPercentage": "100",
+            "residencyStatus": "NON_RESIDENT",
+            "currency": "FOREIGN_CURRENCY",
+            "nationality": "FOREIGNER",
+            "features": []
+          }
+        ]
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

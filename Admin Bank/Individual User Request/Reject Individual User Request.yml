@@ -15,7 +15,7 @@ http:
     type: json
     data: |
       {
-        "workflowId": "9fda8bef-e8b7-41b8-9e07-ce745aebc588",
+        "workflowId": "a4398ab6-845f-4463-8fc2-288cae3e97d7",
         "comment": "Rejected"
       }
 

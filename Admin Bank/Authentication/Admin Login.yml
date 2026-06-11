@@ -37,6 +37,30 @@ http:
       // tien_maker Vmm9B4QDe4hrzVJwVJak4YX8fcstzH/6iAsdHW8a1L0Vk4bTnni5perm6Ls1uRrmQ2lEyjJ7oW4Ro6HD9e4NbxSPc969rKXXy1V3Uf3ITvaqVvNaQW6cJY1PIg/y4JFEAingrxfggeOPSgOJoBEW19seoDAP5MScSehnwHGaqCbLvgNdHgwiJuLWDKYflGMy6mgWAW9UILuVBmlWVMqUfwWJsOkyteCFPy8bmn5Ch6AmyzODKpQX5v0AnCnwQ82yQaK7o56WjhBIFbCygHo6BJ6mv5JjVEeC/aIrGJGp5dlpJPtuFgv3uE+B/jqVo4J+ySCybUFYu/3PJnBYcEa0E33WPY20Ii4695JhwtGB/90CeYNPGEJXz2J/Pj53jGBnj97VfvdDCHY9U3hSwFZ3DQrvL6+pnWNo8Ev1L4DyuSkVhyeSSlHc4C6/cHEnGIHMjJtA7Qc7tkOCzRbHZ0gjOJcZWvWk5phCToVnnA1XGfCsO2/Ozq98TpCojiPJppSezF9aHeS8W7l/1dh1KCaxbo4polI0YbzEpNMdnu9lHDGlS7qBqg==
   auth: inherit
 
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const json = res.getBody();
+
+        try {
+            // Get access token from response
+            const token = json?.data?.token;
+
+            // Skip if token is missing, null, or empty
+            if (!token) {
+                console.log("data.token field is missing or empty");
+            } else {
+                // Save token to environment variable
+                bru.setEnvVar("individual_admin_token", token);
+
+                console.log("individual_admin_token saved successfully");
+            }
+        } catch (err) {
+            // Ignore parsing or runtime errors
+            console.log("Skip saving token:", err.message);
+        }
+
 settings:
   encodeUrl: true
   timeout: 0

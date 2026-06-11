@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-user/db4b1192-4a93-42f5-a2f7-627f4fc5784d"
+  url: "{{individual_admin_host}}/individual-user/585d7ee0-39e4-4e92-b905-f7340dd31358"
   headers:
     - name: platform
       value: WEB

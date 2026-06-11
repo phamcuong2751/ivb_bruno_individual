@@ -1,7 +1,7 @@
 info:
-  name: Login trancongluan2029734
+  name: Login 0898912890 Tấn Tài
   type: http
-  seq: 7
+  seq: 11
 
 http:
   method: POST
@@ -51,11 +51,12 @@ http:
     type: json
     data: |-
       {
-        "username": "trancongluan2029734",
-        "password": "a8amqFiS9+m3TaI+HJIRwYHgtzrJaOC4970VBs3zKCatp3OHUKoCD385fRiS1GLpbxqsUmRao/KQgq3DEd7cxqczMB6YxmKpDME14uA2CM0g+wVCwae3wx6vy1Yh6M8C7OMUJmNL7wGszYLTCrOYb/E51K+2xy05gCbAR8Gmg0EbmTNeKgvi87uvtuO1esllxl6cbkogZeDN1uUGcHTQT5gki5vEPr0s0R1KX+hPN2Fw7+3a1Q6LAoNs57m4Ez1dDLcYUptR/p0rVQUZoOEz9E0rM+D0moFGxHsAK7isEqUTpHHdNi/xBiLgk2KfNV5PDpmAIEF8GMAltUOneSS1QagjwkP0kP5gETo8a9o0ycHP0lymN1fWLUpc75knb3uspqNtFbRlxmwpPbMIWmY4/HXEqRPbU8Z8e6Yu1xBmRycwf5K+fmn/hy7wSOgRZo8qPiMGeVLkmzKria8PedMCkJNw7agrzJ3/9BrNM7l/3b1Kl5jXoX21aaO6mUrgwSgBmUVkFWbgFHPDQH+RIustEs7XosaP5ZPkFzhgtigiwOfsLWRX",
+        "username": "0898912890",
+        "password": "Kkq4y5SU2cgoBBD0q9iU3RLI8JikRz1ArqDNZTOJ+ztynlNxSdGCrTX8hIocXkvO7H+URafX+tuKLtD72n1VtmD1NeZGXRNOhqd3Rn1w5nFM0OW/6NtLPgtnbSqJ7+2u3nJ9W7MwmPnoh+CoHx4aPYHUz5GJqfxZpakLkddYfRCqj+1eqVHH7Fd1ths22byzIvQ9fPD2mNFJ9J1lFQGK3iIuaem4ELpfPA2slaLo27wTu3I+wxN1Bmm1bLhVB7cMzG5RCX0tGryNQh5vpyKNyIF/q23k/FjEpmRozV60prn+erbTbN7Gn8WR5Acw3+nHkxe4M9R01O1+eSaVPtOwVk7fBr5mWd8SY/V5ryVTRayDi1KFFdES6o/MFIk3geYe1xsf+wLbpPMextWm5NuTuOJyO7ny6esyMKanCwek1luRM14q4nK2zHBstchtDQYMIteCJqMhltEf+GumvI8twgFVSFsD/KotiMVGOo9qOUi4IRXJonVryKrkQnWD86Z+S5vMX0P3DQQ92pQhHY8ted+omrnyXwQeNh/HqHaum9dPY7mLuQ==",
         "loginType": "PASSWORD",
         "platform": "WEB",
-        "captchaVerify": "63e748868edd2096b37b6543e4e2bf69"
+        "captchaVerify": "63e748868edd2096b37b6543e4e2bf69",
+        "confirmLoginOtherDevice": true
       }
 
 runtime:

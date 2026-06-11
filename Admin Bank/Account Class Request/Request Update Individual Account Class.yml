@@ -1,0 +1,43 @@
+info:
+  name: Request Update Individual Account Class
+  type: http
+  seq: 7
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-account-class-request"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "accountClassId": "c4fc3be5-8d64-455b-85e4-8231f3c1b48a",
+        "requestType": "UPDATE",
+        "name": "CURROF",
+        "description": "CURROF description",
+        "code": "CURROF",
+        "isCreateUser": false,
+        "accountClassConfigs": [
+          {
+            "residencyStatus": "RESIDENT",
+            "nationality": "VIETNAM",
+            "currency": "VND",
+            "limitPercentage": 75,
+            "features": [
+              {
+                "featureKey": "NAPAS247"
+              }
+            ]
+          }
+        ]
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

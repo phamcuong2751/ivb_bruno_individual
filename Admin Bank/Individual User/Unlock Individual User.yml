@@ -5,7 +5,7 @@ info:
 
 http:
   method: PUT
-  url: "{{individual_admin_host}}/individual-user/d7f835df-3433-4cdf-97b9-9486e8975e09/unlock"
+  url: "{{individual_admin_host}}/individual-user/9f665bba-13d6-441d-823d-eb9d56fa0639/unlock"
   headers:
     - name: platform
       value: WEB
