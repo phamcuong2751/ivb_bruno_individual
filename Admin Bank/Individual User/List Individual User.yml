@@ -1,5 +1,5 @@
 info:
-  name: Get Individual User List
+  name: List Individual User
   type: http
   seq: 1
 

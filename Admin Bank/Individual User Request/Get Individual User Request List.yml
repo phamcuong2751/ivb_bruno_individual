@@ -5,12 +5,19 @@ info:
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-user-request/list"
+  url: "{{individual_admin_host}}/individual-user-request/list?pageSize=10&numPage=0"
   headers:
     - name: platform
       value: WEB
     - name: Authorization
       value: Bearer {{individual_admin_token}}
+  params:
+    - name: pageSize
+      value: "10"
+      type: query
+    - name: numPage
+      value: "0"
+      type: query
   body:
     type: json
     data: ""

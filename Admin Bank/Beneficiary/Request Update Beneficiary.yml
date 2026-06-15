@@ -1,0 +1,52 @@
+info:
+  name: Request Update Beneficiary
+  type: http
+  seq: 4
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-beneficiary-request"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "bankReceiver": {
+          "bankCode": "101",
+          "fullBankName": "Ngan hang Nha nuoc So giao dich"
+        },
+        "senderName": "19IH J5TM K3IWO W44BN YWNA XM4X V64ODJ",
+        "senderAccountNumber": "1017816-067",
+        "receiverName": "STX074UL",
+        "receiverAccountNumber": "1003131-038",
+        "receiverCcy": "USD",
+        "receiverBranchName": "Vu Tai chinh - Ke toan",
+        "receiverBranchCode": "01101011",
+        "description": "BENEFICIARY description",
+        "userId": "425bd5de-338f-43a0-ac5d-ee2219819fa9",
+        "amount": 0,
+        "isFavorite": false,
+        "isTemplate": false,
+        "ccy": "USD",
+        "ccyAmountType": null,
+        "exchangeRate": 0,
+        "amountConverted": 0,
+        "cif": "1017816",
+        "accountPayFee": {
+          "accountNumber": "1017816-067",
+          "feePayer": "BENEFICIARY"
+        },
+        "requestType": "UPDATE",
+        "status": "ACTIVE",
+        "customerName": "2GG 6KDG 2FENZI5VO3 FNN14Q6UXEQ"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

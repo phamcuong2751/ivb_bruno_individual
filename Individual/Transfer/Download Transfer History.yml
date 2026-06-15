@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_host}}/transfer-services/transfer/user/download?pageSize=10&numPage=0&extension=xls"
+  url: "{{individual_host}}/transfer-services/transfer/user/download?pageSize=10&numPage=0&extension=xls&isSchedule=true"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -21,6 +21,9 @@ http:
       value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
     - name: Language
       value: vi
+      disabled: true
+    - name: Language
+      value: en
     - name: Origin
       value: https://dgb-uat.indovinabank.com.vn
     - name: Platform
@@ -58,6 +61,9 @@ http:
       type: query
     - name: extension
       value: xls
+      type: query
+    - name: isSchedule
+      value: "true"
       type: query
 
 runtime:

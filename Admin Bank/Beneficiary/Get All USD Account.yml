@@ -1,11 +1,11 @@
 info:
-  name: Get Individual User Request Detail
+  name: Get All USD Account
   type: http
-  seq: 3
+  seq: 7
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-user-request/1bb183f2-b143-44f9-975e-b363ac6a00e4"
+  url: "{{individual_admin_host}}/individual-beneficiary/1017816/account"
   headers:
     - name: platform
       value: WEB

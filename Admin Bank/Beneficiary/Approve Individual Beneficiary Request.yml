@@ -1,11 +1,11 @@
 info:
-  name: Approve Individual User Request
+  name: Approve Individual Beneficiary Request
   type: http
-  seq: 8
+  seq: 5
 
 http:
   method: post
-  url: "{{individual_admin_host}}/individual-user-request/approve"
+  url: "{{individual_admin_host}}/individual-beneficiary-request/approve"
   headers:
     - name: platform
       value: WEB
@@ -15,8 +15,8 @@ http:
     type: json
     data: |
       {
-        "entityId": "1bb183f2-b143-44f9-975e-b363ac6a00e4",
-        "workflowId": "3ff423a0-c110-485a-adc1-63aedb830b2b",
+        "entityId": "424d3613-b5ba-4416-826c-5d2a6f0a4b6c",
+        "workflowId": "88faaab7-86b4-4bb7-b3fb-ba6374f62cc9",
         "comment": "Approved"
       }
 
