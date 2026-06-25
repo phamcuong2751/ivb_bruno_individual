@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_host}}/other-services/account/download?extension=xls"
+  url: "{{individual_host}}/other-services/account/download?extension=pdf"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -21,9 +21,9 @@ http:
       value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
     - name: Language
       value: vi
+      disabled: true
     - name: Language
       value: en
-      disabled: true
     - name: Origin
       value: https://dgb-uat.indovinabank.com.vn
     - name: Platform
@@ -56,10 +56,10 @@ http:
     - name: extension
       value: xls
       type: query
+      disabled: true
     - name: extension
       value: pdf
       type: query
-      disabled: true
 
 runtime:
   variables:

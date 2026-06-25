@@ -1,0 +1,27 @@
+info:
+  name: Approve TT77 Config Request
+  type: http
+  seq: 3
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/tt77-request/approve"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |
+      {
+        "entityId": "25678965-2637-4224-89c3-e52713ff6bc0",
+        "workflowId": "6c40bc12-5f92-4204-bbc8-20fc34161368",
+        "comment": "Approved"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

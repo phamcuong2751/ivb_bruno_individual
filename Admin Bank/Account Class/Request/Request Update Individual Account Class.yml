@@ -1,0 +1,60 @@
+info:
+  name: Request Update Individual Account Class
+  type: http
+  seq: 7
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-account-class-request"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "accountClassId": "b7693550-a699-46d8-9441-c661abe97b13", // 4405828e-4cf5-4fde-9de5-fc76dbd156ee b7693550-a699-46d8-9441-c661abe97b13
+        "requestType": "UPDATE",
+        "name": "CURROF", // CURROF testka-123
+        "description": "CURROF description",
+        "code": "testka-123", // CURROF testka-123
+        "isCreateUser": false,
+        "accountClassConfigs": [
+          {
+            "residencyStatus": "RESIDENT",
+            "nationality": "VIETNAM",
+            "currency": "VND",
+            "limitPercentage": 75,
+            "features": [
+              {
+                "featureKey": "NAPAS247"
+              },
+              {
+                "featureKey": "BILL_PAYMENT"
+              }
+            ]
+          },
+          {
+            "residencyStatus": "NON_RESIDENT",
+            "nationality": "VIETNAM",
+            "currency": "VND",
+            "limitPercentage": 75,
+            "features": [
+              {
+                "featureKey": "PAYROLL_PAYMENT"
+              },
+              {
+                "featureKey": "CARDS"
+              }
+            ]
+          }
+        ]
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

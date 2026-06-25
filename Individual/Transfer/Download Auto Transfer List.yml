@@ -1,11 +1,11 @@
 info:
-  name: Download Receipt
+  name: Download Auto Transfer List
   type: http
-  seq: 1
+  seq: 3
 
 http:
-  method: GET
-  url: "{{individual_host}}/transfer-services/transfer/cbf28109-38c0-4f94-add7-c19f36cdea79/export"
+  method: POST
+  url: "{{individual_host}}/transfer-services//transfer/auto/search/download"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -21,6 +21,9 @@ http:
       value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
     - name: Language
       value: vi
+    - name: Language
+      value: en
+      disabled: true
     - name: Origin
       value: https://dgb-uat.indovinabank.com.vn
     - name: Platform
@@ -49,6 +52,14 @@ http:
       value: "1770014796305"
     - name: request-id
       value: d7775e14-5100-45ec-adee-5173a9e1a21b
+  body:
+    type: json
+    data: |-
+      {
+        "pageSize": 10,
+        "numPage": 0,
+        "extension": "pdf" // xls pdf
+      }
 
 runtime:
   variables:

@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-account-class/code/CURROF"
+  url: "{{individual_admin_host}}/individual-account-class/code/testka-123"
   headers:
     - name: platform
       value: WEB

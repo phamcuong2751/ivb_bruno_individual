@@ -1,7 +1,7 @@
 info:
-  name: Beneficiary
+  name: Request
   type: folder
-  seq: 5
+  seq: 4
 
 request:
   auth: inherit

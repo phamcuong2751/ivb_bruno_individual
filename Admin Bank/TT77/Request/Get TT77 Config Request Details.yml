@@ -1,19 +1,16 @@
 info:
-  name: Get All USD Account
+  name: Get TT77 Config Request Details
   type: http
-  seq: 2
+  seq: 1
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-beneficiary/1017816/account"
+  url: "{{individual_admin_host}}/tt77-request/662b7a03-ad34-4884-a90f-db212023f30e"
   headers:
     - name: platform
       value: WEB
     - name: Authorization
       value: Bearer {{individual_admin_token}}
-  body:
-    type: json
-    data: ""
 
 settings:
   encodeUrl: false

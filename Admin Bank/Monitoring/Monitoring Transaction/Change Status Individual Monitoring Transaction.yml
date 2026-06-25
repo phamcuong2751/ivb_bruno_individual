@@ -1,0 +1,27 @@
+info:
+  name: Change Status Individual Monitoring Transaction
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{individual_admin_host}}/individual-monitoring-transaction/b367fa9b-3b9b-48c8-b1b7-1371774e5c7f/status"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "status": "MONITORED", // NOT_MONITORED MONITORING MONITORED COUNT_FREQUENCY
+        "result": "NONE_RISK",
+        "note": "No comment"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -15,7 +15,7 @@ http:
     type: json
     data: |-
       {
-        "branchId": 5, // 2 5
+        "branchId": 5, // 2 - HEAD OFFICE    5 - BUSINESS CENTER
         "tempToken": "{{individual_admin_token}}"
       }
   auth: inherit

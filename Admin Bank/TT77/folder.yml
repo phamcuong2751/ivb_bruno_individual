@@ -1,7 +1,7 @@
 info:
-  name: Beneficiary
+  name: TT77
   type: folder
-  seq: 5
+  seq: 7
 
 request:
   auth: inherit

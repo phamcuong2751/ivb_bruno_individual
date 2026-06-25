@@ -1,7 +1,0 @@
-info:
-  name: Individual User Request
-  type: folder
-  seq: 4
-
-request:
-  auth: inherit
