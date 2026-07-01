@@ -1,0 +1,56 @@
+info:
+  name: Add Individual Monitoring Transaction
+  type: http
+  seq: 6
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-monitoring-transaction"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "transaction": {
+          "accountHolderName": "O4A2VV CNA0M7 9WQOS W0H4U OJ0SIMI 3QUR9",
+          "accountNumber": "5032289-001",
+          "accountBranchName": "BINH DUONG - BRANCH",
+          "accountBranchCode": "150",
+          "bank": {
+            "bankCode": "304"
+          },
+          "id": "ac6658d2-a1ff-4364-99fa-3a4a4a678cee",
+          "fee": 0,
+          "feeType": "SENDER_PAY",
+          "transRef": "20260610TRF113138371",
+          "amount": 300000000,
+          "ccyAmountType": "VND",
+          "description": "PHAM THANH DAT transfer",
+          "createdBy": "TRUC JOLIBE",
+          "accountReceiveNumber": "12345",
+          "accountHolderReceiveName": "ACCOUNT TEST NAPAS",
+          "accountReceiveBranchCode": "",
+          "accountReceiveBranchName": "",
+          "bankCodeReceive": "970406",
+          "status": "COMPLETED"
+        },
+        "feature": "NAPAS247",
+        "customerSegment": "INDIVIDUAL",
+        "customerEmail": "ray.tran@alpaca.vn",
+        "userName": "trancongluan2029734",
+        "customerName": "Ray Tran",
+        "authenticationMethod": "SMS_OTP",
+        "authenticationDeviceSerial": "ecd7f8cf-7ead-488c-9bd7-24cb5f06d5aa",
+        "transactionDate": "2026-06-16T09:05:45.208Z",
+        "checkerEmail": null
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

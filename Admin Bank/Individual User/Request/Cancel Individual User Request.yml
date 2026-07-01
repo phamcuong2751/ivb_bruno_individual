@@ -1,0 +1,26 @@
+info:
+  name: Cancel Individual User Request
+  type: http
+  seq: 10
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-user-request/cancel"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |
+      {
+        "workflowId": "ab1d936e-d270-4a20-9fbf-d5d76c106bb6",
+        "comment": "Cancelled"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

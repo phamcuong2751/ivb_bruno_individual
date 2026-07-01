@@ -1,0 +1,26 @@
+info:
+  name: Reject Individual User Request
+  type: http
+  seq: 9
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-user-request/reject"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |
+      {
+        "workflowId": "a4398ab6-845f-4463-8fc2-288cae3e97d7",
+        "comment": "Rejected"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

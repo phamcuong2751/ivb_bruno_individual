@@ -1,0 +1,22 @@
+info:
+  name: List TT77 Config
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/tt77/configs"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: ""
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

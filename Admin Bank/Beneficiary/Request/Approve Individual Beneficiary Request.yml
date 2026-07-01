@@ -1,0 +1,27 @@
+info:
+  name: Approve Individual Beneficiary Request
+  type: http
+  seq: 5
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-beneficiary-request/approve"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |
+      {
+        "entityId": "424d3613-b5ba-4416-826c-5d2a6f0a4b6c",
+        "workflowId": "88faaab7-86b4-4bb7-b3fb-ba6374f62cc9",
+        "comment": "Approved"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

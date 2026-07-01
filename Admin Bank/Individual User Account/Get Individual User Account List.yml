@@ -5,7 +5,7 @@ info:
 
 http:
   method: get
-  url: "{{individual_admin_host}}/individual-user-account/user/507e10e5-247d-4cda-b38a-146bce90094c/list?pageSize=5&numPage=0&status=ACTIVE"
+  url: "{{individual_admin_host}}/individual-user-account/user/9f665bba-13d6-441d-823d-eb9d56fa0639/list?pageSize=5&numPage=0"
   headers:
     - name: Cookie
       value: JSESSIONID=A27DA6558C1D26B8B89C85599858D025
@@ -23,6 +23,19 @@ http:
     - name: status
       value: ACTIVE
       type: query
+      disabled: true
+    - name: featureKey
+      value: NAPAS247
+      type: query
+      disabled: true
+    - name: featureKey
+      value: CITAD
+      type: query
+      disabled: true
+    - name: featureKey
+      value: EMAIL_SUBCRIBE
+      type: query
+      disabled: true
   auth: inherit
 
 settings:

@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_host}}/other-services/account/user"
+  url: "{{individual_host}}/other-services/account/user?numPage=0&pageSize=1000"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -50,8 +50,18 @@ http:
     - name: request-id
       value: d7775e14-5100-45ec-adee-5173a9e1a21b
   params:
+    - name: numPage
+      value: "0"
+      type: query
+    - name: pageSize
+      value: "1000"
+      type: query
     - name: isForeignCurrency
       value: "false"
+      type: query
+      disabled: true
+    - name: featureKey
+      value: EMAIL_SUBCRIBE
       type: query
       disabled: true
 

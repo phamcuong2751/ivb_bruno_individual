@@ -31,6 +31,30 @@ http:
       }
   auth: inherit
 
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const json = res.getBody();
+
+        try {
+            // Get access token from response
+            const token = json?.data?.token;
+
+            // Skip if token is missing, null, or empty
+            if (!token) {
+                console.log("data.token field is missing or empty");
+            } else {
+                // Save token to environment variable
+                bru.setEnvVar("individual_admin_token", token);
+
+                console.log("individual_admin_token saved successfully");
+            }
+        } catch (err) {
+            // Ignore parsing or runtime errors
+            console.log("Skip saving token:", err.message);
+        }
+
 settings:
   encodeUrl: true
   timeout: 0

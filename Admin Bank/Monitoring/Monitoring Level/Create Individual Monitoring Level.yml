@@ -1,0 +1,55 @@
+info:
+  name: Create Individual Monitoring Level
+  type: http
+  seq: 1
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-monitoring-level"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Rule chặn 200 triệu",
+        "code": "IVB_LEVEL_200",
+        "type": "MONITORING_TRANSACTION",
+        "feature": "NAPAS247",
+        "minimumTransactionCcy": "VND",
+        "minimumTransactionAmount": 200000000,
+        "startTime": "00:00",
+        "endTime": "23:59",
+        "customerSegment": "INDIVIDUAL",
+      //   "alertMethod": "EMAIL",
+      //   "alertRecipientType": "ALL",
+      //   "internalRecipientIds": [
+      //     "cfdef0bc-db39-4fdc-877b-2f74109fb3b9"
+      //   ],
+        "customerNotifications": [
+          {
+            "templateId": "6",
+            "templateType": "EMAIL",
+            "recipientIds": []
+          }
+        ],
+        "internalNotifications": [
+          {
+            "templateId": "6",
+            "templateType": "EMAIL",
+            "recipientIds": [
+              "2ee8c4d1-40c7-4d9e-946c-08cab6deb6c7",
+              "dc7ab705-9b42-442b-9cc9-931f6d15bce6"
+            ]
+          }
+        ]
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

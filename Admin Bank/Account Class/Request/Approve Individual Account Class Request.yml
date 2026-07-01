@@ -1,0 +1,27 @@
+info:
+  name: Approve Individual Account Class Request
+  type: http
+  seq: 4
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-account-class-request/approve"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |
+      {
+        "entityId": "86bccc77-a4d4-446d-a601-b5c97b3b90e8",
+        "workflowId": "89e10114-c1c5-4006-80cf-92ec2cf46b2a",
+        "comment": "Approved"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

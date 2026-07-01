@@ -1,0 +1,28 @@
+info:
+  name: Request Close TT77 Config
+  type: http
+  seq: 7
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/tt77-request"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "requestType": "CLOSE",
+        "entityId": "3ffdf22f-4abf-4ee8-abd9-954133753933",
+        "requestDetails": null,
+        "reason": "Đóng để test"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

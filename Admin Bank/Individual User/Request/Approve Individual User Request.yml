@@ -1,0 +1,27 @@
+info:
+  name: Approve Individual User Request
+  type: http
+  seq: 8
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-user-request/approve"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |
+      {
+        "entityId": "dec02381-e2ab-40ee-9308-3fbd3a18f7d7",
+        "workflowId": "2891695c-b432-4653-880f-b10f489b459c",
+        "comment": "Approved"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

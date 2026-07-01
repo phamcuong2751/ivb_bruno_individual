@@ -1,0 +1,7 @@
+info:
+  name: TT77
+  type: folder
+  seq: 7
+
+request:
+  auth: inherit

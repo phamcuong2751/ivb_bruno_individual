@@ -1,0 +1,75 @@
+info:
+  name: Request Create TT77 Config
+  type: http
+  seq: 2
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/tt77-request"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "requestType": "CREATE",
+        "entityId": null,
+        "requestDetails": {
+          "feature": "CITAD",
+          "groupCode": "I.3",
+          "description": "CITAD - SOFT_OTP custom config",
+          "tier1AuthMethod": "SOFT_OTP",
+          "tier2AuthMethod": "SOFT_OTP",
+          "tier3AuthMethod": "SOFT_OTP",
+          "status": "ACTIVE",
+          "tierRules": [
+            {
+              "tierLevel": 1,
+              "ruleIndex": 1,
+              "conditions": [
+                { "variable": "G", "operator": "LESS_THAN_OR_EQUAL", "compareValue": 10000000, "conditionIndex": 0 }
+              ]
+            },
+            {
+              "tierLevel": 2,
+              "ruleIndex": 1,
+              "conditions": [
+                { "variable": "G", "operator": "GREATER_THAN", "compareValue": 10000000, "conditionIndex": 0 }
+              ]
+            },
+            {
+              "tierLevel": 2,
+              "ruleIndex": 2,
+              "conditions": [
+                { "variable": "G", "operator": "LESS_THAN_OR_EQUAL", "compareValue": 10000000, "conditionIndex": 0 },
+                { "variable": "G_PLUS_T_KSTH", "operator": "GREATER_THAN_OR_EQUAL", "compareValue": 20000000, "conditionIndex": 1 }
+              ]
+            },
+            {
+              "tierLevel": 3,
+              "ruleIndex": 1,
+              "conditions": [
+                { "variable": "G", "operator": "GREATER_THAN", "compareValue": 500000000, "conditionIndex": 0 }
+              ]
+            },
+            {
+              "tierLevel": 3,
+              "ruleIndex": 2,
+              "conditions": [
+                { "variable": "G", "operator": "LESS_THAN_OR_EQUAL", "compareValue": 500000000, "conditionIndex": 0 },
+                { "variable": "G_PLUS_T", "operator": "GREATER_THAN_OR_EQUAL", "compareValue": 1500000000, "conditionIndex": 1 }
+              ]
+            }
+          ]
+        },
+        "reason": "Tạo để test"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
