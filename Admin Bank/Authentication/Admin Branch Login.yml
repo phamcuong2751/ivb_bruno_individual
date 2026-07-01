@@ -15,11 +15,7 @@ http:
     type: json
     data: |-
       {
-<<<<<<< HEAD
         "branchId": 5, // 2 5
-=======
-        "branchId": 5, // 2 - HEAD OFFICE    5 - BUSINESS CENTER
->>>>>>> b7078832e788530a771ca5edc1fe19f71d2e2896
         "tempToken": "{{individual_admin_token}}"
       }
   auth: inherit
@@ -28,7 +24,6 @@ runtime:
   scripts:
     - type: after-response
       code: |-
-<<<<<<< HEAD
         try {
             const body = res.getBody();
             const response = typeof body === "string"
@@ -44,26 +39,6 @@ runtime:
             }
         } catch (e) {
             console.log("Skip update individual_admin_branch_token:", e.message);
-=======
-        const json = res.getBody();
-
-        try {
-            // Get access token from response
-            const token = json?.data?.token;
-
-            // Skip if token is missing, null, or empty
-            if (!token) {
-                console.log("data.token field is missing or empty");
-            } else {
-                // Save token to environment variable
-                bru.setEnvVar("individual_admin_token", token);
-
-                console.log("individual_admin_token saved successfully");
-            }
-        } catch (err) {
-            // Ignore parsing or runtime errors
-            console.log("Skip saving token:", err.message);
->>>>>>> b7078832e788530a771ca5edc1fe19f71d2e2896
         }
 
 settings:

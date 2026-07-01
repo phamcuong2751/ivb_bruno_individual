@@ -38,7 +38,6 @@ http:
   auth: inherit
 
 runtime:
-<<<<<<< HEAD
   variables:
     - name: individual_admin_host
       value: https://will-colour-cheats-indication.trycloudflare.com
@@ -59,29 +58,6 @@ runtime:
                 "Cannot extract token from response:",
                 error.message
             );
-=======
-  scripts:
-    - type: after-response
-      code: |-
-        const json = res.getBody();
-
-        try {
-            // Get access token from response
-            const token = json?.data?.token;
-
-            // Skip if token is missing, null, or empty
-            if (!token) {
-                console.log("data.token field is missing or empty");
-            } else {
-                // Save token to environment variable
-                bru.setEnvVar("individual_admin_token", token);
-
-                console.log("individual_admin_token saved successfully");
-            }
-        } catch (err) {
-            // Ignore parsing or runtime errors
-            console.log("Skip saving token:", err.message);
->>>>>>> b7078832e788530a771ca5edc1fe19f71d2e2896
         }
 
 settings:
