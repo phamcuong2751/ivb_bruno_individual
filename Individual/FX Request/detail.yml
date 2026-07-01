@@ -1,11 +1,11 @@
 info:
-  name: POST create
+  name: detail
   type: http
-  seq: 1
+  seq: 3
 
 http:
-  method: POST
-  url: "{{individual_host}}/fx-services/fx/request"
+  method: GET
+  url: "{{individual_host}}/fx-services/fx/request/{{requestId}}"
   headers:
     - name: Language
       value: vi
@@ -35,28 +35,14 @@ http:
       value: application/json, text/plain, */*
     - name: Platform
       value: WEB
-  body:
-    type: json
-    data: |-
-      {
-          "fxType": "SELL",
-          "fxRequestType": "NEW_REQUEST",
-          "senderAccountId": "e218bd49-222a-4302-b2f2-8bb19ee5eca9",
-          "fromCcy": "USD",
-          "toAccountId":"f016b743-d73c-4481-9487-61f88c83c9a5",
-          "toCcy": "VND",
-          "amount": 500,
-          "toAmount": 12082500,
-          "requestedRate": 24165,
-          "exchangeRateType": "LISTED",
-          "purpose": "purpose_sell_1",
-          "description": "Ban 500.00 USD",
-          "authenticationMethod": "SMS_OTP",
-          "otp" : 832094
-      }
   auth:
     type: bearer
     token: "{{individual_token}}"
+
+runtime:
+  variables:
+    - name: requestId
+      value: 6f6e388a-1951-44ed-b8be-4398f2a6820e
 
 settings:
   encodeUrl: true

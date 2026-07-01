@@ -1,0 +1,85 @@
+info:
+  name: SUP Reject
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{individual_admin_host}}/fx/request/reject"
+  headers:
+    - name: platform
+      value: WEB
+  body:
+    type: json
+    data: |-
+      {
+        "entityId" : "fd819e65-270e-4af4-bd9e-728cfd9723e4",
+        "workflowId" : "469b9d4a-afff-431f-ad64-c6be73bd7e4e",
+        "comment" : "Reject Rejection of TELLER"
+      }
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+runtime:
+  variables:
+    - name: id
+      value: 2ce5b72d-6ea6-49bb-ab52-169851ff4995
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260625
+    request:
+      url: "{{individual_admin_host}}/fx/request/reject"
+      method: POST
+      headers:
+        - name: platform
+          value: WEB
+      body:
+        type: json
+        data: |-
+          {
+            "entityId" : "fd819e65-270e-4af4-bd9e-728cfd9723e4",
+            "workflowId" : "469b9d4a-afff-431f-ad64-c6be73bd7e4e",
+            "comment" : "Reject Rejection of TELLER"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 9698f91c354e52ec8c046f8c18d772f6
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "53"
+        - name: date
+          value: Thu, 25 Jun 2026 07:30:10 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "message": "Reject FX request successful"
+          }

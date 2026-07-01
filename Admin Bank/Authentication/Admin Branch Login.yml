@@ -16,9 +16,30 @@ http:
     data: |-
       {
         "branchId": 5, // 2 5
-        "tempToken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ7XCJpZFwiOlwiZTA4MjJhOTgtZDRhMC00ZWViLTg4ODEtYmExOGNkN2IwNTQxXCIsXCJ0b2tlblwiOm51bGwsXCJyZWZyZXNoVG9rZW5cIjpudWxsLFwiZGF0ZVwiOm51bGwsXCJpc090aGVyRGV2aWNlXCI6ZmFsc2UsXCJicmFuY2hlc1wiOltdLFwiZGF0YVwiOntcImlkXCI6XCJlMDgyMmE5OC1kNGEwLTRlZWItODg4MS1iYTE4Y2Q3YjA1NDFcIixcInVzZXJuYW1lXCI6XCJoc19tYWtlclwiLFwiY3VzdG9tZXJOYW1lXCI6bnVsbCxcInVzZXJBbGlhc1wiOm51bGwsXCJkYXlFeHBpcmVkU29vblwiOjM4NixcInN0YXR1c1wiOjIsXCJlbWFpbFwiOm51bGwsXCJsb2dpbkFjdGlvblwiOlwiTk9STUFMXCIsXCJicmFuY2hJZFwiOm51bGwsXCJpc0FkbWluXCI6ZmFsc2UsXCJyb2xlU3lzdGVtQ29kZVwiOlwiQkFOS19VU0VSXCIsXCJyb2xlSWRcIjpudWxsLFwicGVybWlzc2lvbnNcIjpbXSxcIm1hbmFnZW1lbnRCcmFuY2hcIjpudWxsLFwicGhvbmVOdW1iZXJcIjpudWxsLFwiZnVsbE5hbWVcIjpudWxsLFwiaXNIZWFkT2ZmaWNlXCI6bnVsbH19IiwiaWF0IjoxNzgwMDQ1NTUwLCJleHAiOjE3ODAwNDY0NTB9.u_S5nY-UlPc3SCF5vPSq3qB1o--Sg6BYseqpspdfj4Y"
+        "tempToken": "{{individual_admin_token}}"
       }
   auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        try {
+            const body = res.getBody();
+            const response = typeof body === "string"
+                ? JSON.parse(body)
+                : body;
+
+            if (response?.data?.token) {
+                bru.setEnvVar(
+                    "individual_admin_branch_token",
+                    response.data.token
+                );
+                console.log("individual_admin_branch_token updated");
+            }
+        } catch (e) {
+            console.log("Skip update individual_admin_branch_token:", e.message);
+        }
 
 settings:
   encodeUrl: false

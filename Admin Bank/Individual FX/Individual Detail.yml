@@ -1,0 +1,513 @@
+info:
+  name: Individual Detail
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/fx/individual/request/{{individual_fx_request_id}}"
+  headers:
+    - name: platform
+      value: WEB
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+runtime:
+  variables:
+    - name: requestId
+      value: 081258fa-e5fa-421a-b44f-4e4fad25255d
+    - name: individualRequestId
+      value: 14a23dc7-9968-418a-9119-0add8d6a236c
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260619
+    request:
+      url: "{{individual_admin_host}}/fx/corp/request/{{requestId}}"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: a0f4a8108011bd56f2fe9b8e93777745
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "5044"
+        - name: date
+          value: Fri, 19 Jun 2026 07:44:46 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": {
+              "amount": 1,
+              "authenticationMethod": "SOFT_OTP",
+              "branch": {
+                "address": "SO 2, TOA NHA 102 NGUYEN LUONG BANG, Q7 TP HO CHI MINH",
+                "code": "104",
+                "id": 15,
+                "name": "PHU MY HUNG BRANCH"
+              },
+              "branchCode": "104",
+              "ccy": "USD",
+              "cif": "1006912",
+              "createdAt": "2026-06-19T07:35:11.007938Z",
+              "createdBy": {
+                "id": "61c7f693-ff75-4abe-8e34-4c7d62f3c444",
+                "address": "97A NGUYEN VAN TROI",
+                "allowLoginInInternetBanking": false,
+                "birthDate": "1975-11-14T00:00",
+                "branch": {
+                  "address": "97A NGUYEN VAN TROI, PHUONG 12, QUAN PHU NHUAN TPHCM",
+                  "code": "100",
+                  "id": 3,
+                  "name": "BUSINESS CENTER"
+                },
+                "cifCore": "1006912",
+                "countLoginFail": 0,
+                "customerName": "NGUYEN NGOC CHAU MI",
+                "email": "neo.nguyen@alpaca.vn",
+                "emailReceived": "neo.nguyen@alpaca.vn",
+                "expiredDate": "2099-12-31",
+                "gender": "M",
+                "idNumber": "000000001231",
+                "idType": "PASSPORT",
+                "isActive": false,
+                "isReceivedEmail": false,
+                "isSendSMS": true,
+                "isStaff": false,
+                "isUseLoginBiometric": false,
+                "issueDate": "2022-11-22",
+                "issuePlace": "CCS",
+                "lastLogin": "2026-06-19T14:22:03.208352Z",
+                "loginAction": "NORMAL",
+                "mobileContact": "+84934733715",
+                "nationality": "Taiwan",
+                "oldStatus": 2,
+                "passport": "NM142805",
+                "registerChannel": "EMAIL",
+                "resident": false,
+                "status": 2,
+                "username": "0934733715"
+              },
+              "description": "b",
+              "feature": "FX_SELL_REQUEST",
+              "fxExchangeType": "LISTED",
+              "fxRequestType": "NEW_REQUEST",
+              "fxType": "SELL",
+              "id": "ae6895e5-0d24-4db5-ae65-8bb84dc7c4b4",
+              "isAdminProcessing": false,
+              "otp": "066212",
+              "purpose": "purpose_sell_6",
+              "purposeContent": [
+                {
+                  "createdAt": "2025-06-10T11:13:58.513082Z",
+                  "createdBy": "900ef1e2-e999-47cd-b48f-cac43c4973ed",
+                  "description": "Source of foreign currency",
+                  "id": "006112fb-0841-4ba7-8583-120a3834ce1c",
+                  "isActive": true,
+                  "key": "purpose_sell_6",
+                  "language": "vi",
+                  "masterKey": "fx_purpose_sell",
+                  "sort": 6,
+                  "updatedAt": "2025-06-10T11:13:58.513082Z",
+                  "updatedBy": "900ef1e2-e999-47cd-b48f-cac43c4973ed",
+                  "value": "Giải ngân vốn đầu tư gián tiếp (mua cổ phần, cổ phiếu, trái phiếu, chứng khoán khác)"
+                },
+                {
+                  "createdAt": "2025-06-10T11:13:58.513082Z",
+                  "createdBy": "900ef1e2-e999-47cd-b48f-cac43c4973ed",
+                  "description": "Source of foreign currency",
+                  "id": "29b7b2bc-c6bb-469c-afef-fb76bc35f928",
+                  "isActive": true,
+                  "key": "purpose_sell_6",
+                  "language": "en",
+                  "masterKey": "fx_purpose_sell",
+                  "sort": 6,
+                  "updatedAt": "2025-06-10T11:13:58.513082Z",
+                  "updatedBy": "900ef1e2-e999-47cd-b48f-cac43c4973ed",
+                  "value": "Indirect investment disbursement (purchase shares, stocks, bonds, other securities)"
+                }
+              ],
+              "requestRateDate": "2026-06-19T07:35:11.007938Z",
+              "requestRef": "20260619FEX143510984",
+              "requestedRate": 23954,
+              "retailRequestId": "ae6895e5-0d24-4db5-ae65-8bb84dc7c4b4",
+              "senderAccount": {
+                "accountBranchCode": "104",
+                "accountBranchName": "PHU MY HUNG BRANCH",
+                "accountClassCode": "CURRST",
+                "accountHolderName": "19IH J5TM K3IWO W44BN YWNA XM4X V64ODJ",
+                "accountNumber": "1017816-067",
+                "accountOpenDate": "2014-04-16T00:00",
+                "accountType": {
+                  "description": "Payment Account",
+                  "id": 1,
+                  "name": "CA"
+                },
+                "amount": 0,
+                "availableBalance": 50000,
+                "balance": 50000,
+                "bankCode": "502",
+                "branchCodeCif": "101",
+                "cardNo": 0.0,
+                "ccy": "USD",
+                "channel": "ATC",
+                "cifCore": "1017816",
+                "createdDate": "2025-07-11T16:57:21.510362",
+                "frozenBalance": 0,
+                "id": "e218bd49-222a-4302-b2f2-8bb19ee5eca9",
+                "interestMaturity": 0,
+                "interestRate": 0,
+                "isDefault": true,
+                "isFavorite": false,
+                "isMain": false,
+                "limitTransfer": 0,
+                "openingBalance": 0,
+                "outstandingBalance": 0,
+                "overdraftLimit": 0,
+                "status": "ACTIVE"
+              },
+              "senderAccountId": "e218bd49-222a-4302-b2f2-8bb19ee5eca9",
+              "status": "PROCESSING",
+              "toAccount": {
+                "accountBranchCode": "104",
+                "accountBranchName": "PHU MY HUNG BRANCH",
+                "accountNumber": "022FIS6831",
+                "accountType": {
+                  "description": "Custody Account",
+                  "id": 7,
+                  "name": "CO"
+                },
+                "amount": 0,
+                "availableBalance": 12794395,
+                "balance": 12794395,
+                "bankCode": "502",
+                "cardNo": 0.0,
+                "ccy": "VND",
+                "cifCore": "1017816",
+                "createdDate": "2025-07-11T17:46:32.053063",
+                "frozenBalance": 0,
+                "id": "eb29f0af-e16c-4132-9242-6222acbd0ae8",
+                "interestMaturity": 0,
+                "interestRate": 0,
+                "isDefault": false,
+                "isFavorite": false,
+                "isMain": false,
+                "limitTransfer": 0,
+                "openingBalance": 0,
+                "outstandingBalance": 0,
+                "overdraftLimit": 0
+              },
+              "toAccountId": "eb29f0af-e16c-4132-9242-6222acbd0ae8",
+              "toAmount": 23954,
+              "toCcy": "VND",
+              "traceId": "8e5779d1-be2b-4e05-aac2-fd4a584619d0",
+              "updatedBy": {
+                "id": "61c7f693-ff75-4abe-8e34-4c7d62f3c444",
+                "address": "97A NGUYEN VAN TROI",
+                "allowLoginInInternetBanking": false,
+                "birthDate": "1975-11-14T00:00",
+                "branch": {
+                  "address": "97A NGUYEN VAN TROI, PHUONG 12, QUAN PHU NHUAN TPHCM",
+                  "code": "100",
+                  "id": 3,
+                  "name": "BUSINESS CENTER"
+                },
+                "cifCore": "1006912",
+                "countLoginFail": 0,
+                "customerName": "NGUYEN NGOC CHAU MI",
+                "email": "neo.nguyen@alpaca.vn",
+                "emailReceived": "neo.nguyen@alpaca.vn",
+                "expiredDate": "2099-12-31",
+                "gender": "M",
+                "idNumber": "000000001231",
+                "idType": "PASSPORT",
+                "isActive": false,
+                "isReceivedEmail": false,
+                "isSendSMS": true,
+                "isStaff": false,
+                "isUseLoginBiometric": false,
+                "issueDate": "2022-11-22",
+                "issuePlace": "CCS",
+                "lastLogin": "2026-06-19T14:22:03.208352Z",
+                "loginAction": "NORMAL",
+                "mobileContact": "+84934733715",
+                "nationality": "Taiwan",
+                "oldStatus": 2,
+                "passport": "NM142805",
+                "registerChannel": "EMAIL",
+                "resident": false,
+                "status": 2,
+                "username": "0934733715"
+              },
+              "updatedDate": "2026-06-19T07:35:11.007938Z"
+            },
+            "message": "Get FX request successfully"
+          }
+  - name: TST 20260622
+    request:
+      url: "{{individual_admin_host}}/fx/individual/request/{{requestId}}"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 958de5c9e4002b30fceddbaad965d99a
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "4677"
+        - name: date
+          value: Mon, 22 Jun 2026 08:11:51 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": {
+              "amount": 100,
+              "authenticationMethod": "SOFT_OTP",
+              "branch": {
+                "address": "SO 2, TOA NHA 102 NGUYEN LUONG BANG, Q7 TP HO CHI MINH",
+                "id": 15,
+                "name": "PHU MY HUNG BRANCH"
+              },
+              "branchCode": "104",
+              "ccy": "USD",
+              "cif": "1006912",
+              "createdAt": "2026-06-22T07:48:57.939118Z",
+              "createdBy": {
+                "address": "97A NGUYEN VAN TROI",
+                "allowLoginInInternetBanking": false,
+                "birthDate": "1975-11-14T00:00",
+                "branch": {
+                  "address": "97A NGUYEN VAN TROI, PHUONG 12, QUAN PHU NHUAN TPHCM",
+                  "code": "100",
+                  "id": 3,
+                  "name": "BUSINESS CENTER"
+                },
+                "cifCore": "1006912",
+                "countLoginFail": 0,
+                "customerName": "NGUYEN NGOC CHAU MI",
+                "email": "neo.nguyen@alpaca.vn",
+                "emailReceived": "neo.nguyen@alpaca.vn",
+                "expiredDate": "2099-12-31",
+                "gender": "M",
+                "id": "61c7f693-ff75-4abe-8e34-4c7d62f3c444",
+                "idNumber": "000000001231",
+                "idType": "PASSPORT",
+                "isActive": false,
+                "isReceivedEmail": false,
+                "isSendSMS": true,
+                "isStaff": false,
+                "isUseLoginBiometric": false,
+                "issueDate": "2022-11-22",
+                "issuePlace": "CCS",
+                "lastLogin": "2026-06-22T14:41:46.437901Z",
+                "loginAction": "NORMAL",
+                "mobileContact": "+84934733715",
+                "nationality": "Taiwan",
+                "oldStatus": 2,
+                "passport": "NM142805",
+                "registerChannel": "EMAIL",
+                "resident": false,
+                "status": 2,
+                "username": "0934733715"
+              },
+              "description": "123",
+              "feature": "FX_SELL_REQUEST",
+              "fxExchangeType": "LISTED",
+              "fxRequestType": "NEW_REQUEST",
+              "fxType": "SELL",
+              "id": "081258fa-e5fa-421a-b44f-4e4fad25255d",
+              "isAdminProcessing": false,
+              "isPending": false,
+              "otp": "683043",
+              "purpose": "purpose_sell_2",
+              "purposeContent": [
+                {
+                  "createdAt": "2025-06-10T11:13:58.513082Z",
+                  "createdBy": "900ef1e2-e999-47cd-b48f-cac43c4973ed",
+                  "description": "Source of foreign currency",
+                  "id": "f8cde891-7944-4f04-a185-313737fd4e58",
+                  "isActive": true,
+                  "key": "purpose_sell_2",
+                  "language": "vi",
+                  "masterKey": "fx_purpose_sell",
+                  "sort": 2,
+                  "updatedAt": "2025-06-10T11:13:58.513082Z",
+                  "updatedBy": "900ef1e2-e999-47cd-b48f-cac43c4973ed",
+                  "value": "Từ xuất khẩu dịch vụ (vận tải, viễn thông, du lịch, tài chính …)"
+                },
+                {
+                  "createdAt": "2025-06-10T11:13:58.513082Z",
+                  "createdBy": "900ef1e2-e999-47cd-b48f-cac43c4973ed",
+                  "description": "Source of foreign currency",
+                  "id": "74aab5ab-6286-4c09-bf69-342288ff7066",
+                  "isActive": true,
+                  "key": "purpose_sell_2",
+                  "language": "en",
+                  "masterKey": "fx_purpose_sell",
+                  "sort": 2,
+                  "updatedAt": "2025-06-10T11:13:58.513082Z",
+                  "updatedBy": "900ef1e2-e999-47cd-b48f-cac43c4973ed",
+                  "value": "From exporting services (transportation, telecommunication, tourism, financial service,…)"
+                }
+              ],
+              "requestRateDate": "2026-06-22T07:48:57.939118Z",
+              "requestRef": "20260622FEX144857322",
+              "requestedRate": 23954,
+              "retailRequestId": "081258fa-e5fa-421a-b44f-4e4fad25255d",
+              "senderAccount": {
+                "accountBranchCode": "104",
+                "accountHolderName": "19IH J5TM K3IWO W44BN YWNA XM4X V64ODJ",
+                "accountNumber": "1017816-067",
+                "accountType": {
+                  "description": "Payment Account",
+                  "id": 1,
+                  "name": "CA"
+                },
+                "availableBalance": 50000.0,
+                "balance": 50000.0,
+                "bankCode": "502",
+                "cardNo": 0.0,
+                "ccy": "USD",
+                "createdDate": "2025-07-11T16:57:21.510362",
+                "frozenBalance": 0.0,
+                "id": "e218bd49-222a-4302-b2f2-8bb19ee5eca9",
+                "isFavorite": false,
+                "isMain": false,
+                "limitTransfer": 0.0,
+                "openingBalance": 0.0,
+                "overdraftLimit": 0.0,
+                "subAccounts": []
+              },
+              "senderAccountId": "e218bd49-222a-4302-b2f2-8bb19ee5eca9",
+              "status": "PROCESSING",
+              "toAccount": {
+                "accountBranchCode": "104",
+                "accountNumber": "022FIS6831",
+                "accountType": {
+                  "description": "Custody Account",
+                  "id": 7,
+                  "name": "CO"
+                },
+                "availableBalance": 1.2794395E7,
+                "balance": 1.2794395E7,
+                "bankCode": "502",
+                "cardNo": 0.0,
+                "ccy": "VND",
+                "createdDate": "2025-07-11T17:46:32.053063",
+                "frozenBalance": 0.0,
+                "id": "eb29f0af-e16c-4132-9242-6222acbd0ae8",
+                "isFavorite": false,
+                "isMain": false,
+                "limitTransfer": 0.0,
+                "openingBalance": 0.0,
+                "overdraftLimit": 0.0,
+                "subAccounts": []
+              },
+              "toAccountId": "eb29f0af-e16c-4132-9242-6222acbd0ae8",
+              "toAmount": 2395400,
+              "toCcy": "VND",
+              "traceId": "d94bc4a6-7e5f-460b-a2eb-1719c1c77423",
+              "updatedBy": {
+                "address": "97A NGUYEN VAN TROI",
+                "allowLoginInInternetBanking": false,
+                "birthDate": "1975-11-14T00:00",
+                "branch": {
+                  "address": "97A NGUYEN VAN TROI, PHUONG 12, QUAN PHU NHUAN TPHCM",
+                  "code": "100",
+                  "id": 3,
+                  "name": "BUSINESS CENTER"
+                },
+                "cifCore": "1006912",
+                "countLoginFail": 0,
+                "customerName": "NGUYEN NGOC CHAU MI",
+                "email": "neo.nguyen@alpaca.vn",
+                "emailReceived": "neo.nguyen@alpaca.vn",
+                "expiredDate": "2099-12-31",
+                "gender": "M",
+                "id": "61c7f693-ff75-4abe-8e34-4c7d62f3c444",
+                "idNumber": "000000001231",
+                "idType": "PASSPORT",
+                "isActive": false,
+                "isReceivedEmail": false,
+                "isSendSMS": true,
+                "isStaff": false,
+                "isUseLoginBiometric": false,
+                "issueDate": "2022-11-22",
+                "issuePlace": "CCS",
+                "lastLogin": "2026-06-22T14:41:46.437901Z",
+                "loginAction": "NORMAL",
+                "mobileContact": "+84934733715",
+                "nationality": "Taiwan",
+                "oldStatus": 2,
+                "passport": "NM142805",
+                "registerChannel": "EMAIL",
+                "resident": false,
+                "status": 2,
+                "username": "0934733715"
+              },
+              "updatedDate": "2026-06-22T07:48:57.939118Z"
+            },
+            "message": "Get FX request successfully"
+          }
