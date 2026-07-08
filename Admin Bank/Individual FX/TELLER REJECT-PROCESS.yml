@@ -1,0 +1,174 @@
+info:
+  name: TELLER REJECT/PROCESS
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{individual_admin_host}}/fx/request"
+  headers:
+    - name: platform
+      value: WEB
+  body:
+    type: json
+    data: |-
+      {
+          "individualRequestId": "14a23dc7-9968-418a-9119-0add8d6a236c",
+          "requestType": "REJECTION_REQUEST",
+          "reason": "TEST"
+      }
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+runtime:
+  variables:
+    - name: requestId
+      value: 081258fa-e5fa-421a-b44f-4e4fad25255d
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260623
+    request:
+      url: "{{individual_admin_host}}/fx/request"
+      method: POST
+      headers:
+        - name: platform
+          value: WEB
+      body:
+        type: json
+        data: |-
+          {
+              "individualRequestId": "081258fa-e5fa-421a-b44f-4e4fad25255d",
+              "requestType": "REJECTION_REQUEST",
+              "reason": "TEST"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 46cb6cfa839ca6ad8bda930ee3d4af88
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "2573"
+        - name: date
+          value: Tue, 23 Jun 2026 06:43:48 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": {
+              "amount": 100,
+              "approvalWorkflowId": "469b9d4a-afff-431f-ad64-c6be73bd7e4e",
+              "authenticationMethod": "SOFT_OTP",
+              "ccy": "USD",
+              "cifCore": "1006912",
+              "createdDate": "2026-06-23T06:43:36.460071Z",
+              "customerName": "NGUYEN NGOC CHAU MI",
+              "description": "123",
+              "feature": "INDIVIDUAL_FX_SELL_REQUEST",
+              "fxExchangeType": "LISTED",
+              "fxRequestType": "NEW_REQUEST",
+              "fxType": "SELL",
+              "id": "fd819e65-270e-4af4-bd9e-728cfd9723e4",
+              "individualCreatedById": "61c7f693-ff75-4abe-8e34-4c7d62f3c444",
+              "individualCreatedDate": "2026-06-22T07:48:57.939118Z",
+              "individualRequestId": "081258fa-e5fa-421a-b44f-4e4fad25255d",
+              "isAdminProcessing": true,
+              "isBiometric": false,
+              "maker": {
+                "id": "e0822a98-d4a0-4eeb-8881-ba18cd7b0541",
+                "dayExpiredSoon": 361,
+                "email": "lien.truong@tpisoftware.com",
+                "fullName": "Teller Name",
+                "managementBranch": {
+                  "address": "88 HAI BA TRUNG HANOI",
+                  "branchCode": "120",
+                  "branchType": "BRANCH",
+                  "createdBy": "admin",
+                  "createdDate": "2025-07-10T11:07:34.946306Z",
+                  "description": "Branch Migrated by null at 2025-07-10T11:07:34.856572",
+                  "id": 7,
+                  "ivbCode": "120",
+                  "name": "HANOI BRANCH",
+                  "priority": 15,
+                  "status": "ACTIVE",
+                  "updatedDate": "2026-01-15T10:24:50.576371Z"
+                },
+                "permissions": [],
+                "phoneNumber": "5786787545345234",
+                "status": 2,
+                "userAlias": "s",
+                "username": "hs_maker"
+              },
+              "purpose": "purpose_sell_2",
+              "reason": "TEST",
+              "receivedBranch": {
+                "address": "97A NGUYEN VAN TROI, PHUONG 12, QUAN PHU NHUAN TPHCM",
+                "branchCode": "100",
+                "branchType": "BRANCH",
+                "createdBy": "admin",
+                "createdDate": "2025-07-10T11:07:34.920559Z",
+                "description": "Branch Migrated by null at 2025-07-10T11:07:34.856561",
+                "id": 5,
+                "ivbCode": "100",
+                "name": "BUSINESS CENTER",
+                "priority": 35,
+                "status": "ACTIVE",
+                "updatedDate": "2026-01-15T10:24:50.575392Z"
+              },
+              "requestRateDate": "2026-06-22T07:48:57.939118Z",
+              "requestRef": "20260622FEX144857322",
+              "requestType": "REJECTION_REQUEST",
+              "requestedBranch": {
+                "address": "SO 2, TOA NHA 102 NGUYEN LUONG BANG, Q7 TP HO CHI MINH",
+                "branchCode": "104",
+                "branchType": "BRANCH",
+                "createdBy": "admin",
+                "createdDate": "2025-07-10T11:07:35.095433Z",
+                "description": "Branch Migrated by null at 2025-07-10T11:07:34.856629",
+                "id": 17,
+                "ivbCode": "104",
+                "name": "PHU MY HUNG BRANCH",
+                "priority": 31,
+                "status": "ACTIVE",
+                "updatedBy": "CORPORATE_SYSTEM",
+                "updatedDate": "2026-01-15T10:24:50.578463Z"
+              },
+              "requestedRate": 23954,
+              "senderAccountId": "e218bd49-222a-4302-b2f2-8bb19ee5eca9",
+              "senderAccountNumber": "1017816-067",
+              "status": "PENDING",
+              "toAccountId": "eb29f0af-e16c-4132-9242-6222acbd0ae8",
+              "toAccountNumber": "022FIS6831",
+              "toAmount": 2395400,
+              "toCcy": "VND",
+              "traceId": "d94bc4a6-7e5f-460b-a2eb-1719c1c77423",
+              "updatedDate": "2026-06-23T06:43:36.46009Z"
+            },
+            "message": "Request new FX successful"
+          }

@@ -1,0 +1,23 @@
+info:
+  name: Email Reminder
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{individual_admin_host}}/fx/email-reminder"
+  headers:
+    - name: platform
+      value: WEB
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

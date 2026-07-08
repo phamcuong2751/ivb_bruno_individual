@@ -1,10 +1,10 @@
 info:
-  name: GET list
+  name: create
   type: http
-  seq: 2
+  seq: 1
 
 http:
-  method: GET
+  method: POST
   url: "{{individual_host}}/fx-services/fx/request"
   headers:
     - name: Language
@@ -35,6 +35,25 @@ http:
       value: application/json, text/plain, */*
     - name: Platform
       value: WEB
+  body:
+    type: json
+    data: |-
+      {
+          "fxType": "SELL",
+          "fxRequestType": "NEW_REQUEST",
+          "senderAccountId": "e218bd49-222a-4302-b2f2-8bb19ee5eca9",
+          "fromCcy": "USD",
+          "toAccountId":"f016b743-d73c-4481-9487-61f88c83c9a5",
+          "toCcy": "VND",
+          "amount": 500,
+          "toAmount": 12082500,
+          "requestedRate": 24165,
+          "fxExchangeType": "NEGOTIATED",
+          "purpose": "purpose_sell_1",
+          "description": "Ban 500.00 USD",
+          "authenticationMethod": "SMS_OTP",
+          "otp" : 832094
+      }
   auth:
     type: bearer
     token: "{{individual_token}}"

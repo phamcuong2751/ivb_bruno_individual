@@ -21,7 +21,12 @@ http:
     type: json
     data: |
       {
+          "data": "Aa@123123" // Aa@123123 Aa@123321 2zk@RSk0 Bb@123123 olrH##1l Nm6969696969!
+<<<<<<< .mine
           "data": "Nm6969696969!" // Aa@123123 Aa@123321 2zk@RSk0 Bb@123123 olrH##1 l Nm6969696969!
+=======
+          "data": "Pp@123123" // Aa@123321 2zk@RSk0
+>>>>>>> .theirs
       }
   auth: inherit
 

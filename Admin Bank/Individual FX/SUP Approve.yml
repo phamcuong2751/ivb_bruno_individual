@@ -1,0 +1,85 @@
+info:
+  name: SUP Approve
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{individual_admin_host}}/fx/request/approve"
+  headers:
+    - name: platform
+      value: WEB
+  body:
+    type: json
+    data: |-
+      {
+        "entityId" : "9e3c9800-0d75-410b-90e2-e02fe1c011e3",
+        "workflowId" : "eef6370b-96f3-4a81-b24a-49cc45c9b94c",
+        "comment" : "Approve Rejection of TELLER"
+      }
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+runtime:
+  variables:
+    - name: id
+      value: 2ce5b72d-6ea6-49bb-ab52-169851ff4995
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260625
+    request:
+      url: "{{individual_admin_host}}/fx/request/approve"
+      method: POST
+      headers:
+        - name: platform
+          value: WEB
+      body:
+        type: json
+        data: |-
+          {
+            "entityId" : "9e3c9800-0d75-410b-90e2-e02fe1c011e3",
+            "workflowId" : "eef6370b-96f3-4a81-b24a-49cc45c9b94c",
+            "comment" : "Approve Rejection of TELLER"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 0c0ef82a5314adc8b462044aa03ec59b
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "54"
+        - name: date
+          value: Thu, 25 Jun 2026 07:25:02 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "message": "Approve FX request successful"
+          }

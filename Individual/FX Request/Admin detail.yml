@@ -1,0 +1,328 @@
+info:
+  name: Admin detail
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{individual_host}}/fx-services/admin-fx/request/{{requestId}}"
+  headers:
+    - name: Language
+      value: vi
+    - name: X-Request-Id
+      value: 91d7c3f5-eab5-417d-975b-21da4f8dcaba
+    - name: Cache-Control
+      value: no-cache
+      disabled: true
+    - name: X-Request-Timestamp
+      value: "1778645804159"
+    - name: Referer
+      value: http://localhost:3000/auth/login
+    - name: X-Checksum
+      value: e168cf0a86ea54eb473c8152c25842f581d3448a717ea6e53d3606a5da2d5ad9
+      disabled: true
+    - name: Pragma
+      value: no-cache
+    - name: sec-ch-ua
+      value: '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+    - name: User-Agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Platform
+      value: WEB
+  auth:
+    type: bearer
+    token: "{{individual_token}}"
+
+runtime:
+  variables:
+    - name: requestId
+      value: 507b1f0c-6018-44ef-808f-8de0751abb6c
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260619
+    request:
+      url: "{{individual_host}}/fx-services/admin-fx/request/{{requestId}}"
+      method: GET
+      headers:
+        - name: Language
+          value: vi
+        - name: X-Request-Id
+          value: 91d7c3f5-eab5-417d-975b-21da4f8dcaba
+        - name: Cache-Control
+          value: no-cache
+          disabled: true
+        - name: X-Request-Timestamp
+          value: "1778645804159"
+        - name: Referer
+          value: http://localhost:3000/auth/login
+        - name: X-Checksum
+          value: e168cf0a86ea54eb473c8152c25842f581d3448a717ea6e53d3606a5da2d5ad9
+          disabled: true
+        - name: Pragma
+          value: no-cache
+        - name: sec-ch-ua
+          value: '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"'
+        - name: sec-ch-ua-mobile
+          value: ?0
+        - name: sec-ch-ua-platform
+          value: '"macOS"'
+        - name: User-Agent
+          value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+        - name: Accept
+          value: application/json, text/plain, */*
+        - name: Platform
+          value: WEB
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: transfer-encoding
+          value: chunked
+        - name: vary
+          value: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+        - name: x-request-id
+          value: dcd1422e-984d-4fdc-b97c-6c8b9de8770f
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: strict-transport-security
+          value: max-age=31536000 ; includeSubDomains
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: date
+          value: Fri, 19 Jun 2026 06:42:11 GMT
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": {
+              "amount": 10,
+              "authenticationMethod": "SMS_OTP",
+              "branch": {
+                "address": "SO 2, TOA NHA 102 NGUYEN LUONG BANG, Q7 TP HO CHI MINH",
+                "code": "104",
+                "id": 15,
+                "name": "PHU MY HUNG BRANCH"
+              },
+              "branchCode": "104",
+              "ccy": "USD",
+              "cif": "5026869",
+              "createdAt": "2026-06-17T03:15:25.417739Z",
+              "createdBy": {
+                "id": "03575791-e968-4a11-adf8-2ae110b12369",
+                "address": "97A NGUYEN VAN TROI PHU NHUAN W HCM",
+                "allowLoginInInternetBanking": false,
+                "birthDate": "1999-07-01T00:00",
+                "branch": {
+                  "address": "97A NGUYEN VAN TROI, PHUONG 12, QUAN PHU NHUAN TPHCM",
+                  "code": "100",
+                  "id": 3,
+                  "name": "BUSINESS CENTER"
+                },
+                "cifCore": "5026869",
+                "countLoginFail": 0,
+                "customerName": "PHAM XUAN HAU",
+                "email": "hau.pham@tpisoftware.com",
+                "emailReceived": "hau.pham@tpisoftware.com",
+                "expiredDate": "2099-12-31",
+                "idNumber": "051097011909",
+                "idType": "CCCD",
+                "isActive": false,
+                "isReceivedEmail": false,
+                "isSendSMS": true,
+                "isStaff": false,
+                "isUseLoginBiometric": false,
+                "issueDate": "2015-01-05",
+                "issuePlace": "CCS",
+                "lastLogin": "2026-06-19T13:41:38.974424Z",
+                "loginAction": "NORMAL",
+                "mobileContact": "+84373331451",
+                "nationality": "Vietnam",
+                "oldStatus": 2,
+                "registerChannel": "SMS",
+                "resident": true,
+                "status": 2,
+                "unlockTime": "2026-05-28T15:27:42.259732Z",
+                "username": "0373331451"
+              },
+              "description": "Ban 10.00 USD",
+              "feature": "FX_SELL_REQUEST",
+              "fxExchangeType": "LISTED",
+              "fxRequestType": "NEW_REQUEST",
+              "fxType": "SELL",
+              "id": "507b1f0c-6018-44ef-808f-8de0751abb6c",
+              "isAdminProcessing": false,
+              "otp": "696969",
+              "purpose": "purpose_sell_1",
+              "purposeContent": [
+                {
+                  "createdAt": "2025-06-10T11:13:58.513082Z",
+                  "createdBy": "900ef1e2-e999-47cd-b48f-cac43c4973ed",
+                  "description": "Source of foreign currency",
+                  "id": "8f24c3b6-ded6-4b9f-bd7f-8adbf7269d41",
+                  "isActive": true,
+                  "key": "purpose_sell_1",
+                  "language": "vi",
+                  "masterKey": "fx_purpose_sell",
+                  "sort": 1,
+                  "updatedAt": "2025-06-10T11:13:58.513082Z",
+                  "updatedBy": "900ef1e2-e999-47cd-b48f-cac43c4973ed",
+                  "value": "Từ xuất khẩu hàng hóa (gồm dịch vụ gắn liền)"
+                },
+                {
+                  "createdAt": "2025-06-10T11:13:58.513082Z",
+                  "createdBy": "900ef1e2-e999-47cd-b48f-cac43c4973ed",
+                  "description": "Source of foreign currency",
+                  "id": "a62f9919-9578-416b-ad6b-c1f71054f13d",
+                  "isActive": true,
+                  "key": "purpose_sell_1",
+                  "language": "en",
+                  "masterKey": "fx_purpose_sell",
+                  "sort": 1,
+                  "updatedAt": "2025-06-10T11:13:58.513082Z",
+                  "updatedBy": "900ef1e2-e999-47cd-b48f-cac43c4973ed",
+                  "value": "From exporting goods (include services attached)"
+                }
+              ],
+              "requestRateDate": "2026-06-17T03:15:25.412693Z",
+              "requestRef": "20260617FEX101524908",
+              "requestedRate": 24460,
+              "retailRequestId": "507b1f0c-6018-44ef-808f-8de0751abb6c",
+              "senderAccount": {
+                "accountBranchCode": "104",
+                "accountBranchName": "PHU MY HUNG BRANCH",
+                "accountClassCode": "CURRST",
+                "accountHolderName": "19IH J5TM K3IWO W44BN YWNA XM4X V64ODJ",
+                "accountNumber": "1017816-067",
+                "accountOpenDate": "2014-04-16T00:00",
+                "accountType": {
+                  "description": "Payment Account",
+                  "id": 1,
+                  "name": "CA"
+                },
+                "amount": 0,
+                "availableBalance": 50000,
+                "balance": 50000,
+                "bankCode": "502",
+                "branchCodeCif": "101",
+                "cardNo": 0.0,
+                "ccy": "USD",
+                "channel": "ATC",
+                "cifCore": "1017816",
+                "createdDate": "2025-07-11T16:57:21.510362",
+                "frozenBalance": 0,
+                "id": "e218bd49-222a-4302-b2f2-8bb19ee5eca9",
+                "interestMaturity": 0,
+                "interestRate": 0,
+                "isDefault": true,
+                "isFavorite": false,
+                "isMain": false,
+                "limitTransfer": 0,
+                "openingBalance": 0,
+                "outstandingBalance": 0,
+                "overdraftLimit": 0,
+                "status": "ACTIVE"
+              },
+              "senderAccountId": "e218bd49-222a-4302-b2f2-8bb19ee5eca9",
+              "status": "PROCESSING",
+              "toAccount": {
+                "accountBranchCode": "100",
+                "accountBranchName": "BUSINESS CENTER",
+                "accountClassCode": "CURORI",
+                "accountHolderName": "R30T97UDI",
+                "accountNumber": "1015663-057",
+                "accountOpenDate": "2018-08-10T00:00",
+                "accountType": {
+                  "description": "Payment Account",
+                  "id": 1,
+                  "name": "CA"
+                },
+                "amount": 0,
+                "availableBalance": 1004860991,
+                "balance": 1004860991,
+                "bankCode": "502",
+                "branchCodeCif": "101",
+                "cardNo": 0.0,
+                "ccy": "VND",
+                "channel": "ATC",
+                "cifCore": "1015663",
+                "createdDate": "2026-05-26T13:26:38.116231",
+                "frozenBalance": 0,
+                "id": "7aab175d-74c9-4d40-a53f-346216a063f9",
+                "interestRate": 1,
+                "isDefault": false,
+                "isFavorite": false,
+                "isMain": false,
+                "limitTransfer": 0,
+                "openingBalance": 0,
+                "outstandingBalance": 0,
+                "overdraftLimit": 0,
+                "status": "ACTIVE"
+              },
+              "toAccountId": "7aab175d-74c9-4d40-a53f-346216a063f9",
+              "toAmount": 244600,
+              "toCcy": "VND",
+              "traceId": "d843ebf3-14d5-4e93-8375-6ef71a87c56e",
+              "updatedBy": {
+                "id": "03575791-e968-4a11-adf8-2ae110b12369",
+                "address": "97A NGUYEN VAN TROI PHU NHUAN W HCM",
+                "allowLoginInInternetBanking": false,
+                "birthDate": "1999-07-01T00:00",
+                "branch": {
+                  "address": "97A NGUYEN VAN TROI, PHUONG 12, QUAN PHU NHUAN TPHCM",
+                  "code": "100",
+                  "id": 3,
+                  "name": "BUSINESS CENTER"
+                },
+                "cifCore": "5026869",
+                "countLoginFail": 0,
+                "customerName": "PHAM XUAN HAU",
+                "email": "hau.pham@tpisoftware.com",
+                "emailReceived": "hau.pham@tpisoftware.com",
+                "expiredDate": "2099-12-31",
+                "idNumber": "051097011909",
+                "idType": "CCCD",
+                "isActive": false,
+                "isReceivedEmail": false,
+                "isSendSMS": true,
+                "isStaff": false,
+                "isUseLoginBiometric": false,
+                "issueDate": "2015-01-05",
+                "issuePlace": "CCS",
+                "lastLogin": "2026-06-19T13:41:38.974424Z",
+                "loginAction": "NORMAL",
+                "mobileContact": "+84373331451",
+                "nationality": "Vietnam",
+                "oldStatus": 2,
+                "registerChannel": "SMS",
+                "resident": true,
+                "status": 2,
+                "unlockTime": "2026-05-28T15:27:42.259732Z",
+                "username": "0373331451"
+              },
+              "updatedDate": "2026-06-17T03:15:25.417739Z"
+            },
+            "message": "Get FX request successfully"
+          }
