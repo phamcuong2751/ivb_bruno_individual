@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-beneficiary?pageSize=10&numPage=0"
+  url: "{{individual_admin_host}}/individual-beneficiary?pageSize=10&numPage=0&cif=1017816"
   headers:
     - name: platform
       value: WEB
@@ -17,6 +17,9 @@ http:
       type: query
     - name: numPage
       value: "0"
+      type: query
+    - name: cif
+      value: "1017816"
       type: query
   body:
     type: json

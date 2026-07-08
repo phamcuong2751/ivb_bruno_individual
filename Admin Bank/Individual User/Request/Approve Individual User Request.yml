@@ -15,8 +15,8 @@ http:
     type: json
     data: |
       {
-        "entityId": "dec02381-e2ab-40ee-9308-3fbd3a18f7d7",
-        "workflowId": "2891695c-b432-4653-880f-b10f489b459c",
+        "entityId": "e5a77ea2-8ded-47bf-bd30-8e8f5435fcf5",
+        "workflowId": "870c298f-5adb-481c-9fb0-aa91c51bc5c9",
         "comment": "Approved"
       }
 

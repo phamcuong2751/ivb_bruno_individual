@@ -1,11 +1,11 @@
 info:
-  name: Request Delete TT77 Config
+  name: Reject TT77 Config Request
   type: http
-  seq: 8
+  seq: 7
 
 http:
   method: post
-  url: "{{individual_admin_host}}/tt77-request"
+  url: "{{individual_admin_host}}/tt77-request/reject"
   headers:
     - name: platform
       value: WEB
@@ -13,12 +13,11 @@ http:
       value: Bearer {{individual_admin_token}}
   body:
     type: json
-    data: |-
+    data: |
       {
-        "requestType": "DELETE",
-        "entityId": "3ffdf22f-4abf-4ee8-abd9-954133753933",
-        "requestDetails": null,
-        "reason": "Xóa để test"
+        "entityId": "dd1154d7-93ae-40ed-8b40-7d28d36b789f",
+        "workflowId": "5026bbff-bc7a-43ba-8ff8-4ac897f2c844",
+        "comment": "Approved"
       }
 
 settings:

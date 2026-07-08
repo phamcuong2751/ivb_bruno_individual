@@ -1,7 +1,7 @@
 info:
   name: Request Close TT77 Config
   type: http
-  seq: 7
+  seq: 6
 
 http:
   method: post
@@ -16,7 +16,6 @@ http:
     data: |-
       {
         "requestType": "CLOSE",
-        "entityId": "3ffdf22f-4abf-4ee8-abd9-954133753933",
         "requestDetails": null,
         "reason": "Đóng để test"
       }

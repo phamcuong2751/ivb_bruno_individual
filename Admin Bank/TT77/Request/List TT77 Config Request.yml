@@ -1,7 +1,7 @@
 info:
   name: List TT77 Config Request
   type: http
-  seq: 6
+  seq: 1
 
 http:
   method: GET

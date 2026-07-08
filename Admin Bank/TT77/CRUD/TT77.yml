@@ -1,11 +1,11 @@
 info:
-  name: TT77 History Details
+  name: TT77
   type: http
-  seq: 5
+  seq: 2
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/tt77/history/2"
+  url: "{{individual_admin_host}}/tt77"
   headers:
     - name: platform
       value: WEB

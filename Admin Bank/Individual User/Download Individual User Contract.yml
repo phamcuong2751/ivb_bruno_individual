@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-user/9f665bba-13d6-441d-823d-eb9d56fa0639/download-contract"
+  url: "{{individual_admin_host}}/individual-user/04e9ef71-22d1-477b-8b96-e83bc617b859/download-contract"
   headers:
     - name: platform
       value: WEB

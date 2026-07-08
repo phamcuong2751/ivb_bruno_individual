@@ -1,0 +1,50 @@
+info:
+  name: List Individual Management Request
+  type: http
+  seq: 13
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/individual-management-request?pageSize=10&numPage=0&status=PENDING&fromCreatedDate=2026-07-01T17:00:00.000Z&toCreatedDate=2026-07-04T16:59:59.999Z"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  params:
+    - name: pageSize
+      value: "10"
+      type: query
+    - name: numPage
+      value: "0"
+      type: query
+    - name: searchRequest
+      value: 2GG
+      type: query
+      disabled: true
+    - name: status
+      value: PENDING
+      type: query
+    - name: fromCreatedDate
+      value: 2026-07-01T17:00:00.000Z
+      type: query
+    - name: toCreatedDate
+      value: 2026-07-04T16:59:59.999Z
+      type: query
+    - name: fromCreatedDate
+      value: 2026-06-15T02:50:04.597665Z
+      type: query
+      disabled: true
+    - name: toCreatedDate
+      value: 2026-06-15T07:28:45.191971Z
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: ""
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

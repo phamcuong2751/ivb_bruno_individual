@@ -26,6 +26,8 @@ http:
             "nationality": "VIETNAM",
             "currency": "VND",
             "limitPercentage": 75,
+            "dailyLimitAmount": 200000000,
+            "monthlyLimitAmount": 2000000000,
             "features": [
               {
                 "featureKey": "NAPAS247"

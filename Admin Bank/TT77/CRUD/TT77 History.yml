@@ -1,11 +1,11 @@
 info:
-  name: TT77 Config Details With History
+  name: TT77 History
   type: http
-  seq: 3
+  seq: 1
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/tt77/configs/db7b9420-94f7-4095-92f7-629b8f005228/detail"
+  url: "{{individual_admin_host}}/tt77/history"
   headers:
     - name: platform
       value: WEB

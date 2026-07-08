@@ -1,7 +1,7 @@
 info:
   name: Approve TT77 Config Request
   type: http
-  seq: 3
+  seq: 4
 
 http:
   method: post
@@ -15,8 +15,8 @@ http:
     type: json
     data: |
       {
-        "entityId": "25678965-2637-4224-89c3-e52713ff6bc0",
-        "workflowId": "6c40bc12-5f92-4204-bbc8-20fc34161368",
+        "entityId": "2a35ec16-9473-4bf9-8092-301b6934345b",
+        "workflowId": "56263f1c-abf2-449f-b3f0-f1a5a2345fc8",
         "comment": "Approved"
       }
 

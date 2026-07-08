@@ -16,7 +16,7 @@ http:
     data: |-
       {
         "cifCore": "2029734",
-        "userId": "e358fe12-440a-44f3-a200-8b8b08620281",
+        "userId": "adb23845-865c-4add-a06f-7608e45a3894",
         "branchCode": "121",
         "branchName": "DONG DA BRANCH",
         "customerName": "76 9HK 2A80O",
@@ -25,7 +25,9 @@ http:
         "passwordDelivery": "EMAIL",
         "defaultAccount": "8aac2864-c3ea-4317-b60c-c46f29faee58",
         "reason": "Request Update Individual User",
-        "requestType": "UPDATE"
+        "requestType": "UPDATE",
+        "limitPackageId": "73f6ef3b-e5e0-4ba9-8a16-320a439ac9ac", // 5ad4a273-3f7a-4c81-b6ec-dd597fe253b8 73f6ef3b-e5e0-4ba9-8a16-320a439ac9ac
+        "tabType": "INFORMATION"
       }
 
 settings:

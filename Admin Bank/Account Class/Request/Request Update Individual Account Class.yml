@@ -15,11 +15,11 @@ http:
     type: json
     data: |-
       {
-        "accountClassId": "b7693550-a699-46d8-9441-c661abe97b13", // 4405828e-4cf5-4fde-9de5-fc76dbd156ee b7693550-a699-46d8-9441-c661abe97b13
+        "accountClassId": "e7ed6f10-3f28-4acf-8754-65112bea6ee9",
         "requestType": "UPDATE",
-        "name": "CURROF", // CURROF testka-123
+        "name": "CURROF",
         "description": "CURROF description",
-        "code": "testka-123", // CURROF testka-123
+        "code": "CURROF",
         "isCreateUser": false,
         "accountClassConfigs": [
           {
@@ -27,6 +27,8 @@ http:
             "nationality": "VIETNAM",
             "currency": "VND",
             "limitPercentage": 75,
+            "dailyLimitAmount": 200000000,
+            "monthlyLimitAmount": 2000000000,
             "features": [
               {
                 "featureKey": "NAPAS247"
@@ -41,6 +43,8 @@ http:
             "nationality": "VIETNAM",
             "currency": "VND",
             "limitPercentage": 75,
+            "dailyLimitAmount": 300000000,
+            "monthlyLimitAmount": 3000000000,
             "features": [
               {
                 "featureKey": "PAYROLL_PAYMENT"

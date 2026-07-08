@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-account-class/search?pageSize=10&numPage=0&searchRequest=testka-123"
+  url: "{{individual_admin_host}}/individual-account-class/search?pageSize=10&numPage=0"
   headers:
     - name: platform
       value: WEB
@@ -25,6 +25,7 @@ http:
     - name: searchRequest
       value: testka-123
       type: query
+      disabled: true
     - name: currency
       value: VND
       type: query
