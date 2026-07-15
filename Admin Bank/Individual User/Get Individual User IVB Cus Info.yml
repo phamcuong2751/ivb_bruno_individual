@@ -10,12 +10,12 @@ http:
     - name: platform
       value: WEB
     - name: Authorization
-      value: Bearer {{individual_admin_token}}
+      value: Bearer {{individual_admin_branch_token}}
   body:
     type: json
     data: |-
       {
-        "cifCore": "2029734" // 2003463 2029734
+        "cifCore": "1031757" // 2003463 2029734 1031757
       }
 
 settings:
