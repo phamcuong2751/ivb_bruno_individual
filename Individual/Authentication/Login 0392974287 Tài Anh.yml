@@ -52,7 +52,7 @@ http:
     data: |-
       {
         "username": "0392974287",
-        "password": "N9V8I3nvDpBX5MO9sMswf/pQAiMxkUb3SiZlPXRrFQX6krMuW+OQUwqWV28FSzY7TkxcJ9lZDUZ21S89voacGc+qAb0P7JaYOiPfh5o9ccR2jaIIK9H5MSzUBTBTdF1f/PGDBDVjMHAYzTKbMwpJAwxw9ANnfuK+YoxmEIQQM5SpXAZd0zdu+4lbpNywst57xzfYL7S3cUQXaZeAo2GEXKTmK7s5cLzwiywPoTXXvch5f5KTbWauG4+RzIGrrmvyiw3klJRiTJ6T5rUot2e1fW+NFRBrXJNOGPovAog1iK5TH9Halz8L1HTCwljQh7BMdjFh4ngndvCdxC0SiH4KXb4+A5sqcnWamaHusb64sJqX9GrXGfvPw1w030p+QxOTgz8PqlEylO3hRrBQsZF9URyezUQkDF6hwkAO+mHuc0n4n60ld8n9OP0U79aL4G0bWhaOqm49a22aFBKzWlT/gaznNhoOX2d/+cPtOpR44Ft13+6FSJ8f2zb4amfui/hVfXIF1lU11h6jS1oaXWZb97UnzNK+CRl67j7FWPhoybCDcgHKGw==", // Aa@123123
+        "password": "RTWvyb56B78WMfPJnMhqHWBUUs1Jr1/2eDVxQi7R5Pu9RnfrgRxVm/OxRGQfZyExnu08hQGhoEk5hGQQftZPzq3SZMr7N/bSmV5hF1IPsQwbmrqaXKG2TpuwIOT3lBglXSAicAFVFe3CJfGdKVeN2yOnZUJhWHvGowy0pUVjJ0BFwDpPUMvraNA3vFk+mgwmlOWGWnUo+TAyKExx67tiXys6Pju8C5Eyl8yS7VDtF/R6CNmPBsebq9sc3mKICSam/0gXg+ZzR++/RAWtnHluvX3CoWdodps9ESJ4D85l1ht39yk/X4ho4BX1xbT1pU3CRAxAYfGaPPYFmYoB6cOqWuUIGJUAHAIhR7r1X5ceMDh398fqdmg9pdm/GpQgxT4vdVyx4TjgVLqSSxPlsjbZ+bH/9ESa3MchuQyLwRpIrNAJERpC9DvNtSdkRlAuijVi2A9peuLXIQphTuvX5ttYZ1J99PUhCV1ZZmL+wbpSu3HjZUs7qX9qr+JuI/+QEWdUZF1YYxS2817gFyqOExqJKMIafEovFQJTO3hZ/LUVkKUVhuY6kA==", // Aa@123123
         "loginType": "PASSWORD",
         "platform": "WEB",
         "captchaVerify": "63e748868edd2096b37b6543e4e2bf69",
@@ -60,6 +60,9 @@ http:
       }
 
 runtime:
+  variables:
+    - name: individual_host
+      value: https://localhost:9090
   scripts:
     - type: after-response
       code: |-

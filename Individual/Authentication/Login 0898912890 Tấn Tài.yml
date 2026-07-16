@@ -60,6 +60,9 @@ http:
       }
 
 runtime:
+  variables:
+    - name: individual_host
+      value: https://localhost:9090
   scripts:
     - type: after-response
       code: |-

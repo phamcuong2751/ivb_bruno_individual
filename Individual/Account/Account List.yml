@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_host}}/other-services/account/user?numPage=0&pageSize=1000"
+  url: "{{individual_host}}/other-services/account/user?numPage=0&pageSize=9999"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -54,7 +54,7 @@ http:
       value: "0"
       type: query
     - name: pageSize
-      value: "1000"
+      value: "9999"
       type: query
     - name: isForeignCurrency
       value: "false"

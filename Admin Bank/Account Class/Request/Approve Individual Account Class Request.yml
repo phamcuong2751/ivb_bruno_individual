@@ -10,15 +10,20 @@ http:
     - name: platform
       value: WEB
     - name: Authorization
-      value: Bearer {{individual_admin_token}}
+      value: Bearer {{individual_admin_branch_token}}
   body:
     type: json
     data: |
       {
-        "entityId": "2fdb9f90-75a1-4e60-8634-41d6edeeb8ea",
-        "workflowId": "aef24179-0a52-4124-8b26-cb3ae711a74d",
+        "entityId": "616d9237-77d8-466f-accb-8768f7a42b16",
+        "workflowId": "3593b324-45b6-4149-9989-59ce98e9e8d1",
         "comment": "Approved"
       }
+
+runtime:
+  variables:
+    - name: individual_admin_host
+      value: http://localhost:9092
 
 settings:
   encodeUrl: false

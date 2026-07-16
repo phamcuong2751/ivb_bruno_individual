@@ -5,7 +5,7 @@ info:
 
 http:
   method: get
-  url: "{{individual_admin_host}}/individual-user-account/user/9f665bba-13d6-441d-823d-eb9d56fa0639/list?pageSize=5&numPage=0"
+  url: "{{individual_admin_host}}/individual-user-account/user/c66850ea-6bae-4c2a-b5ea-c0a9d897a7ee/list?pageSize=9999&numPage=0"
   headers:
     - name: Cookie
       value: JSESSIONID=A27DA6558C1D26B8B89C85599858D025
@@ -15,7 +15,7 @@ http:
       value: Bearer {{individual_admin_token}}
   params:
     - name: pageSize
-      value: "5"
+      value: "9999"
       type: query
     - name: numPage
       value: "0"
@@ -37,6 +37,11 @@ http:
       type: query
       disabled: true
   auth: inherit
+
+runtime:
+  variables:
+    - name: individual_admin_host
+      value: http://localhost:9092
 
 settings:
   encodeUrl: false

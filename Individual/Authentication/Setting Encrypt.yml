@@ -1,0 +1,46 @@
+info:
+  name: Setting Encrypt
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{individual_host}}/auth-services/setting/encrypt"
+  headers:
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Accept-Language
+      value: vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5
+    - name: Cache-Control
+      value: no-cache
+    - name: Connection
+      value: keep-alive
+    - name: Device-Name
+      value: ""
+    - name: Language
+      value: vi
+    - name: Origin
+      value: http://192.168.50.137:4002
+    - name: Pragma
+      value: no-cache
+    - name: Referer
+      value: http://192.168.50.137:4002/
+    - name: Request-Id
+      value: b6a45f6b-76e7-4090-9bfd-97467a6a5cb2
+    - name: Time
+      value: "1770016016943"
+    - name: User-Agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+  body:
+    type: json
+    data: |-
+      {
+        "data": "Aa#123123" // Aa@123456 Aa@123123
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

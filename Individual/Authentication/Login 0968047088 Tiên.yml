@@ -1,7 +1,7 @@
 info:
-  name: Login 0373331451
+  name: Login 0968047088 Tiên
   type: http
-  seq: 10
+  seq: 13
 
 http:
   method: POST
@@ -51,8 +51,8 @@ http:
     type: json
     data: |-
       {
-        "username": "0373331451",
-        "password": "fLWW4RppAT7V9Eam6ymnFQubYjYvgx9M8bjxARKyvuKf4XkumtWnY5KuOixOwVv22TqBrAelj7sReopUeLo/kzLBprGTHOpZYy0e4WbBwDb/F/JzMLwAD/5zdPrS6CwX09tyx726sSR37H+yZwC4pJ/C5ZS+BAHNplI8zeVQgmiL2Kt06h/wPtclrCX+aa9P9IchJPOJf91K7UAv3GOvRtuZgplGqeQHGn2TBvUSZu3U1fZnmqsvO/p0ggZzgm7x1xMd9uCtFzLvDWc1p8mYU/vYWxTRnGEv7Thf6DEMoeR6BimTvXtFTUhxXOXuU8MMm8OBUd+XFUZmLeLTPIzU4zwyKJNY3CrMT/49II7A3AuO/0SwRlW2oQcLqMTbDyBKfpk1YoQo280fn4G9+w907VsohebFX333SncpoKH54NPWCs8B9DTugwPPJmky4wfh3q94mfyeVQfM3xDxV7T2qpwSvrexWFKmQu/FtPcQy8zQSD29qzPtiJceJFGhxJvrRIZvUlhhxZD4/tajbNNSxek41y/ERnkNzDuxZVFvSilGHYyyDQ==",
+        "username": "0968047088", // Aa#123123
+        "password": "UNb4oefyD7xuzvQ9fFAHSfLxoGLE9kREdxSOmJyEKt6q9DkuEjZoBmuRKMQHhDLwN6TwSq8uivt/4mw9gZutn/729TVFWAAAqIw/fQnR8nszgzeHwTdwG16TDH23NEBfI2yivGw2an+3rq6MUtNaGFfuv+ldqsVvLCK0fE/IudZK3/2wOgq/9kKE1AhrBQJCUdixOQ1YVhpT1SK/yeSvYs7PVmyAPytfjjua4AyerBpS1tLPy5HLyu6kHUPxGPgF4PVXHhGbJU7B9KHlBpCKlB6CSAOq9+y7qTVD8mgMgAYtncbdqWpGM6HmqhgRLYQQIn+sGgVUMHrtY2+ftZsAYe0xXiq1xhNRUPIAUT6CKcVOz8Orj745tsnNCuZ2S+pYP2PomMn2+HdxxYnS7+3KE4JWv9iH4PitNVJPCejdvE6TwHz37bJcEYRRJQEYtIRlp3bWt09WUMaMATmyoVHePsWoeVZXOhLU12tYWEc1IZkwrHf0CRDhjKbesM7TgqtOEyWajS1dWDB07Vqyav1iWos8DdJ6qWMlXNoUsZfbra6mkY9jhw==",
         "loginType": "PASSWORD",
         "platform": "WEB",
         "captchaVerify": "63e748868edd2096b37b6543e4e2bf69",
@@ -60,9 +60,6 @@ http:
       }
 
 runtime:
-  variables:
-    - name: individual_host
-      value: https://localhost:9090
   scripts:
     - type: after-response
       code: |-

@@ -5,14 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{individual_host}}/other-services/account/20963b11-3e9c-48d9-ac78-daae40502af6"
+  url: "{{individual_host}}/other-services/account/54be11b6-50a7-451c-addc-36b771d3344f"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
     - name: Accept-Language
       value: en-US,en;q=0.9
     - name: Authorization
-      value: Bearer {{Token}}
+      value: Bearer {{individual_token}}
     - name: Connection
       value: keep-alive
     - name: Content-Type

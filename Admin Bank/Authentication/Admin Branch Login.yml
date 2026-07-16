@@ -21,6 +21,9 @@ http:
   auth: inherit
 
 runtime:
+  variables:
+    - name: individual_admin_host
+      value: http://localhost:9092
   scripts:
     - type: after-response
       code: |-
