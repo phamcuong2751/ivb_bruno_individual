@@ -10,13 +10,13 @@ http:
     - name: platform
       value: WEB
     - name: Authorization
-      value: Bearer {{individual_admin_token}}
+      value: Bearer {{individual_admin_branch_token}}
   body:
     type: json
     data: |
       {
-        "entityId": "2a35ec16-9473-4bf9-8092-301b6934345b",
-        "workflowId": "56263f1c-abf2-449f-b3f0-f1a5a2345fc8",
+        "entityId": "b4aaff08-8700-481c-8373-86c561a1d1b3",
+        "workflowId": "c2d18204-d8a8-4afc-b185-a674a9dd07b2",
         "comment": "Approved"
       }
 

@@ -18,6 +18,46 @@ http:
     - name: numPage
       value: "0"
       type: query
+    - name: keyword
+      value: STH_EDIT
+      type: query
+      disabled: true
+    - name: requestType
+      value: CREATE
+      type: query
+      disabled: true
+    - name: requestType
+      value: UPDATE
+      type: query
+      disabled: true
+    - name: status
+      value: PENDING
+      type: query
+      disabled: true
+    - name: status
+      value: APPROVED
+      type: query
+      disabled: true
+    - name: status
+      value: REJECTED
+      type: query
+      disabled: true
+    - name: status
+      value: CANCELLED
+      type: query
+      disabled: true
+    - name: status
+      value: COMPLETED
+      type: query
+      disabled: true
+    - name: fromCreatedDate
+      value: 2026-07-15T17:00:00.000Z
+      type: query
+      disabled: true
+    - name: toCreatedDate
+      value: 2026-07-16T16:59:59.999Z
+      type: query
+      disabled: true
 
 settings:
   encodeUrl: false

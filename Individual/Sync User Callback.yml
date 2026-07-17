@@ -1,18 +1,18 @@
 info:
-  name: TT77 Check
+  name: Sync User Callback
   type: http
-  seq: 1
+  seq: 2
 
 http:
   method: POST
-  url: "{{individual_host}}/other-services/tt77/check"
+  url: "{{individual_host}}/other-services/user/core/callback"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
     - name: Accept-Language
       value: en-US,en;q=0.9
     - name: Authorization
-      value: Bearer {{individual_token}}
+      value: Bearer eyJraWQiOiJhdXRoLWtleS1pZCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbi1pbmRpdmlkdWFsIiwiYXVkIjoiYWRtaW4taW5kaXZpZHVhbCIsIm5iZiI6MTc4NDE4MzQyMCwic2NvcGUiOlsiYWRtaW4taW5kaXZpZHVhbCJdLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo4MDgwIiwiZXhwIjoxNzg0MTgzNzIwLCJpYXQiOjE3ODQxODM0MjAsImp0aSI6ImFmMTRkOTQ2LTVhN2EtNDk1OC1iZDE0LWQ1NmI0MTIxMDdiZCJ9.Ma_jS8X2MI1pVUJB2nq_PhQGuiTCtMNxQxU_n4YK-eCKkj2cUrmuSVHs2VElHhTpgJspIuL0fjXa5UTAJtg27tnF9TtHDDtOyJ0rPIzQVCTKU9F3yxYHJw3A6CasoKOOqsgJxXAbFBNNrJoT7EKs54qJzjvVzgo5yD2gqBfEpks37I1fb3o1f_GavxlJpIfGwW9o9EMflIzdSNtdFwpC7b9cx-E4h1BB8KQZfjX3UdEFynYTEkjE1EY8xmWQ6kUaWE2nOhPWIrITQS9AxNdvSE2LaRVZ29AUzQyYHc8QwchjTlpa9e5e5No84qYexcJV-KcfXzK4W5FnPoex2MR3RQ
     - name: Connection
       value: keep-alive
     - name: Content-Type
@@ -55,13 +55,34 @@ http:
   body:
     type: json
     data: |-
-      {
-          "authMethod": "SMS_OTP", // SMS_OTP SOFT_OTP CA_TOKEN
-          "cifCode": "1015663",
-          "feature": "INTERNAL_TRANSFER_OTHER",
-          "transactionAmount": 150000000,
-          "transactionType": "OTHER"
-      }
+      [
+        {
+          "cif": "2029734",
+          "type": "INDIVIDUAL",
+          "title": "MR",
+          "name": "NGUYEN TAN TRUC",
+          "phone": "0909015594",
+          "email": "truc.nguyen@tpisoftware.com",
+          "permanent_address": "97A NGUYEN VAN TROI 11 PHU NHUAN HO CHI MINH",
+          "current_address": "97A NGUYEN VAN TROI 11 PHU NHUAN HO CHI MINH",
+          "dob": "1980-03-08",
+          "resident": "Y",
+          "id": "011**********631",
+          "doi": "2026-01-16",
+          "edoi": "2046-01-16",
+          "poi": "Cuc Canh sat QLHC ve TTXH",
+          "visa": null,
+          "dov": null,
+          "edov": null,
+          "pov": null,
+          "visa_free": "N",
+          "nationality": "VNM",
+          "id_type": "CCCD",
+          "indefinite_stat": "N",
+          "contract_sign": "NGUYEN TAN TRUC",
+          "id_old": "079159027212"
+        }
+      ]
 
 runtime:
   variables:
