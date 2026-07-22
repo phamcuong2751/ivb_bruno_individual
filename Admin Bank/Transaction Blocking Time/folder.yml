@@ -1,7 +1,7 @@
 info:
-  name: TT77
+  name: Transaction Blocking Time
   type: folder
-  seq: 9
+  seq: 7
 
 request:
   auth: inherit

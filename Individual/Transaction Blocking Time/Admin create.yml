@@ -1,0 +1,143 @@
+info:
+  name: Admin create
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{individual_host}}/other-services/admin-transaction-blocking-time"
+  headers:
+    - name: Language
+      value: vi
+    - name: X-Request-Id
+      value: 91d7c3f5-eab5-417d-975b-21da4f8dcaba
+    - name: Cache-Control
+      value: no-cache
+      disabled: true
+    - name: X-Request-Timestamp
+      value: "1778645804159"
+    - name: Referer
+      value: http://localhost:3000/auth/login
+    - name: X-Checksum
+      value: e168cf0a86ea54eb473c8152c25842f581d3448a717ea6e53d3606a5da2d5ad9
+      disabled: true
+    - name: Pragma
+      value: no-cache
+    - name: sec-ch-ua
+      value: '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+    - name: User-Agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Platform
+      value: WEB
+  body:
+    type: json
+    data: |-
+      {
+        "name": "FX Blocking Time",
+        "ccy": "CNY",
+        "startTime": "09:00:00",
+        "endTime": "17:00:00",
+        "limitAmount": 1000000,
+        "branchCode": "100",
+        "featureId": 262,
+        "createdBy": "admin"
+      }
+  auth:
+    type: bearer
+    token: "{{individual_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: example 20260615
+    request:
+      url: "{{individual_host}}/other-services/transaction-blocking-time/check?featureKey=FX_SELL_REQUEST&ccy=USD&checkType=CAN_TRANSACTION&createdAt="
+      method: GET
+      headers:
+        - name: Language
+          value: vi
+        - name: X-Request-Id
+          value: 91d7c3f5-eab5-417d-975b-21da4f8dcaba
+        - name: Cache-Control
+          value: no-cache
+          disabled: true
+        - name: X-Request-Timestamp
+          value: "1778645804159"
+        - name: Referer
+          value: http://localhost:3000/auth/login
+        - name: X-Checksum
+          value: e168cf0a86ea54eb473c8152c25842f581d3448a717ea6e53d3606a5da2d5ad9
+          disabled: true
+        - name: Pragma
+          value: no-cache
+        - name: sec-ch-ua
+          value: '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"'
+        - name: sec-ch-ua-mobile
+          value: ?0
+        - name: sec-ch-ua-platform
+          value: '"macOS"'
+        - name: User-Agent
+          value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+        - name: Accept
+          value: application/json, text/plain, */*
+        - name: Platform
+          value: WEB
+      params:
+        - name: featureKey
+          value: FX_SELL_REQUEST
+          type: query
+        - name: ccy
+          value: USD
+          type: query
+        - name: checkType
+          value: CAN_TRANSACTION
+          type: query
+        - name: createdAt
+          value: ""
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: transfer-encoding
+          value: chunked
+        - name: vary
+          value: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+        - name: x-request-id
+          value: 82c566ffb541b7a1e6d5bfe2ba584cfe
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: strict-transport-security
+          value: max-age=31536000 ; includeSubDomains
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: date
+          value: Mon, 15 Jun 2026 08:05:12 GMT
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": true,
+            "message": "Get checking blocking time successfully"
+          }

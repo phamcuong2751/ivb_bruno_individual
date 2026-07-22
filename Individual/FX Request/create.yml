@@ -39,20 +39,27 @@ http:
     type: json
     data: |-
       {
-          "fxType": "SELL",
-          "fxRequestType": "NEW_REQUEST",
-          "senderAccountId": "e218bd49-222a-4302-b2f2-8bb19ee5eca9",
-          "fromCcy": "USD",
-          "toAccountId":"f016b743-d73c-4481-9487-61f88c83c9a5",
-          "toCcy": "VND",
-          "amount": 500,
-          "toAmount": 12082500,
-          "requestedRate": 24165,
-          "fxExchangeType": "NEGOTIATED",
-          "purpose": "purpose_sell_1",
-          "description": "Ban 500.00 USD",
-          "authenticationMethod": "SMS_OTP",
-          "otp" : 832094
+        "fxType": "SELL",
+        "fxRequestType": "NEW_REQUEST",
+        "senderAccountId": "af3ca275-1526-40fe-8440-d3d1082a6c47",
+        "fromCcy": "USD",
+        "toAccountId": "0cf8deff-d3d6-4c42-bbf3-cd8a01b8c4df",
+        "toCcy": "VND",
+        "amount": 1.2,
+        "toAmount": 28998,
+        "requestedRate": 24165,
+        "fxExchangeType": "LISTED",
+        "purpose": "purpose_sell_3",
+        "description": "Ban 1.2 USD",
+        "authenticationMethod": "SOFT_OTP",
+        "transactionId": "20260715FEX103110790",
+        "authorizeTransaction": {
+          "authenticationMethod": "SOFT_OTP",
+          "challengeCode": "355173",
+          "details": "a4615cad-1ee9-4fb3-b42c-3f6fddb93587",
+          "otp": "305450",
+          "transactionId": "20260715FEX103110790"
+        }
       }
   auth:
     type: bearer

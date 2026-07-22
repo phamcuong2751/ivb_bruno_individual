@@ -1,5 +1,5 @@
 info:
-  name: GET Trading Limit
+  name: User current limit
   type: http
   seq: 1
 

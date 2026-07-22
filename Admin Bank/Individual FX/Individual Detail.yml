@@ -22,6 +22,8 @@ runtime:
       value: 081258fa-e5fa-421a-b44f-4e4fad25255d
     - name: individualRequestId
       value: 14a23dc7-9968-418a-9119-0add8d6a236c
+    - name: individual_fx_request_id
+      value: fed3f4a5-31e9-40e6-bd0c-dc2c65cd0dd3
 
 settings:
   encodeUrl: false

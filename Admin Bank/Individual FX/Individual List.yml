@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/fx/individual/request?numPage=0&pageSize=10"
+  url: "{{individual_admin_host}}/fx/individual/request?numPage=0&pageSize=10&search=20260716FEX155339770"
   headers:
     - name: platform
       value: WEB
@@ -15,6 +15,13 @@ http:
       type: query
     - name: pageSize
       value: "10"
+      type: query
+    - name: status
+      value: SENT_TO_BANK
+      type: query
+      disabled: true
+    - name: search
+      value: 20260716FEX155339770
       type: query
   body:
     type: json

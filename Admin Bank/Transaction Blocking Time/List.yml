@@ -1,0 +1,199 @@
+info:
+  name: List
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/transaction-blocking-time"
+  headers:
+    - name: platform
+      value: WEB
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260708
+    request:
+      url: "{{individual_admin_host}}/transaction-blocking-time"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 941dabf601298a68e4f8ffe5c152cce8
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "2933"
+        - name: date
+          value: Wed, 08 Jul 2026 07:24:18 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": [
+              {
+                "id": "4d6b0cb4-ec39-46e1-b931-8cf17d8d8b60",
+                "ccy": "HKD",
+                "featureKey": "FX_SELL_REQUEST",
+                "startTime": "10:30:00",
+                "endTime": "17:00:00",
+                "branchCode": "100",
+                "limitAmount": 5555,
+                "status": "ACTIVE",
+                "createdAt": "2026-07-08T05:49:48.392587",
+                "createdBy": "hs_maker",
+                "updatedAt": "2026-07-08T06:38:31.210548",
+                "updatedBy": "hs_maker"
+              },
+              {
+                "id": "6207f09c-be44-40e0-a3e3-61ca9ae3f56c",
+                "ccy": "CAD",
+                "featureKey": "FX_SELL_REQUEST",
+                "startTime": "17:40:00",
+                "endTime": "09:40:00",
+                "branchCode": "199",
+                "limitAmount": 250000,
+                "status": "ACTIVE",
+                "createdAt": "2026-07-08T03:05:24.181124",
+                "createdBy": "hs_checker",
+                "updatedAt": "2026-07-08T04:12:23.500643",
+                "updatedBy": "hs_checker"
+              },
+              {
+                "id": "854988e8-42c1-4dc5-83be-ed25d6306899",
+                "ccy": "CNY",
+                "featureKey": "FX_SELL_REQUEST",
+                "startTime": "00:00:00",
+                "endTime": "23:59:00",
+                "branchCode": "100",
+                "limitAmount": 0,
+                "status": "ACTIVE",
+                "createdAt": "2026-06-05T06:38:26.063681",
+                "createdBy": "hs_maker",
+                "updatedAt": "2026-06-05T06:38:26.063682",
+                "updatedBy": "hs_maker"
+              },
+              {
+                "id": "a7c241f2-a058-4620-a6d0-32b5728ba713",
+                "ccy": "USD",
+                "featureKey": "FX_SELL_REQUEST",
+                "startTime": "17:30:00",
+                "endTime": "08:00:00",
+                "branchCode": "100",
+                "limitAmount": 200000,
+                "status": "ACTIVE",
+                "createdAt": "2026-06-05T06:30:33.370751",
+                "createdBy": "hs_maker",
+                "updatedAt": "2026-06-05T06:38:46.369194",
+                "updatedBy": "hs_maker"
+              },
+              {
+                "id": "6df4bee6-7930-4f9d-a157-a2d93811cdb0",
+                "ccy": "SGD",
+                "featureKey": "FX_SELL_REQUEST",
+                "startTime": "17:00:00",
+                "endTime": "08:00:00",
+                "branchCode": "100",
+                "limitAmount": 0,
+                "status": "ACTIVE",
+                "createdAt": "2026-01-09T08:07:25.86103",
+                "createdBy": "ivb_maker",
+                "updatedAt": "2026-06-05T06:39:01.225075",
+                "updatedBy": "hs_maker"
+              },
+              {
+                "id": "d1d07ab3-24ba-407b-8a58-0c9c8250dba5",
+                "ccy": "AUD",
+                "featureKey": "FX_SELL_REQUEST",
+                "startTime": "12:00:00",
+                "endTime": "08:00:00",
+                "branchCode": "100",
+                "limitAmount": 0,
+                "status": "ACTIVE",
+                "createdAt": "2026-01-09T08:07:00.963775",
+                "createdBy": "ivb_maker",
+                "updatedAt": "2026-06-05T06:35:53.018575",
+                "updatedBy": "hs_maker"
+              },
+              {
+                "id": "775022a0-421d-4d97-bb36-9a93db7fd911",
+                "ccy": "GBP",
+                "featureKey": "FX_SELL_REQUEST",
+                "startTime": "17:00:00",
+                "endTime": "08:00:00",
+                "branchCode": "100",
+                "limitAmount": 0,
+                "status": "ACTIVE",
+                "createdAt": "2026-01-09T08:06:33.821649",
+                "createdBy": "ivb_maker",
+                "updatedAt": "2026-06-05T06:40:06.029753",
+                "updatedBy": "hs_maker"
+              },
+              {
+                "id": "3db0c003-c5bb-420c-8af0-20b8ce64b6e5",
+                "ccy": "JPY",
+                "featureKey": "FX_SELL_REQUEST",
+                "startTime": "13:00:00",
+                "endTime": "08:00:00",
+                "branchCode": "100",
+                "limitAmount": 0,
+                "status": "ACTIVE",
+                "createdAt": "2026-01-09T08:06:05.080809",
+                "createdBy": "ivb_maker",
+                "updatedAt": "2026-06-05T06:41:02.102793",
+                "updatedBy": "hs_maker"
+              },
+              {
+                "id": "779db047-f849-4c7f-9ef1-a7a6f6da3fa4",
+                "ccy": "EUR",
+                "featureKey": "FX_SELL_REQUEST",
+                "startTime": "13:00:00",
+                "endTime": "08:00:00",
+                "branchCode": "100",
+                "limitAmount": 0,
+                "status": "ACTIVE",
+                "createdAt": "2026-01-09T08:05:40.991511",
+                "createdBy": "ivb_maker",
+                "updatedAt": "2026-06-05T06:42:21.035274",
+                "updatedBy": "hs_maker"
+              }
+            ],
+            "count": 9,
+            "message": "Get transaction blocking time successfully"
+          }
