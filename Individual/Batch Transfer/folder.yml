@@ -1,7 +1,7 @@
 info:
-  name: Individual User Account
+  name: Batch Transfer
   type: folder
-  seq: 5
+  seq: 15
 
 request:
   auth: inherit

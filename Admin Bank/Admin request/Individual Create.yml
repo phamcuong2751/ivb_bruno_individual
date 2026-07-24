@@ -1,25 +1,28 @@
 info:
-  name: delete
+  name: Individual Create
   type: http
-  seq: 6
+  seq: 3
 
 http:
-  method: DELETE
-  url: "{{individual_admin_host}}/transaction-blocking-time/{{id}}"
+  method: POST
+  url: "{{individual_admin_host}}/transaction-blocking-time"
   headers:
     - name: platform
       value: WEB
   body:
     type: json
-    data: ""
+    data: |-
+      {
+        "ccy": "CAD",
+        "featureId": 262,
+        "branchCode": "199",
+        "limitAmount": 2000000,
+        "startTime": "17:30:00",
+        "endTime": "08:30:00"
+      }
   auth:
     type: bearer
     token: "{{individual_admin_branch_token}}"
-
-runtime:
-  variables:
-    - name: id
-      value: 775022a0-421d-4d97-bb36-9a93db7fd911
 
 settings:
   encodeUrl: false
@@ -28,22 +31,30 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: TST 20260708
+  - name: tst duplicate 20260708
     request:
-      url: "{{individual_admin_host}}/transaction-blocking-time/{{id}}"
-      method: GET
+      url: "{{individual_admin_host}}/transaction-blocking-time"
+      method: POST
       headers:
         - name: platform
           value: WEB
       body:
         type: json
-        data: ""
+        data: |-
+          {
+            "ccy": "CAD",
+            "featureId": 262,
+            "branchCode": "199",
+            "limitAmount": 2000000,
+            "startTime": "17:30:00",
+            "endTime": "08:30:00"
+          }
     response:
       status: 200
       statusText: OK
       headers:
         - name: x-request-id
-          value: 90df99a9405f76fde3cb8ead20ad3620
+          value: c41303ea10064f4c7b756e71c2de311a
         - name: x-content-type-options
           value: nosniff
         - name: x-xss-protection
@@ -59,9 +70,9 @@ examples:
         - name: content-type
           value: application/json
         - name: content-length
-          value: "400"
+          value: "107"
         - name: date
-          value: Wed, 08 Jul 2026 07:25:32 GMT
+          value: Wed, 08 Jul 2026 03:05:29 GMT
         - name: keep-alive
           value: timeout=60
         - name: connection
@@ -70,20 +81,6 @@ examples:
         type: json
         data: |-
           {
-            "code": 200,
-            "data": {
-              "id": "a7c241f2-a058-4620-a6d0-32b5728ba713",
-              "ccy": "USD",
-              "featureKey": "FX_SELL_REQUEST",
-              "startTime": "17:30:00",
-              "endTime": "08:00:00",
-              "branchCode": "100",
-              "limitAmount": 200000,
-              "status": "ACTIVE",
-              "createdAt": "2026-06-05T06:30:33.370751",
-              "createdBy": "hs_maker",
-              "updatedAt": "2026-06-05T06:38:46.369194",
-              "updatedBy": "hs_maker"
-            },
-            "message": "Get transaction blocking time detail successfully"
+            "code": 400,
+            "message": "Transaction blocking time already exists. Feature: FX_SELL_REQUEST - Currency: CAD"
           }

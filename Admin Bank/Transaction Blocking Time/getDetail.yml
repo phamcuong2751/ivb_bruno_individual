@@ -1,0 +1,120 @@
+info:
+  name: getDetail
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/transaction-blocking-time/request/{{id}}"
+  headers:
+    - name: platform
+      value: WEB
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+runtime:
+  variables:
+    - name: id
+      value: fb49f7db-9905-4d6b-9cd4-de601173c77c
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260723
+    request:
+      url: "{{individual_admin_host}}/transaction-blocking-time/request/{{id}}"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: c4f003de7eeb083964a31cceabb26e26
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "1140"
+        - name: date
+          value: Thu, 23 Jul 2026 07:31:05 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": {
+              "approvalWorkflowId": "7c614f72-a495-48ed-80b2-07a4d319cfdd",
+              "branch": {
+                "address": "97A NGUYEN VAN TROI, PHUONG 12, QUAN PHU NHUAN TPHCM",
+                "branchCode": "100",
+                "branchType": "BRANCH",
+                "createdBy": "admin",
+                "createdDate": "2025-07-10T11:07:34.920559Z",
+                "description": "Branch Migrated by null at 2025-07-10T11:07:34.856561",
+                "id": 5,
+                "ivbCode": "100",
+                "name": "BUSINESS CENTER",
+                "priority": 35,
+                "status": "ACTIVE",
+                "updatedDate": "2026-01-15T10:24:50.575392Z"
+              },
+              "branchCode": "100",
+              "canCancel": true,
+              "canProcess": true,
+              "ccy": "EUR",
+              "createdDate": "2026-07-23T07:25:09.541924Z",
+              "endTime": "08:00:00",
+              "featureKey": "FX_SELL_REQUEST",
+              "id": "fb49f7db-9905-4d6b-9cd4-de601173c77c",
+              "limitAmount": 100000,
+              "maker": {
+                "customerName": "hs maker",
+                "fullName": "hs maker",
+                "id": "e0822a98-d4a0-4eeb-8881-ba18cd7b0541",
+                "username": "hs_maker"
+              },
+              "name": "Sample blocking time",
+              "payload": {
+                "branchCode": "100",
+                "ccy": "EUR",
+                "endTime": "08:00:00",
+                "featureKey": "FX_SELL_REQUEST",
+                "limitAmount": 100000,
+                "name": "Sample blocking time",
+                "startTime": "17:00:00"
+              },
+              "requestType": "CREATE_REQUEST",
+              "startTime": "17:00:00",
+              "status": "PENDING"
+            },
+            "message": "Get transaction blocking time request successful"
+          }

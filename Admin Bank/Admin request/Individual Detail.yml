@@ -1,11 +1,11 @@
 info:
-  name: Feature
+  name: Individual Detail
   type: http
-  seq: 3
+  seq: 2
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/transaction-blocking-time/features"
+  url: "{{individual_admin_host}}/transaction-blocking-time/{{id}}"
   headers:
     - name: platform
       value: WEB
@@ -16,6 +16,11 @@ http:
     type: bearer
     token: "{{individual_admin_branch_token}}"
 
+runtime:
+  variables:
+    - name: id
+      value: 775022a0-421d-4d97-bb36-9a93db7fd911
+
 settings:
   encodeUrl: false
   timeout: 0
@@ -25,7 +30,7 @@ settings:
 examples:
   - name: TST 20260708
     request:
-      url: "{{individual_admin_host}}/transaction-blocking-time/features"
+      url: "{{individual_admin_host}}/transaction-blocking-time/{{id}}"
       method: GET
       headers:
         - name: platform
@@ -38,7 +43,7 @@ examples:
       statusText: OK
       headers:
         - name: x-request-id
-          value: 60d6cabe32cc75f369f605f3cf7fcd8b
+          value: 90df99a9405f76fde3cb8ead20ad3620
         - name: x-content-type-options
           value: nosniff
         - name: x-xss-protection
@@ -54,9 +59,9 @@ examples:
         - name: content-type
           value: application/json
         - name: content-length
-          value: "291"
+          value: "400"
         - name: date
-          value: Wed, 08 Jul 2026 07:24:34 GMT
+          value: Wed, 08 Jul 2026 07:25:32 GMT
         - name: keep-alive
           value: timeout=60
         - name: connection
@@ -66,25 +71,19 @@ examples:
         data: |-
           {
             "code": 200,
-            "data": [
-              {
-                "blockingTimeCurrencies": [
-                  "HKD",
-                  "AUD",
-                  "SGD",
-                  "JPY",
-                  "EUR",
-                  "GBP",
-                  "CAD",
-                  "USD",
-                  "CNY"
-                ],
-                "description": "Request SELL FX",
-                "id": 262,
-                "isTransactionBlockingTime": true,
-                "key": "FX_SELL_REQUEST",
-                "name": "Request SELL FX"
-              }
-            ],
-            "message": "Get transaction blocking time features successfully"
+            "data": {
+              "id": "a7c241f2-a058-4620-a6d0-32b5728ba713",
+              "ccy": "USD",
+              "featureKey": "FX_SELL_REQUEST",
+              "startTime": "17:30:00",
+              "endTime": "08:00:00",
+              "branchCode": "100",
+              "limitAmount": 200000,
+              "status": "ACTIVE",
+              "createdAt": "2026-06-05T06:30:33.370751",
+              "createdBy": "hs_maker",
+              "updatedAt": "2026-06-05T06:38:46.369194",
+              "updatedBy": "hs_maker"
+            },
+            "message": "Get transaction blocking time detail successfully"
           }

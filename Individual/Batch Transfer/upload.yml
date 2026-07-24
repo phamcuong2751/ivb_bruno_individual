@@ -1,0 +1,60 @@
+info:
+  name: upload
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{individual_host}}/transfer-services/batch-transfer/upload"
+  headers:
+    - name: Language
+      value: vi
+    - name: X-Request-Id
+      value: 91d7c3f5-eab5-417d-975b-21da4f8dcaba
+    - name: Cache-Control
+      value: no-cache
+      disabled: true
+    - name: X-Request-Timestamp
+      value: "1778645804159"
+    - name: Referer
+      value: http://localhost:3000/auth/login
+    - name: X-Checksum
+      value: e168cf0a86ea54eb473c8152c25842f581d3448a717ea6e53d3606a5da2d5ad9
+      disabled: true
+    - name: Pragma
+      value: no-cache
+    - name: sec-ch-ua
+      value: '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+    - name: User-Agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Platform
+      value: WEB
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - /Users/phamcuong2751/Downloads/batch_transfer_template.xlsx
+        contentType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+      - name: checkSum
+        type: text
+        value: 7c9d59d53da39031684a3a36f71c08dbbb97728145de92bbbc45f963744fa0de
+      - name: accountNo
+        type: text
+        value: 1032471-001
+  auth:
+    type: bearer
+    token: "{{individual_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

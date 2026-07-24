@@ -1,25 +1,17 @@
 info:
-  name: Create
+  name: features
   type: http
-  seq: 2
+  seq: 1
 
 http:
-  method: POST
-  url: "{{individual_admin_host}}/transaction-blocking-time"
+  method: GET
+  url: "{{individual_admin_host}}/transaction-blocking-time/features"
   headers:
     - name: platform
       value: WEB
   body:
     type: json
-    data: |-
-      {
-        "ccy": "CAD",
-        "featureId": 262,
-        "branchCode": "199",
-        "limitAmount": 2000000,
-        "startTime": "17:30:00",
-        "endTime": "08:30:00"
-      }
+    data: ""
   auth:
     type: bearer
     token: "{{individual_admin_branch_token}}"
@@ -31,30 +23,22 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: tst duplicate 20260708
+  - name: TST 20260723
     request:
-      url: "{{individual_admin_host}}/transaction-blocking-time"
-      method: POST
+      url: "{{individual_admin_host}}/transaction-blocking-time/features"
+      method: GET
       headers:
         - name: platform
           value: WEB
       body:
         type: json
-        data: |-
-          {
-            "ccy": "CAD",
-            "featureId": 262,
-            "branchCode": "199",
-            "limitAmount": 2000000,
-            "startTime": "17:30:00",
-            "endTime": "08:30:00"
-          }
+        data: ""
     response:
       status: 200
       statusText: OK
       headers:
         - name: x-request-id
-          value: c41303ea10064f4c7b756e71c2de311a
+          value: f3d1469674e8979674d54412e4635d83
         - name: x-content-type-options
           value: nosniff
         - name: x-xss-protection
@@ -70,9 +54,9 @@ examples:
         - name: content-type
           value: application/json
         - name: content-length
-          value: "107"
+          value: "255"
         - name: date
-          value: Wed, 08 Jul 2026 03:05:29 GMT
+          value: Thu, 23 Jul 2026 07:43:00 GMT
         - name: keep-alive
           value: timeout=60
         - name: connection
@@ -81,6 +65,20 @@ examples:
         type: json
         data: |-
           {
-            "code": 400,
-            "message": "Transaction blocking time already exists. Feature: FX_SELL_REQUEST - Currency: CAD"
+            "code": 200,
+            "data": [
+              {
+                "blockingTimeCurrencies": [
+                  "SGD",
+                  "USD",
+                  "CAD"
+                ],
+                "description": "Request SELL FX",
+                "id": 262,
+                "isTransactionBlockingTime": true,
+                "key": "FX_SELL_REQUEST",
+                "name": "Request SELL FX"
+              }
+            ],
+            "message": "Get transaction blocking time features successfully"
           }

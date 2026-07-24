@@ -1,0 +1,90 @@
+info:
+  name: Feature
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/transaction-blocking-time/features"
+  headers:
+    - name: platform
+      value: WEB
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260708
+    request:
+      url: "{{individual_admin_host}}/transaction-blocking-time/features"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 60d6cabe32cc75f369f605f3cf7fcd8b
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "291"
+        - name: date
+          value: Wed, 08 Jul 2026 07:24:34 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": [
+              {
+                "blockingTimeCurrencies": [
+                  "HKD",
+                  "AUD",
+                  "SGD",
+                  "JPY",
+                  "EUR",
+                  "GBP",
+                  "CAD",
+                  "USD",
+                  "CNY"
+                ],
+                "description": "Request SELL FX",
+                "id": 262,
+                "isTransactionBlockingTime": true,
+                "key": "FX_SELL_REQUEST",
+                "name": "Request SELL FX"
+              }
+            ],
+            "message": "Get transaction blocking time features successfully"
+          }

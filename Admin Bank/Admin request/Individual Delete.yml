@@ -1,10 +1,10 @@
 info:
-  name: Detail
+  name: Individual Delete
   type: http
   seq: 5
 
 http:
-  method: GET
+  method: DELETE
   url: "{{individual_admin_host}}/transaction-blocking-time/{{id}}"
   headers:
     - name: platform

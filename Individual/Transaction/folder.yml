@@ -1,7 +1,7 @@
 info:
-  name: Individual User Account
+  name: Transaction
   type: folder
-  seq: 5
+  seq: 14
 
 request:
   auth: inherit

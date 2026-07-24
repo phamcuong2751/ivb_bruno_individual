@@ -1,5 +1,5 @@
 info:
-  name: Admin Branch Login
+  name: Branch Login
   type: http
   seq: 1
 
@@ -23,7 +23,7 @@ http:
 runtime:
   variables:
     - name: individual_admin_host
-      value: http://localhost:9092
+      value: localhost:9092
   scripts:
     - type: after-response
       code: |-

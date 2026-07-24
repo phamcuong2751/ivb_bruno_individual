@@ -1,0 +1,85 @@
+info:
+  name: approve
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{individual_admin_host}}/transaction-blocking-time/request/approve"
+  headers:
+    - name: platform
+      value: WEB
+  body:
+    type: json
+    data: |-
+      {
+        "entityId": "937919fe-0fda-4ab8-a507-68b5e12cb67a",
+        "workflowId": "a01ece2f-198c-465d-8d1e-61e3879168a0",
+        "comment": "Approved"
+      }
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+runtime:
+  variables:
+    - name: id
+      value: fb49f7db-9905-4d6b-9cd4-de601173c77c
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260723
+    request:
+      url: "{{individual_admin_host}}/transaction-blocking-time/request/approve"
+      method: POST
+      headers:
+        - name: platform
+          value: WEB
+      body:
+        type: json
+        data: |-
+          {
+            "entityId": "937919fe-0fda-4ab8-a507-68b5e12cb67a",
+            "workflowId": "a01ece2f-198c-465d-8d1e-61e3879168a0",
+            "comment": "Approved"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 403a930e971f2553f306b3aa5fab0d72
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "77"
+        - name: date
+          value: Thu, 23 Jul 2026 07:48:57 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "message": "Approve transaction blocking time request successful"
+          }
