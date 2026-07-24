@@ -1,11 +1,11 @@
 info:
   name: Setting Encrypt
   type: http
-  seq: 12
+  seq: 5
 
 http:
-  method: POST
-  url: "{{individual_host}}/auth-services/setting/encrypt"
+  method: GET
+  url: "{{individual_admin_host}}/setting/encrypt"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -35,7 +35,7 @@ http:
     type: json
     data: |-
       {
-        "data": "xR4A*R" // Aa@123456 Aa@123123
+        "data": "Aa@123456" // Aa@123456 Aa@123123 Aa@1234567
       }
   auth: inherit
 

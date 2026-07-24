@@ -1,0 +1,32 @@
+info:
+  name: Batch Remove Black List
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{individual_admin_host}}/individual-black-list/batch-remove"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_branch_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "reason": "Phát hiện khách hàng hợp lệ",
+        "ids": [
+          "13715f89-b3de-40bb-9131-37d7182cd682",
+          "a83909f4-38bd-4130-9abd-5c2169edfca3",
+          "c5c8d446-e524-4a24-a419-3c6bfaf218b6",
+          "cea00a52-76fc-4b86-8662-60d3fc11de51",
+          "62ae097c-c37c-469e-ae52-92075b5ab5d5"
+        ]
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

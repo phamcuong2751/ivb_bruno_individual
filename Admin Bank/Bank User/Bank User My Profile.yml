@@ -1,11 +1,11 @@
 info:
-  name: Synchronize Individual User
+  name: Bank User My Profile
   type: http
-  seq: 8
+  seq: 4
 
 http:
-  method: post
-  url: "{{individual_admin_host}}/individual-user/synchronize"
+  method: GET
+  url: "{{individual_admin_host}}/bank-user/my-profile"
   headers:
     - name: platform
       value: WEB
@@ -13,10 +13,7 @@ http:
       value: Bearer {{individual_admin_branch_token}}
   body:
     type: json
-    data: |-
-      {
-        "cifCore": "2029734"
-      }
+    data: ""
 
 settings:
   encodeUrl: false

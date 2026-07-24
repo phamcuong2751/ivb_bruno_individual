@@ -1,7 +1,7 @@
 info:
   name: Login 0392974287 Tài Anh
   type: http
-  seq: 9
+  seq: 8
 
 http:
   method: POST

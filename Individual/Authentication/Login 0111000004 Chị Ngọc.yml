@@ -1,7 +1,7 @@
 info:
   name: Login 0111000004 Chị Ngọc
   type: http
-  seq: 12
+  seq: 11
 
 http:
   method: POST

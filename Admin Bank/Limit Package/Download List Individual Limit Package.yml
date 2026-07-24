@@ -10,9 +10,9 @@ http:
     - name: platform
       value: WEB
     - name: Authorization
-      value: Bearer {{individual_admin_token}}
+      value: Bearer {{individual_admin_branch_token}}
     - name: Language
-      value: en
+      value: vi
   params:
     - name: pageSize
       value: "9999"
