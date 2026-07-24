@@ -1,22 +1,17 @@
 info:
-  name: SUP Approve
+  name: Individual Detail
   type: http
-  seq: 6
+  seq: 2
 
 http:
-  method: POST
-  url: "{{individual_admin_host}}/fx/request/approve"
+  method: GET
+  url: "{{individual_admin_host}}/transaction-blocking-time/{{id}}"
   headers:
     - name: platform
       value: WEB
   body:
     type: json
-    data: |-
-      {
-        "entityId" : "d0e2edb5-e036-4286-9be0-bf14c6440944",
-        "workflowId" : "7ebad96f-44ca-44f5-bbdc-c5e842314a10",
-        "comment" : "Approve Case"
-      }
+    data: ""
   auth:
     type: bearer
     token: "{{individual_admin_branch_token}}"
@@ -24,7 +19,7 @@ http:
 runtime:
   variables:
     - name: id
-      value: 2ce5b72d-6ea6-49bb-ab52-169851ff4995
+      value: 775022a0-421d-4d97-bb36-9a93db7fd911
 
 settings:
   encodeUrl: false
@@ -33,27 +28,22 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: TST 20260625
+  - name: TST 20260708
     request:
-      url: "{{individual_admin_host}}/fx/request/approve"
-      method: POST
+      url: "{{individual_admin_host}}/transaction-blocking-time/{{id}}"
+      method: GET
       headers:
         - name: platform
           value: WEB
       body:
         type: json
-        data: |-
-          {
-            "entityId" : "9e3c9800-0d75-410b-90e2-e02fe1c011e3",
-            "workflowId" : "eef6370b-96f3-4a81-b24a-49cc45c9b94c",
-            "comment" : "Approve Rejection of TELLER"
-          }
+        data: ""
     response:
       status: 200
       statusText: OK
       headers:
         - name: x-request-id
-          value: 0c0ef82a5314adc8b462044aa03ec59b
+          value: 90df99a9405f76fde3cb8ead20ad3620
         - name: x-content-type-options
           value: nosniff
         - name: x-xss-protection
@@ -69,9 +59,9 @@ examples:
         - name: content-type
           value: application/json
         - name: content-length
-          value: "54"
+          value: "400"
         - name: date
-          value: Thu, 25 Jun 2026 07:25:02 GMT
+          value: Wed, 08 Jul 2026 07:25:32 GMT
         - name: keep-alive
           value: timeout=60
         - name: connection
@@ -81,5 +71,19 @@ examples:
         data: |-
           {
             "code": 200,
-            "message": "Approve FX request successful"
+            "data": {
+              "id": "a7c241f2-a058-4620-a6d0-32b5728ba713",
+              "ccy": "USD",
+              "featureKey": "FX_SELL_REQUEST",
+              "startTime": "17:30:00",
+              "endTime": "08:00:00",
+              "branchCode": "100",
+              "limitAmount": 200000,
+              "status": "ACTIVE",
+              "createdAt": "2026-06-05T06:30:33.370751",
+              "createdBy": "hs_maker",
+              "updatedAt": "2026-06-05T06:38:46.369194",
+              "updatedBy": "hs_maker"
+            },
+            "message": "Get transaction blocking time detail successfully"
           }

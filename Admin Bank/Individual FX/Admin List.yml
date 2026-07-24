@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/fx/request?numPage=0&pageSize=10"
+  url: "{{individual_admin_host}}/fx/request?numPage=0&pageSize=10&fromExecutedDate=2026-07-20T17%3A00%3A00.000Z&toExecutedDate=2026-07-21T16%3A59%3A59.999Z&search="
   headers:
     - name: platform
       value: WEB
@@ -16,10 +16,15 @@ http:
     - name: pageSize
       value: "10"
       type: query
-    - name: status
-      value: PENDING
+    - name: fromExecutedDate
+      value: 2026-07-20T17%3A00%3A00.000Z
       type: query
-      disabled: true
+    - name: toExecutedDate
+      value: 2026-07-21T16%3A59%3A59.999Z
+      type: query
+    - name: search
+      value: ""
+      type: query
   body:
     type: json
     data: ""

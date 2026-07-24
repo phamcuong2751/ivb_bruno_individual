@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_host}}/fx-services/fx/request"
+  url: "{{individual_host}}/fx-services/fx/request?pageSize=20&numPage=0"
   headers:
     - name: Language
       value: vi
@@ -35,6 +35,21 @@ http:
       value: application/json, text/plain, */*
     - name: Platform
       value: WEB
+  params:
+    - name: pageSize
+      value: "20"
+      type: query
+    - name: numPage
+      value: "0"
+      type: query
+    - name: fromIvbSentDate
+      value: 2026-06-30T00:00:00Z
+      type: query
+      disabled: true
+    - name: toIvbSentDate
+      value: 2026-07-31T16%3A59%3A59.999Z
+      type: query
+      disabled: true
   auth:
     type: bearer
     token: "{{individual_token}}"

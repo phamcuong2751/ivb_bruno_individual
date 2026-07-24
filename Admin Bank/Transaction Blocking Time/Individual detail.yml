@@ -1,0 +1,179 @@
+info:
+  name: Individual detail
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/transaction-blocking-time/{{id}}"
+  headers:
+    - name: platform
+      value: WEB
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+runtime:
+  variables:
+    - name: id
+      value: 0509d680-3b2b-4b02-8ed2-0d22f48e7d8f
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260723
+    request:
+      url: "{{individual_admin_host}}/transaction-blocking-time"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 8c6c948a0d8290bf12885d35d480e4d3
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "1045"
+        - name: date
+          value: Thu, 23 Jul 2026 06:39:52 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": [
+              {
+                "id": "0509d680-3b2b-4b02-8ed2-0d22f48e7d8f",
+                "ccy": "CAD",
+                "featureKey": "FX_SELL_REQUEST",
+                "startTime": "17:30:00",
+                "endTime": "08:30:00",
+                "branchCode": "100",
+                "limitAmount": 2000000,
+                "status": "ACTIVE",
+                "createdAt": "2026-07-23T06:29:01.505655",
+                "createdBy": "hs_maker",
+                "updatedAt": "2026-07-23T06:29:01.505672",
+                "updatedBy": "hs_maker"
+              },
+              {
+                "id": "ca906241-efd8-40d9-80e9-a550b80d18ea",
+                "ccy": "SGD",
+                "featureKey": "FX_SELL_REQUEST",
+                "startTime": "17:00:00",
+                "endTime": "08:00:00",
+                "branchCode": "100",
+                "limitAmount": 0,
+                "status": "ACTIVE",
+                "createdAt": "2026-07-22T08:12:01.117808",
+                "createdBy": "hs_checker",
+                "updatedAt": "2026-07-22T08:12:01.117808",
+                "updatedBy": "hs_checker"
+              },
+              {
+                "id": "f0291199-979e-432b-a6d1-39089226d224",
+                "ccy": "USD",
+                "featureKey": "FX_SELL_REQUEST",
+                "startTime": "17:00:00",
+                "endTime": "08:00:00",
+                "branchCode": "100",
+                "limitAmount": 200000,
+                "status": "ACTIVE",
+                "createdAt": "2026-07-22T08:11:12.74715",
+                "createdBy": "hs_checker",
+                "updatedAt": "2026-07-22T08:11:12.74715",
+                "updatedBy": "hs_checker"
+              }
+            ],
+            "count": 3,
+            "message": "Get transaction blocking time successfully"
+          }
+  - name: TST 20260723
+    request:
+      url: "{{individual_admin_host}}/transaction-blocking-time/{{id}}"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 2f90988924c83ddd93f2fc36cfc2be52
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "401"
+        - name: date
+          value: Thu, 23 Jul 2026 06:41:09 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": {
+              "id": "0509d680-3b2b-4b02-8ed2-0d22f48e7d8f",
+              "ccy": "CAD",
+              "featureKey": "FX_SELL_REQUEST",
+              "startTime": "17:30:00",
+              "endTime": "08:30:00",
+              "branchCode": "100",
+              "limitAmount": 2000000,
+              "status": "ACTIVE",
+              "createdAt": "2026-07-23T06:29:01.505655",
+              "createdBy": "hs_maker",
+              "updatedAt": "2026-07-23T06:29:01.505672",
+              "updatedBy": "hs_maker"
+            },
+            "message": "Get transaction blocking time detail successfully"
+          }

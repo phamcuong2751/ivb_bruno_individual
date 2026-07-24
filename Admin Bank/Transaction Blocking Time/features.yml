@@ -1,30 +1,20 @@
 info:
-  name: SUP Approve
+  name: features
   type: http
-  seq: 6
+  seq: 1
 
 http:
-  method: POST
-  url: "{{individual_admin_host}}/fx/request/approve"
+  method: GET
+  url: "{{individual_admin_host}}/transaction-blocking-time/features"
   headers:
     - name: platform
       value: WEB
   body:
     type: json
-    data: |-
-      {
-        "entityId" : "d0e2edb5-e036-4286-9be0-bf14c6440944",
-        "workflowId" : "7ebad96f-44ca-44f5-bbdc-c5e842314a10",
-        "comment" : "Approve Case"
-      }
+    data: ""
   auth:
     type: bearer
     token: "{{individual_admin_branch_token}}"
-
-runtime:
-  variables:
-    - name: id
-      value: 2ce5b72d-6ea6-49bb-ab52-169851ff4995
 
 settings:
   encodeUrl: false
@@ -33,27 +23,22 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: TST 20260625
+  - name: TST 20260723
     request:
-      url: "{{individual_admin_host}}/fx/request/approve"
-      method: POST
+      url: "{{individual_admin_host}}/transaction-blocking-time/features"
+      method: GET
       headers:
         - name: platform
           value: WEB
       body:
         type: json
-        data: |-
-          {
-            "entityId" : "9e3c9800-0d75-410b-90e2-e02fe1c011e3",
-            "workflowId" : "eef6370b-96f3-4a81-b24a-49cc45c9b94c",
-            "comment" : "Approve Rejection of TELLER"
-          }
+        data: ""
     response:
       status: 200
       statusText: OK
       headers:
         - name: x-request-id
-          value: 0c0ef82a5314adc8b462044aa03ec59b
+          value: f3d1469674e8979674d54412e4635d83
         - name: x-content-type-options
           value: nosniff
         - name: x-xss-protection
@@ -69,9 +54,9 @@ examples:
         - name: content-type
           value: application/json
         - name: content-length
-          value: "54"
+          value: "255"
         - name: date
-          value: Thu, 25 Jun 2026 07:25:02 GMT
+          value: Thu, 23 Jul 2026 07:43:00 GMT
         - name: keep-alive
           value: timeout=60
         - name: connection
@@ -81,5 +66,19 @@ examples:
         data: |-
           {
             "code": 200,
-            "message": "Approve FX request successful"
+            "data": [
+              {
+                "blockingTimeCurrencies": [
+                  "SGD",
+                  "USD",
+                  "CAD"
+                ],
+                "description": "Request SELL FX",
+                "id": 262,
+                "isTransactionBlockingTime": true,
+                "key": "FX_SELL_REQUEST",
+                "name": "Request SELL FX"
+              }
+            ],
+            "message": "Get transaction blocking time features successfully"
           }

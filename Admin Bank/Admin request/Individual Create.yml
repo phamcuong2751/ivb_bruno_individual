@@ -1,11 +1,11 @@
 info:
-  name: SUP Approve
+  name: Individual Create
   type: http
-  seq: 6
+  seq: 3
 
 http:
   method: POST
-  url: "{{individual_admin_host}}/fx/request/approve"
+  url: "{{individual_admin_host}}/transaction-blocking-time"
   headers:
     - name: platform
       value: WEB
@@ -13,18 +13,16 @@ http:
     type: json
     data: |-
       {
-        "entityId" : "d0e2edb5-e036-4286-9be0-bf14c6440944",
-        "workflowId" : "7ebad96f-44ca-44f5-bbdc-c5e842314a10",
-        "comment" : "Approve Case"
+        "ccy": "CAD",
+        "featureId": 262,
+        "branchCode": "199",
+        "limitAmount": 2000000,
+        "startTime": "17:30:00",
+        "endTime": "08:30:00"
       }
   auth:
     type: bearer
     token: "{{individual_admin_branch_token}}"
-
-runtime:
-  variables:
-    - name: id
-      value: 2ce5b72d-6ea6-49bb-ab52-169851ff4995
 
 settings:
   encodeUrl: false
@@ -33,9 +31,9 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: TST 20260625
+  - name: tst duplicate 20260708
     request:
-      url: "{{individual_admin_host}}/fx/request/approve"
+      url: "{{individual_admin_host}}/transaction-blocking-time"
       method: POST
       headers:
         - name: platform
@@ -44,16 +42,19 @@ examples:
         type: json
         data: |-
           {
-            "entityId" : "9e3c9800-0d75-410b-90e2-e02fe1c011e3",
-            "workflowId" : "eef6370b-96f3-4a81-b24a-49cc45c9b94c",
-            "comment" : "Approve Rejection of TELLER"
+            "ccy": "CAD",
+            "featureId": 262,
+            "branchCode": "199",
+            "limitAmount": 2000000,
+            "startTime": "17:30:00",
+            "endTime": "08:30:00"
           }
     response:
       status: 200
       statusText: OK
       headers:
         - name: x-request-id
-          value: 0c0ef82a5314adc8b462044aa03ec59b
+          value: c41303ea10064f4c7b756e71c2de311a
         - name: x-content-type-options
           value: nosniff
         - name: x-xss-protection
@@ -69,9 +70,9 @@ examples:
         - name: content-type
           value: application/json
         - name: content-length
-          value: "54"
+          value: "107"
         - name: date
-          value: Thu, 25 Jun 2026 07:25:02 GMT
+          value: Wed, 08 Jul 2026 03:05:29 GMT
         - name: keep-alive
           value: timeout=60
         - name: connection
@@ -80,6 +81,6 @@ examples:
         type: json
         data: |-
           {
-            "code": 200,
-            "message": "Approve FX request successful"
+            "code": 400,
+            "message": "Transaction blocking time already exists. Feature: FX_SELL_REQUEST - Currency: CAD"
           }

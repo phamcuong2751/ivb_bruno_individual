@@ -16,6 +16,14 @@ http:
     - name: pageSize
       value: "10"
       type: query
+    - name: status
+      value: SENT_TO_BANK
+      type: query
+      disabled: true
+    - name: search
+      value: 20260716FEX155339770
+      type: query
+      disabled: true
   body:
     type: json
     data: ""

@@ -22,6 +22,8 @@ runtime:
       value: 89b63804-74c6-4ae8-8070-7c17fdf8d18e
     - name: adminFxRequestId
       value: 89b63804-74c6-4ae8-8070-7c17fdf8d18e
+    - name: admin_fx_request_id
+      value: 6a5bfd88-866e-47d5-9c66-670c7cbc83be
 
 settings:
   encodeUrl: false
