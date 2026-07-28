@@ -1,0 +1,61 @@
+info:
+  name: Admin Login huong_maker
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{individual_admin_host}}/auth/login"
+  headers:
+    - name: device-name
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+      disabled: true
+    - name: platform
+      value: WEB
+    - name: language
+      value: en
+    - name: Content-Type
+      value: application/json
+    - name: Cookie
+      value: JSESSIONID=A27DA6558C1D26B8B89C85599858D025
+  body:
+    type: json
+    data: |-
+      {
+        "username": "huong_maker",
+        "password": "ktk3gLtIjD9VoyhTKbEoIxs0hDooajRSiTJqFY+19XV+In+GfYMJskid1O4v+2FHyO6Q6T2sNGwCMa7hLDfvEfbQO2l03u90v6/l118tGuzbamA804RnSXryfWVzshrZJ9ZytHPvU+7WhuN/tmI9obuD0xUqgR2Xih3Q4mcJDiWgiALCTS9gclIyvViTjR2NcBHAe+iP+UrIfRR6Q6nOqnvr7BucHUbiAJgfrKAX71PAlmMRFdkuHFAL0rzvRgDE0NaVbgff6IOoRoXG3jT71dKhoW8EhwHMXEpSvkiAhRNzrjqWPneHQ4KG/uw4lEQBIpZXk+8U6yLUzMnpBZ0Sy2bRktzvm7AXn0Oohc8qmmIwwuG94IJ/mbg4tqxxfHAWdNrkk+E1qvaPvNZjgKmTb6G4x8tbQKrpSAfl6V1iNKF/En6b46OJsPsDyRL81yu8UgBAt3EcBpgiaVXsGFucxDvJEw9OwsC6y3xz+v2BJehazEuHjpFT91LQDsf+jDl35UHGQGF5XH5HYAe9Yz2HI8noo0NrEBTT/cV+a5itf8WyEyoIiw==",
+        "loginType": "PASSWORD",
+        "biometricData": true,
+        "imei": "66B36AEE-580C-47F4-9109-FC0CAFAE500F",
+        "platform": "WEB"
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: individual_admin_host
+      value: http://localhost:9092
+  scripts:
+    - type: after-response
+      code: |-
+        try {
+            const response = res.getBody();
+
+            if (response?.data?.token) {
+                bru.setEnvVar(
+                    "individual_admin_token",
+                    response.data.token
+                );
+            }
+        } catch (error) {
+            console.log(
+                "Cannot extract token from response:",
+                error.message
+            );
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

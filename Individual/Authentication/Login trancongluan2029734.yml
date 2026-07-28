@@ -1,7 +1,7 @@
 info:
   name: Login trancongluan2029734
   type: http
-  seq: 7
+  seq: 6
 
 http:
   method: POST
@@ -52,7 +52,7 @@ http:
     data: |-
       {
         "username": "trancongluan2029734",
-        "password": "a8amqFiS9+m3TaI+HJIRwYHgtzrJaOC4970VBs3zKCatp3OHUKoCD385fRiS1GLpbxqsUmRao/KQgq3DEd7cxqczMB6YxmKpDME14uA2CM0g+wVCwae3wx6vy1Yh6M8C7OMUJmNL7wGszYLTCrOYb/E51K+2xy05gCbAR8Gmg0EbmTNeKgvi87uvtuO1esllxl6cbkogZeDN1uUGcHTQT5gki5vEPr0s0R1KX+hPN2Fw7+3a1Q6LAoNs57m4Ez1dDLcYUptR/p0rVQUZoOEz9E0rM+D0moFGxHsAK7isEqUTpHHdNi/xBiLgk2KfNV5PDpmAIEF8GMAltUOneSS1QagjwkP0kP5gETo8a9o0ycHP0lymN1fWLUpc75knb3uspqNtFbRlxmwpPbMIWmY4/HXEqRPbU8Z8e6Yu1xBmRycwf5K+fmn/hy7wSOgRZo8qPiMGeVLkmzKria8PedMCkJNw7agrzJ3/9BrNM7l/3b1Kl5jXoX21aaO6mUrgwSgBmUVkFWbgFHPDQH+RIustEs7XosaP5ZPkFzhgtigiwOfsLWRX",
+        "password": "ZRnD0YOC7CUh/dDVmwiTWVhxAD0gXOKUbknpKE62x8yAT+sDAwXP+TxaBsReLgfba4Mp9j31di6NT7O11Kp8ksihg2vS8EhP8vZOr/8R/e5PjGQsXoyXxAsRP07CEVJj+HKhk3qNoFzSK96yJMZw/TPBHCgkQP0Twjs8pDKucKWhCecLdAyZWjEoRTt+J68cM8+DZRsKf++Sc3Wx4NUMBoiZOjFgWtynxN6mfDeSFFkKC2u138NpMKnzmRkhCz3KhL7imYsY3Ddo8NOq+et9LYaH3x15u1kLxuVvvtvfNPIf3sseYRRktnmRa8eOy2N0c6TVGjIsAT2kNqAZDSSeIGkYcj4QESSjX0D10L8dIYJ6BLp390H4Od/8AVKjc9H6Pu3E213T6kFDe/Q/gXiUkrRxUXcpWSzXpMALnvPZQGHCi49ECF+xFEsTAZKfu9koQCQzpoMWqDOXQG24l6+AmQKGces3rAPlPOMYEu/dldEPrX19ss4yciAfY9woevRJLD3sSAJRGS0V0KyZhfo6rTeJ6SwDIz2HgKGOiXFjvaivKw==",
         "loginType": "PASSWORD",
         "platform": "WEB",
         "captchaVerify": "63e748868edd2096b37b6543e4e2bf69"

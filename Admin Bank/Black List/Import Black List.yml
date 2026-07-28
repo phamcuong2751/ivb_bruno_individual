@@ -1,0 +1,33 @@
+info:
+  name: Import Black List
+  type: http
+  seq: 9
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-black-list"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_branch_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - D:\Eztek\Project\IVB\temp\XLS IVB_Template_import_blacklist nội bộ.xls
+        contentType: application/vnd.ms-excel
+      - name: file
+        type: file
+        value:
+          - D:\Eztek\Project\IVB\temp\CSV IVB_Template_import_blacklist nội bộ.csv
+        contentType: text/csv; charset=utf-8
+        disabled: true
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

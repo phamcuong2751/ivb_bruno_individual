@@ -1,0 +1,19 @@
+info:
+  name: Black List Details History
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/individual-black-list/cea00a52-76fc-4b86-8662-60d3fc11de51/history"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_branch_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

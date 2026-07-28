@@ -1,11 +1,11 @@
 info:
-  name: Synchronize Individual User
+  name: Remove Black List
   type: http
-  seq: 8
+  seq: 5
 
 http:
-  method: post
-  url: "{{individual_admin_host}}/individual-user/synchronize"
+  method: PUT
+  url: "{{individual_admin_host}}/individual-black-list/cea00a52-76fc-4b86-8662-60d3fc11de51/remove"
   headers:
     - name: platform
       value: WEB
@@ -15,11 +15,11 @@ http:
     type: json
     data: |-
       {
-        "cifCore": "2029734"
+        "reason": "Phát hiện khách hàng hợp lệ"
       }
 
 settings:
-  encodeUrl: false
+  encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
