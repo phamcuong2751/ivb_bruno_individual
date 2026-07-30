@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_host}}/transfer-services/transfer/user/download?pageSize=10&numPage=0&extension=xls&isSchedule=true"
+  url: "{{individual_host}}/transfer-services/transfer/user/download?pageSize=9999&numPage=0&extension=pdf&isSchedule=false"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -54,17 +54,25 @@ http:
       value: d7775e14-5100-45ec-adee-5173a9e1a21b
   params:
     - name: pageSize
-      value: "10"
+      value: "9999"
       type: query
     - name: numPage
       value: "0"
       type: query
     - name: extension
+      value: pdf
+      type: query
+    - name: extension
       value: xls
+      type: query
+      disabled: true
+    - name: isSchedule
+      value: "false"
       type: query
     - name: isSchedule
       value: "true"
       type: query
+      disabled: true
 
 runtime:
   variables:

@@ -35,7 +35,7 @@ http:
     type: json
     data: |-
       {
-        "data": "Bb@123123" // Aa@123456 Aa@123123
+        "data": "P$bN5" // Aa@123456 Aa@123123 Nm6969696969! Ff@123123 P$bN5
       }
   auth: inherit
 

@@ -1,0 +1,95 @@
+info:
+  name: Login 0898912890
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{individual_host}}/auth-services/auth/login"
+  headers:
+    - name: accept
+      value: application/json, text/plain, */*
+    - name: accept-language
+      value: en-US,en;q=0.9,vi;q=0.8
+    - name: cache-control
+      value: no-cache
+    - name: content-type
+      value: application/json
+    - name: dnt
+      value: "1"
+    - name: language
+      value: vi
+    - name: origin
+      value: https://cookbook-exploring-rating-ages.trycloudflare.com
+    - name: platform
+      value: WEB
+    - name: pragma
+      value: no-cache
+    - name: priority
+      value: u=1, i
+    - name: referer
+      value: https://cookbook-exploring-rating-ages.trycloudflare.com/
+    - name: sec-ch-ua
+      value: '"Not;A=Brand";v="8", "Chromium";v="150", "Google Chrome";v="150"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+    - name: sec-fetch-dest
+      value: empty
+    - name: sec-fetch-mode
+      value: cors
+    - name: sec-fetch-site
+      value: cross-site
+    - name: user-agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+    - name: user-agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36
+      disabled: true
+    - name: x-checksum
+      value: b385094a21e01657e8c6dec54369a7f9469c9040cf951367ff40960353588f79
+    - name: x-request-id
+      value: 41d42fa8-d5d2-4cd1-8352-4538c02143d3
+    - name: x-request-timestamp
+      value: "1785228759156"
+  body:
+    type: json
+    data: |-
+      {
+        "username": "0898912890",
+        "password": "IzPBFQH54EGD9nr5Vi/puEjw4zKS1/BAFEFE87mxBGqwarnR4+Jjrn+xxKnM2MYxZ08mEVwRGfqvFgL7I3aOi1ShVt7RcmsSu2tg/gM1xBPPQ0Ms2GNDz9U8tWRjrh7lmUdYxpnnB8nBUgqln/aUBjReaxaixbAW4SCBv1w0PaFVw6osmxv9QyZWKeEIjIygowBWiwxxTGvsZSpEOo/I0gVqkQtvCqP3UBCWEmy0Zumvv7cBHNwq7EDdiYrKhOJJO6donmtWLRhr2tnHijk2zJSjS+or41UAm4Rg560V4/HwgPcrYmykgjXTfxsIdUyX6q2rEosyQ+RWWz0gCqfOJAm7pDecsSro29K5v3xIuQD3Lv7g8hlb9ItSsAj98sTxgG39CZm3pL4hh+/lG0yAw409rRC224YCjQ191l4VWhJtJ6YJj/L5HspJp28xvSh0mQLwYo1NRAHnX96jg1I4Cg1M+woph5lIHd3pK4awLckRAzpmn5yM5vsgSx8a/h9n6sgTPr25fKl52PP62BLLpxUJYT84oAqGXS9yoKjjIf0cIcNVtQ==",
+        "loginType": "PASSWORD",
+        "platform": "WEB",
+        "captchaVerify": "caba71ef17e12f9575f6048be35b7c0f"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const json = res.getBody();
+
+        try {
+            // Get access token from response
+            const token = json?.data?.token;
+
+            // Skip if token is missing, null, or empty
+            if (!token) {
+                console.log("data.token field is missing or empty");
+            } else {
+                // Save token to environment variable
+                bru.setEnvVar("individual_token", token);
+
+                console.log("individual_token saved successfully");
+            }
+        } catch (err) {
+            // Ignore parsing or runtime errors
+            console.log("Skip saving token:", err.message);
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

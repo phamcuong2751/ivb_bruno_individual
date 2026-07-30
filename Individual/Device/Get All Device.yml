@@ -1,11 +1,11 @@
 info:
-  name: Account Default Register
+  name: Get All Device
   type: http
-  seq: 10
+  seq: 12
 
 http:
-  method: POST
-  url: "{{individual_host}}/other-services/account/default"
+  method: GET
+  url: "{{individual_host}}/auth-services/all-device?numPage=0&pageSize=100&fromLoginTime=2026-07-24T17:00:00.000Z&toLoginTime=2026-07-29T16:59:59.999Z"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -49,13 +49,19 @@ http:
       value: "1770014796305"
     - name: request-id
       value: d7775e14-5100-45ec-adee-5173a9e1a21b
-  body:
-    type: json
-    data: |-
-      {
-        "id": "a36814e1-7ec0-4619-be43-8a4b42a4784d",
-        "accountNumber": "2029734-008"
-      }
+  params:
+    - name: numPage
+      value: "0"
+      type: query
+    - name: pageSize
+      value: "100"
+      type: query
+    - name: fromLoginTime
+      value: 2026-07-24T17:00:00.000Z
+      type: query
+    - name: toLoginTime
+      value: 2026-07-29T16:59:59.999Z
+      type: query
 
 runtime:
   variables:

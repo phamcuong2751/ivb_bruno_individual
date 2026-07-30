@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_host}}/other-services/account/user?numPage=0&pageSize=9999"
+  url: "{{individual_host}}/other-services/account/user?numPage=0&pageSize=9999&status=ACTIVE"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -64,6 +64,9 @@ http:
       value: EMAIL_SUBCRIBE
       type: query
       disabled: true
+    - name: status
+      value: ACTIVE
+      type: query
 
 runtime:
   variables:

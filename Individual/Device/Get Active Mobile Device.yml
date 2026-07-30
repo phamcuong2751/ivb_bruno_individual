@@ -1,11 +1,11 @@
 info:
-  name: Account Default Register
+  name: Get Active Mobile Device
   type: http
-  seq: 10
+  seq: 2
 
 http:
-  method: POST
-  url: "{{individual_host}}/other-services/account/default"
+  method: GET
+  url: "{{individual_host}}/auth-services/device"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -49,13 +49,6 @@ http:
       value: "1770014796305"
     - name: request-id
       value: d7775e14-5100-45ec-adee-5173a9e1a21b
-  body:
-    type: json
-    data: |-
-      {
-        "id": "a36814e1-7ec0-4619-be43-8a4b42a4784d",
-        "accountNumber": "2029734-008"
-      }
 
 runtime:
   variables:
