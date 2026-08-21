@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_host}}/other-services/account/user?numPage=0&pageSize=9999&status=ACTIVE"
+  url: "{{individual_host}}/other-services/account/user?numPage=0&pageSize=9999&status=ACTIVE&isNoDebits=false&isNoCredits=false&isDormant=false&isFrozen=false"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
@@ -56,6 +56,21 @@ http:
     - name: pageSize
       value: "9999"
       type: query
+    - name: status
+      value: ACTIVE
+      type: query
+    - name: isNoDebits
+      value: "false"
+      type: query
+    - name: isNoCredits
+      value: "false"
+      type: query
+    - name: isDormant
+      value: "false"
+      type: query
+    - name: isFrozen
+      value: "false"
+      type: query
     - name: isForeignCurrency
       value: "false"
       type: query
@@ -64,9 +79,6 @@ http:
       value: EMAIL_SUBCRIBE
       type: query
       disabled: true
-    - name: status
-      value: ACTIVE
-      type: query
 
 runtime:
   variables:

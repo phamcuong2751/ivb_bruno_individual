@@ -5,14 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{individual_host}}/other-services/other-services/user/info"
+  url: "{{individual_host}}/other-services/user/info"
   headers:
     - name: Accept
       value: application/json, text/plain, */*
     - name: Accept-Language
       value: en-US,en;q=0.9
     - name: Authorization
-      value: Bearer {{Token}}
+      value: Bearer {{individual_token}}
     - name: Connection
       value: keep-alive
     - name: Content-Type

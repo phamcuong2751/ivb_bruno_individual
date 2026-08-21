@@ -1,0 +1,7 @@
+info:
+  name: Digital Signature
+  type: folder
+  seq: 18
+
+request:
+  auth: inherit

@@ -1,0 +1,59 @@
+info:
+  name: List Onboard Verification
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/individual-onboard-verification/search?pageNum=0&pageSize=10&fromDate=2026-07-29T17:00:00.000Z&toDate=2026-09-19T16:59:59.999Z&branch=106"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  params:
+    - name: pageNum
+      value: "0"
+      type: query
+    - name: pageSize
+      value: "10"
+      type: query
+    - name: postVerificationTag
+      value: NEED_PROCESS
+      type: query
+      disabled: true
+    - name: status
+      value: COMPLETED
+      type: query
+      disabled: true
+    - name: status
+      value: SIRON_UNACCEPTED
+      type: query
+      disabled: true
+    - name: status
+      value: OPEN_CIF_PROCESSING
+      type: query
+      disabled: true
+    - name: status
+      value: FAILED
+      type: query
+      disabled: true
+    - name: search
+      value: ""
+      type: query
+      disabled: true
+    - name: fromDate
+      value: 2026-07-29T17:00:00.000Z
+      type: query
+    - name: toDate
+      value: 2026-09-19T16:59:59.999Z
+      type: query
+    - name: branch
+      value: "106"
+      type: query
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

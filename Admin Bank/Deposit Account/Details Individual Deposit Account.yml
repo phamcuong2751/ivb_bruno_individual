@@ -1,0 +1,19 @@
+info:
+  name: Details Individual Deposit Account
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/individual-deposit-account/5b8b1087-ff16-4eaa-8a1f-dadf38b8b8c7"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

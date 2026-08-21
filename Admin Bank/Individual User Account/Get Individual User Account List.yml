@@ -5,7 +5,7 @@ info:
 
 http:
   method: get
-  url: "{{individual_admin_host}}/individual-user-account/user/c66850ea-6bae-4c2a-b5ea-c0a9d897a7ee/list?pageSize=9999&numPage=0"
+  url: "{{individual_admin_host}}/individual-user-account/user/c66850ea-6bae-4c2a-b5ea-c0a9d897a7ee/list?pageSize=9999&numPage=0&isNoDebits=false&isNoCredits=false&isDormant=false&isFrozen=false"
   headers:
     - name: Cookie
       value: JSESSIONID=A27DA6558C1D26B8B89C85599858D025
@@ -36,6 +36,18 @@ http:
       value: EMAIL_SUBCRIBE
       type: query
       disabled: true
+    - name: isNoDebits
+      value: "false"
+      type: query
+    - name: isNoCredits
+      value: "false"
+      type: query
+    - name: isDormant
+      value: "false"
+      type: query
+    - name: isFrozen
+      value: "false"
+      type: query
   auth: inherit
 
 runtime:

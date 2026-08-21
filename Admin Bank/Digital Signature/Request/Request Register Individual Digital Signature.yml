@@ -1,0 +1,44 @@
+info:
+  name: Request Register Individual Digital Signature
+  type: http
+  seq: 4
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-digital-signature-request"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_branch_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: userId
+        type: text
+        value: da823a2a-00c2-41cb-80f8-39d7dc2a19a5
+      - name: serialNumber
+        type: text
+        value: 5403ab8cfc7fdf17409efbc935e94fb7
+      - name: file
+        type: file
+        value:
+          - D:\Eztek\Project\IVB\temp\NhutCert.cer
+        contentType: application/pkix-cert
+        disabled: true
+      - name: file
+        type: file
+        value:
+          - D:\Eztek\Project\IVB\temp\cks.cer
+        contentType: application/pkix-cert
+
+runtime:
+  variables:
+    - name: individual_admin_host
+      value: http://localhost:9092
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

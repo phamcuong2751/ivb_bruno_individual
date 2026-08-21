@@ -1,0 +1,32 @@
+info:
+  name: Approve Individual Device Request
+  type: http
+  seq: 1
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-device-request/approve"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_branch_token}}
+  body:
+    type: json
+    data: |
+      {
+        "entityId": "e2084917-9f42-44db-aa20-6848b123f7a1",
+        "workflowId": "2583b1ac-b9c2-4999-88af-1406f28cfe92",
+        "comment": "Approved"
+      }
+
+runtime:
+  variables:
+    - name: individual_admin_host
+      value: http://localhost:9092
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

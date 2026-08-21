@@ -1,26 +1,29 @@
 info:
-  name: List Onboard Verification
+  name: List Individual Device
   type: http
-  seq: 2
+  seq: 3
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-onboard-verification/search?pageNum=0&pageSize=10"
+  url: "{{individual_admin_host}}/individual-device?pageSize=100&numPage=0&cifCore=1023909"
   headers:
     - name: platform
       value: WEB
     - name: Authorization
       value: Bearer {{individual_admin_token}}
   params:
-    - name: pageNum
+    - name: pageSize
+      value: "100"
+      type: query
+    - name: numPage
       value: "0"
       type: query
-    - name: pageSize
-      value: "10"
+    - name: cifCore
+      value: "1023909"
       type: query
 
 settings:
-  encodeUrl: false
+  encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5

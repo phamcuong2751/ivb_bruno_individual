@@ -1,0 +1,25 @@
+info:
+  name: Lock User Onboard Verification
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{individual_admin_host}}/individual-onboard-verification/4a4a3462-7d5b-4d65-8e0b-f17b23e5a488/lock-user"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "reason": "Lock test hậu kiếm"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

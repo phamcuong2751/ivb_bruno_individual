@@ -5,12 +5,12 @@ info:
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-management-request?pageSize=10&numPage=0&status=PENDING&fromCreatedDate=2026-07-01T17:00:00.000Z&toCreatedDate=2026-07-04T16:59:59.999Z"
+  url: "{{individual_admin_host}}/individual-management-request?pageSize=10&numPage=0"
   headers:
     - name: platform
       value: WEB
     - name: Authorization
-      value: Bearer {{individual_admin_token}}
+      value: Bearer {{individual_admin_branch_token}}
   params:
     - name: pageSize
       value: "10"
@@ -25,12 +25,15 @@ http:
     - name: status
       value: PENDING
       type: query
+      disabled: true
     - name: fromCreatedDate
       value: 2026-07-01T17:00:00.000Z
       type: query
+      disabled: true
     - name: toCreatedDate
       value: 2026-07-04T16:59:59.999Z
       type: query
+      disabled: true
     - name: fromCreatedDate
       value: 2026-06-15T02:50:04.597665Z
       type: query

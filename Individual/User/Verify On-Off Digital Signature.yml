@@ -1,0 +1,64 @@
+info:
+  name: Verify On/Off Digital Signature
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{individual_host}}/other-services/user/settings/useDigitalSignature/verify"
+  headers:
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Accept-Language
+      value: en-US,en;q=0.9
+    - name: Authorization
+      value: Bearer {{individual_token}}
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Device-Name
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+    - name: Language
+      value: vi
+    - name: Origin
+      value: https://dgb-uat.indovinabank.com.vn
+    - name: Platform
+      value: WEB
+    - name: Referer
+      value: https://dgb-uat.indovinabank.com.vn/corporate/transaction/fund-transfer/transfer/create
+    - name: Request-Id
+      value: bf3a15c8-be68-4089-8e70-a1c8aafee452
+    - name: Sec-Fetch-Dest
+      value: empty
+    - name: Sec-Fetch-Mode
+      value: cors
+    - name: Sec-Fetch-Site
+      value: same-origin
+    - name: Time
+      value: "1763955516079"
+    - name: User-Agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+    - name: sec-ch-ua
+      value: '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+    - name: time
+      value: "1770014796305"
+    - name: request-id
+      value: d7775e14-5100-45ec-adee-5173a9e1a21b
+  body:
+    type: json
+    data: |-
+      {
+        "otp": "301088",
+        "useDigitalSignature": true
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

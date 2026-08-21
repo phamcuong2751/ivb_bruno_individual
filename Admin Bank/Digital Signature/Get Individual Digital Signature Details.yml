@@ -1,0 +1,19 @@
+info:
+  name: Get Individual Digital Signature Details
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/individual-digital-signature/eca81f15-a6aa-4679-932c-63c71fa4bc19"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

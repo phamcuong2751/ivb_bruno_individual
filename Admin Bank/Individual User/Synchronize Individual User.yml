@@ -15,7 +15,7 @@ http:
     type: json
     data: |-
       {
-        "cifCore": "2029734"
+        "cifCore": "1032468" // 2029734 1032468
       }
 
 settings:

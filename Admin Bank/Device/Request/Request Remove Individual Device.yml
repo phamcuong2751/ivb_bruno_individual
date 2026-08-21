@@ -1,0 +1,31 @@
+info:
+  name: Request Remove Individual Device
+  type: http
+  seq: 3
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-device-request"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_branch_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "deviceId": 284,
+        "removeReason": "Xóa thiết bị"
+      }
+
+runtime:
+  variables:
+    - name: individual_admin_host
+      value: http://localhost:9092
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

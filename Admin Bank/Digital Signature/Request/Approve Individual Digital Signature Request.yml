@@ -1,0 +1,32 @@
+info:
+  name: Approve Individual Digital Signature Request
+  type: http
+  seq: 4
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-digital-signature-request/approve"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_branch_token}}
+  body:
+    type: json
+    data: |
+      {
+        "entityId": "2b32ca71-d1f1-46c0-a1cb-edf454b50753",
+        "workflowId": "65347da0-eb41-4179-aeed-1a048e5c407e",
+        "comment": "Approved"
+      }
+
+runtime:
+  variables:
+    - name: individual_admin_host
+      value: http://localhost:9092
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
