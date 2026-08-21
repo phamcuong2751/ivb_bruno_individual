@@ -1,7 +1,7 @@
 info:
-  name: TT77
+  name: Cards
   type: folder
-  seq: 14
+  seq: 4
 
 request:
   auth: inherit

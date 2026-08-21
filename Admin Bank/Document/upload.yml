@@ -1,0 +1,61 @@
+info:
+  name: upload
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{individual_admin_host}}/document/individual"
+  headers:
+    - name: accept-language
+      value: en-US,en;q=0.9
+    - name: cache-control
+      value: no-cache
+    - name: language
+      value: en
+    - name: platform
+      value: WEB
+    - name: pragma
+      value: no-cache
+    - name: priority
+      value: u=1, i
+    - name: referer
+      value: http://localhost:4000/
+    - name: request-id
+      value: efaf1fb8-8f71-45fb-88e9-0c39f2b75577
+    - name: sec-ch-ua
+      value: '"Not=A?Brand";v="99", "Google Chrome";v="151", "Chromium";v="151"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+    - name: sec-fetch-dest
+      value: empty
+    - name: sec-fetch-mode
+      value: cors
+    - name: sec-fetch-site
+      value: cross-site
+    - name: time
+      value: "1786593430095"
+    - name: user-agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - /Users/phamcuong2751/Downloads/tst.jpg
+        contentType: image/jpeg
+      - name: checksum
+        type: text
+        value: ba48571a025c485f0f9d6e45ab6def20a4698c0b2bd854ad1781ca522080ce3d
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

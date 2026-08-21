@@ -1,0 +1,237 @@
+info:
+  name: export
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/audit/log/export?cifCore=1015663"
+  headers:
+    - name: accept-language
+      value: en-US,en;q=0.9
+    - name: cache-control
+      value: no-cache
+    - name: language
+      value: en
+    - name: platform
+      value: WEB
+    - name: pragma
+      value: no-cache
+    - name: priority
+      value: u=1, i
+    - name: referer
+      value: http://localhost:4000/
+    - name: request-id
+      value: efaf1fb8-8f71-45fb-88e9-0c39f2b75577
+    - name: sec-ch-ua
+      value: '"Not=A?Brand";v="99", "Google Chrome";v="151", "Chromium";v="151"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+    - name: sec-fetch-dest
+      value: empty
+    - name: sec-fetch-mode
+      value: cors
+    - name: sec-fetch-site
+      value: cross-site
+    - name: time
+      value: "1786593430095"
+    - name: user-agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+  params:
+    - name: cifCore
+      value: "1015663"
+      type: query
+  body:
+    type: multipart-form
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260813
+    request:
+      url: "{{individual_admin_host}}/audit/log?cifCore=1015663"
+      method: GET
+      headers:
+        - name: accept-language
+          value: en-US,en;q=0.9
+        - name: cache-control
+          value: no-cache
+        - name: language
+          value: en
+        - name: platform
+          value: WEB
+        - name: pragma
+          value: no-cache
+        - name: priority
+          value: u=1, i
+        - name: referer
+          value: http://localhost:4000/
+        - name: request-id
+          value: efaf1fb8-8f71-45fb-88e9-0c39f2b75577
+        - name: sec-ch-ua
+          value: '"Not=A?Brand";v="99", "Google Chrome";v="151", "Chromium";v="151"'
+        - name: sec-ch-ua-mobile
+          value: ?0
+        - name: sec-ch-ua-platform
+          value: '"macOS"'
+        - name: sec-fetch-dest
+          value: empty
+        - name: sec-fetch-mode
+          value: cors
+        - name: sec-fetch-site
+          value: cross-site
+        - name: time
+          value: "1786593430095"
+        - name: user-agent
+          value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36
+      params:
+        - name: cifCore
+          value: "1015663"
+          type: query
+      body:
+        type: multipart-form
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: vary
+          value: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+        - name: x-request-id
+          value: d618c090f6a8516324388dbd2da6ccd7
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "2547"
+        - name: date
+          value: Thu, 13 Aug 2026 10:06:52 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": [
+              {
+                "actionDate": "2026-08-13T09:13:27.438784Z",
+                "cifCore": "1015663",
+                "description": "Get auto transfer request success",
+                "endpoint": "/transfer/auto/34a7e424-4bd9-4d5e-97a1-9631d40f4a64",
+                "method": "GET",
+                "platform": "MOBILE",
+                "requestId": "7f86b23d-e65b-4ef4-8cf0-fd22411b2cd0",
+                "status": "Completed"
+              },
+              {
+                "actionDate": "2026-08-13T09:13:27.438784Z",
+                "cifCore": "1015663",
+                "endpoint": "/transfer/auto/history",
+                "method": "POST",
+                "platform": "MOBILE",
+                "requestId": "9268fe3a-d5fd-4a00-8604-9d447b24b70a",
+                "status": "Completed"
+              },
+              {
+                "actionDate": "2026-08-13T09:13:21.414712Z",
+                "cifCore": "1015663",
+                "description": "Get auto transfer request success",
+                "endpoint": "/transfer/auto/cfbd94b8-7901-4e7d-8da1-1974041d3fcc",
+                "method": "GET",
+                "platform": "MOBILE",
+                "requestId": "30e2e5df-ab38-4775-b973-38a2f648d101",
+                "status": "Completed"
+              },
+              {
+                "actionDate": "2026-08-13T09:13:21.119674Z",
+                "cifCore": "1015663",
+                "endpoint": "/transfer/auto/history",
+                "method": "POST",
+                "platform": "MOBILE",
+                "requestId": "17244183-d29b-4132-a092-9fc8f95dac73",
+                "status": "Completed"
+              },
+              {
+                "actionDate": "2026-08-13T09:13:13.345599Z",
+                "cifCore": "1015663",
+                "description": "Get auto transfer request success",
+                "endpoint": "/transfer/auto/4c711468-2aae-476e-b4ca-b5d63f343c5a",
+                "method": "GET",
+                "platform": "MOBILE",
+                "requestId": "dd951bf8-fd58-4e29-a646-6baafd54516d",
+                "status": "Completed"
+              },
+              {
+                "actionDate": "2026-08-13T09:13:13.215004Z",
+                "cifCore": "1015663",
+                "endpoint": "/transfer/auto/history",
+                "method": "POST",
+                "platform": "MOBILE",
+                "requestId": "dbc16252-c2f5-436d-9049-25eb32041f2d",
+                "status": "Completed"
+              },
+              {
+                "actionDate": "2026-08-13T09:13:11.608389Z",
+                "cifCore": "1015663",
+                "endpoint": "/transfer/auto/search",
+                "method": "POST",
+                "platform": "MOBILE",
+                "requestId": "d791c12f-7b20-4250-a533-431f1b587d21",
+                "status": "Completed"
+              },
+              {
+                "actionDate": "2026-08-13T09:12:33.437953Z",
+                "cifCore": "1015663",
+                "description": "Get transfer detail success",
+                "endpoint": "/transfer/3bb5956d-2248-4534-95dd-0af8980bc312",
+                "method": "GET",
+                "platform": "MOBILE",
+                "requestId": "ec070f03-571d-4321-907b-f053a7585d86",
+                "status": "Completed"
+              },
+              {
+                "actionDate": "2026-08-13T09:12:31.680787Z",
+                "cifCore": "1015663",
+                "description": "Get all transfer success",
+                "endpoint": "/transfer/user",
+                "method": "GET",
+                "platform": "MOBILE",
+                "requestId": "61454f14-3af5-466e-a0f7-a37e0e233acd",
+                "status": "Completed"
+              },
+              {
+                "actionDate": "2026-08-13T09:12:26.082607Z",
+                "cifCore": "1015663",
+                "description": "Get all bill payment types successfully",
+                "endpoint": "/bill-payment/types",
+                "method": "GET",
+                "platform": "MOBILE",
+                "requestId": "962f0da9-8243-4aa1-9b88-e3ffa94168f5",
+                "status": "Completed"
+              }
+            ],
+            "count": 2585,
+            "message": "Get audit log successfully"
+          }

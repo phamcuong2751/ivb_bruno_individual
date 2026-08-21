@@ -41,11 +41,11 @@ http:
       - name: file
         type: file
         value:
-          - /Users/phamcuong2751/Downloads/batch_transfer_template.xlsx
+          - /Users/phamcuong2751/Downloads/batch_transfer_template_testFee——1.xlsx
         contentType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
       - name: checkSum
         type: text
-        value: 7c9d59d53da39031684a3a36f71c08dbbb97728145de92bbbc45f963744fa0de
+        value: e5664f267729748e6d66dfe09346170befad8b36d3a941a7657a2e3e89dc2e94
       - name: accountNo
         type: text
         value: 1032471-001

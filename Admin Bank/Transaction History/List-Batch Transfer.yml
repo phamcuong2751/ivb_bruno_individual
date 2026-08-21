@@ -1,0 +1,357 @@
+info:
+  name: List-Batch Transfer
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/batch-transfer?pageSize=10&numPage=0"
+  headers:
+    - name: platform
+      value: WEB
+  params:
+    - name: pageSize
+      value: "10"
+      type: query
+    - name: numPage
+      value: "0"
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260803
+    request:
+      url: "{{individual_admin_host}}/batch-transfer?pageSize=10&numPage=0"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      params:
+        - name: pageSize
+          value: "10"
+          type: query
+        - name: numPage
+          value: "0"
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 199ea71a9d7e26fb414124ed9abd6a5c
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "7189"
+        - name: date
+          value: Mon, 03 Aug 2026 06:48:13 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": [
+              {
+                "amount": 165218888,
+                "batchName": "bat",
+                "batchStatus": "FAILED",
+                "ccy": "VND",
+                "cif": "1015663",
+                "createdAt": "2026-08-03T03:55:53.536409Z",
+                "description": "des",
+                "details": [],
+                "errorCode": [],
+                "errorMessage": [],
+                "failedRecord": 0,
+                "feeServiceAmount": 0,
+                "fileName": "batch_transfer_template_success_30.xlsx",
+                "id": "2a0b6f7d-4a6e-440e-b6d4-1fb3269d5dea",
+                "phoneNumber": "+84909015594",
+                "processedAt": "2026-08-03T03:55:53.536409Z",
+                "requestRef": "20260803TRF105544880",
+                "senderAccountId": "7aab175d-74c9-4d40-a53f-346216a063f9",
+                "status": "FAILED",
+                "successRecord": 8,
+                "totalAmount": 165218888,
+                "totalFeeAmount": 40000,
+                "totalRecord": 8,
+                "totalVatAmount": 4000,
+                "uploadedAt": "2026-08-03T03:55:44.208374Z",
+                "vatServiceAmount": 0
+              },
+              {
+                "amount": 165218888,
+                "batchName": "batch_transfer_template_success_29",
+                "batchStatus": "WAITING_PROCESS",
+                "ccy": "VND",
+                "cif": "1015663",
+                "createdAt": "2026-08-03T03:46:43.33138Z",
+                "details": [],
+                "errorCode": [],
+                "errorMessage": [],
+                "failedRecord": 0,
+                "feeServiceAmount": 0,
+                "fileName": "batch_transfer_template_success_29.xlsx",
+                "id": "720fcebc-d448-4e78-88d1-1874b82c6517",
+                "phoneNumber": "+84909015594",
+                "processedAt": "2026-08-03T03:46:43.33138Z",
+                "requestRef": "20260803TRF104633103",
+                "senderAccountId": "7aab175d-74c9-4d40-a53f-346216a063f9",
+                "status": "PROCESSING",
+                "successRecord": 8,
+                "totalAmount": 165218888,
+                "totalFeeAmount": 40000,
+                "totalRecord": 8,
+                "totalVatAmount": 4000,
+                "uploadedAt": "2026-08-03T03:46:33.915583Z",
+                "vatServiceAmount": 0
+              },
+              {
+                "amount": 165218888,
+                "batchName": "batch_transfer_template_success_28",
+                "batchStatus": "WAITING_PROCESS",
+                "ccy": "VND",
+                "cif": "1015663",
+                "createdAt": "2026-08-03T03:33:23.079243Z",
+                "details": [],
+                "errorCode": [],
+                "errorMessage": [],
+                "failedRecord": 0,
+                "feeServiceAmount": 0,
+                "fileName": "batch_transfer_template_success_28.xlsx",
+                "id": "029eb215-b0f2-4e85-a0b8-4a7017c3f814",
+                "phoneNumber": "+84909015594",
+                "processedAt": "2026-08-03T03:33:23.079243Z",
+                "requestRef": "20260803TRF103313179",
+                "senderAccountId": "7aab175d-74c9-4d40-a53f-346216a063f9",
+                "status": "PROCESSING",
+                "successRecord": 8,
+                "totalAmount": 165218888,
+                "totalFeeAmount": 40000,
+                "totalRecord": 8,
+                "totalVatAmount": 4000,
+                "uploadedAt": "2026-08-03T03:33:13.296005Z",
+                "vatServiceAmount": 0
+              },
+              {
+                "amount": 165218888,
+                "batchName": "batch_transfer_template_success_27",
+                "batchStatus": "WAITING_PROCESS",
+                "ccy": "VND",
+                "cif": "1015663",
+                "createdAt": "2026-08-02T13:50:31.494917Z",
+                "details": [],
+                "errorCode": [],
+                "errorMessage": [],
+                "failedRecord": 0,
+                "feeServiceAmount": 0,
+                "fileName": "batch_transfer_template_success_27.xlsx",
+                "id": "bd03fb2a-9690-44c8-9773-d26ae6153355",
+                "phoneNumber": "+84909015594",
+                "processedAt": "2026-08-02T13:50:31.494917Z",
+                "requestRef": "20260802TRF205023887",
+                "senderAccountId": "7aab175d-74c9-4d40-a53f-346216a063f9",
+                "status": "PROCESSING",
+                "successRecord": 8,
+                "totalAmount": 165218888,
+                "totalFeeAmount": 40000,
+                "totalRecord": 8,
+                "totalVatAmount": 4000,
+                "uploadedAt": "2026-08-02T13:50:23.659484Z",
+                "vatServiceAmount": 0
+              },
+              {
+                "amount": 800000,
+                "batchName": "batch_transfer_template_success_not_rule_27",
+                "batchStatus": "WAITING_PROCESS",
+                "ccy": "VND",
+                "cif": "1015663",
+                "createdAt": "2026-08-02T13:26:41.511042Z",
+                "details": [],
+                "errorCode": [],
+                "errorMessage": [],
+                "failedRecord": 0,
+                "feeServiceAmount": 0,
+                "fileName": "batch_transfer_template_success_not_rule_27.xlsx",
+                "id": "67a21080-8552-4731-a7dc-673e81c577ae",
+                "phoneNumber": "+84909015594",
+                "processedAt": "2026-08-02T13:26:41.511042Z",
+                "requestRef": "20260802TRF202633699",
+                "senderAccountId": "7aab175d-74c9-4d40-a53f-346216a063f9",
+                "status": "PROCESSING",
+                "successRecord": 8,
+                "totalAmount": 800000,
+                "totalFeeAmount": 40000,
+                "totalRecord": 8,
+                "totalVatAmount": 4000,
+                "uploadedAt": "2026-08-02T13:26:33.5464Z",
+                "vatServiceAmount": 0
+              },
+              {
+                "amount": 165218888,
+                "batchName": "batch_transfer_template_success_26",
+                "batchStatus": "WAITING_PROCESS",
+                "ccy": "VND",
+                "cif": "1015663",
+                "createdAt": "2026-08-02T13:20:07.099434Z",
+                "details": [],
+                "errorCode": [],
+                "errorMessage": [],
+                "failedRecord": 0,
+                "feeServiceAmount": 0,
+                "fileName": "batch_transfer_template_success_26.xlsx",
+                "id": "f88e0b7c-1471-461a-96fb-ab63555153be",
+                "phoneNumber": "+84909015594",
+                "processedAt": "2026-08-02T13:20:07.099434Z",
+                "requestRef": "20260802TRF201959148",
+                "senderAccountId": "7aab175d-74c9-4d40-a53f-346216a063f9",
+                "status": "PROCESSING",
+                "successRecord": 8,
+                "totalAmount": 165218888,
+                "totalFeeAmount": 40000,
+                "totalRecord": 8,
+                "totalVatAmount": 4000,
+                "uploadedAt": "2026-08-02T13:19:59.322262Z",
+                "vatServiceAmount": 0
+              },
+              {
+                "amount": 800000,
+                "batchName": "batch_transfer_template_success_not_rule_26",
+                "batchStatus": "WAITING_PROCESS",
+                "ccy": "VND",
+                "cif": "1015663",
+                "createdAt": "2026-08-02T13:19:42.459948Z",
+                "details": [],
+                "errorCode": [],
+                "errorMessage": [],
+                "failedRecord": 0,
+                "feeServiceAmount": 0,
+                "fileName": "batch_transfer_template_success_not_rule_26.xlsx",
+                "id": "aef9aba6-aac9-40c6-82a2-d42249e12b24",
+                "phoneNumber": "+84909015594",
+                "processedAt": "2026-08-02T13:19:42.459948Z",
+                "requestRef": "20260802TRF201934590",
+                "senderAccountId": "7aab175d-74c9-4d40-a53f-346216a063f9",
+                "status": "PROCESSING",
+                "successRecord": 8,
+                "totalAmount": 800000,
+                "totalFeeAmount": 40000,
+                "totalRecord": 8,
+                "totalVatAmount": 4000,
+                "uploadedAt": "2026-08-02T13:19:34.473223Z",
+                "vatServiceAmount": 0
+              },
+              {
+                "amount": 800000,
+                "batchName": "batch_transfer_template_success_not_rule_25",
+                "batchStatus": "WAITING_PROCESS",
+                "ccy": "VND",
+                "cif": "1015663",
+                "createdAt": "2026-08-02T13:19:08.070479Z",
+                "details": [],
+                "errorCode": [],
+                "errorMessage": [],
+                "failedRecord": 0,
+                "feeServiceAmount": 0,
+                "fileName": "batch_transfer_template_success_not_rule_25.xlsx",
+                "id": "3e843474-9e39-4427-b062-e4372d7e638f",
+                "phoneNumber": "+84909015594",
+                "processedAt": "2026-08-02T13:19:08.070479Z",
+                "requestRef": "20260802TRF201859838",
+                "senderAccountId": "7aab175d-74c9-4d40-a53f-346216a063f9",
+                "status": "PROCESSING",
+                "successRecord": 8,
+                "totalAmount": 800000,
+                "totalFeeAmount": 40000,
+                "totalRecord": 8,
+                "totalVatAmount": 4000,
+                "uploadedAt": "2026-08-02T13:18:59.747305Z",
+                "vatServiceAmount": 0
+              },
+              {
+                "amount": 800000,
+                "batchName": "batch_transfer_template_success_not_rule_24",
+                "batchStatus": "WAITING_PROCESS",
+                "ccy": "VND",
+                "cif": "1015663",
+                "createdAt": "2026-08-02T08:23:35.149076Z",
+                "details": [],
+                "errorCode": [],
+                "errorMessage": [],
+                "failedRecord": 0,
+                "feeServiceAmount": 0,
+                "fileName": "batch_transfer_template_success_not_rule_24.xlsx",
+                "id": "efd79aba-ad16-44f4-ba23-3e20f574e899",
+                "phoneNumber": "+84909015594",
+                "processedAt": "2026-08-02T08:23:35.149076Z",
+                "requestRef": "20260802TRF152323955",
+                "senderAccountId": "7aab175d-74c9-4d40-a53f-346216a063f9",
+                "status": "PROCESSING",
+                "successRecord": 8,
+                "totalAmount": 800000,
+                "totalFeeAmount": 40000,
+                "totalRecord": 8,
+                "totalVatAmount": 4000,
+                "uploadedAt": "2026-08-02T08:23:23.679072Z",
+                "vatServiceAmount": 0
+              },
+              {
+                "amount": 800000,
+                "batchName": "batch_transfer_template_success_not_rule_23",
+                "batchStatus": "WAITING_PROCESS",
+                "ccy": "VND",
+                "cif": "1015663",
+                "createdAt": "2026-08-02T08:17:29.181954Z",
+                "details": [],
+                "errorCode": [],
+                "errorMessage": [],
+                "failedRecord": 0,
+                "feeServiceAmount": 0,
+                "fileName": "batch_transfer_template_success_not_rule_23.xlsx",
+                "id": "d68bee98-f0b5-4854-9f92-21cee8662777",
+                "phoneNumber": "+84909015594",
+                "processedAt": "2026-08-02T08:17:29.181954Z",
+                "requestRef": "20260802TRF151721044",
+                "senderAccountId": "7aab175d-74c9-4d40-a53f-346216a063f9",
+                "status": "PROCESSING",
+                "successRecord": 8,
+                "totalAmount": 800000,
+                "totalFeeAmount": 40000,
+                "totalRecord": 8,
+                "totalVatAmount": 4000,
+                "uploadedAt": "2026-08-02T08:17:21.72524Z",
+                "vatServiceAmount": 0
+              }
+            ],
+            "message": "Get all batch transfer requests successfully"
+          }

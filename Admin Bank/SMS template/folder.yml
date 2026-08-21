@@ -1,7 +1,7 @@
 info:
-  name: TT77
+  name: SMS template
   type: folder
-  seq: 14
+  seq: 18
 
 request:
   auth: inherit

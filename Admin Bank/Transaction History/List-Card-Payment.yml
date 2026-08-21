@@ -1,0 +1,397 @@
+info:
+  name: List-Card-Payment
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/transactions/history/card-payment?pageSize=66&numPage=0"
+  headers:
+    - name: platform
+      value: WEB
+  params:
+    - name: pageSize
+      value: "66"
+      type: query
+    - name: numPage
+      value: "0"
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260814
+    request:
+      url: "{{individual_admin_host}}/transactions/history/card-payment?pageSize=66&numPage=0"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      params:
+        - name: pageSize
+          value: "66"
+          type: query
+        - name: numPage
+          value: "0"
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: vary
+          value: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+        - name: x-request-id
+          value: f1921833b722c908c6ede4a654e0ab99
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "7529"
+        - name: date
+          value: Fri, 14 Aug 2026 06:00:29 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": [
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260811CRD132739671",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-11T06:27:50.930532"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260811CRD112009138",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-11T04:20:24.949938"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260811CRD111618907",
+                "status": "FAILED",
+                "transactionDate": "2026-08-11T04:16:35.591958"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260811CRD111328663",
+                "status": "FAILED",
+                "transactionDate": "2026-08-11T04:13:50.369983"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260811CRD110920408",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-11T04:10:06.520956"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260811CRD110414012",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-11T04:04:38.184810"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260811CRD104817350",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-11T03:48:32.340460"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260811CRD104647435",
+                "status": "FAILED",
+                "transactionDate": "2026-08-11T03:46:53.275840"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260811CRD101348258",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-11T03:14:08.148345"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260811CRD101147485",
+                "status": "FAILED",
+                "transactionDate": "2026-08-11T03:12:03.108673"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260811CRD093304732",
+                "status": "FAILED",
+                "transactionDate": "2026-08-11T02:36:29.085413"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260810CRD141334623",
+                "status": "FAILED",
+                "transactionDate": "2026-08-10T07:21:41.328221"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "633FFD020B8FB427XXX",
+                "requestRef": "20260810CRD130140193",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-10T06:02:07.787893"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "633FFD020B8FB427XXX",
+                "requestRef": "20260810CRD103020311",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-10T03:30:37.607994"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "924B83D1AA37860EXXX",
+                "requestRef": "20260807CRD151027014",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-07T08:10:47.753669"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "09B3FCBB8917D83AXXX",
+                "requestRef": "20260807CRD141110583",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-07T07:11:28.673627"
+              },
+              {
+                "cardHolderName": "LIN YU HUA",
+                "cardMask": "2F4C94502D9A0CAAXXX",
+                "requestRef": "20260807CRD133840568",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-07T06:38:55.373057"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "924B83D1AA37860EXXX",
+                "requestRef": "20260807CRD133254579",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-07T06:33:15.563924"
+              },
+              {
+                "cardHolderName": "LIU MEI CHEN",
+                "cardMask": "4BC4CDA9DBBD4DFEXXX",
+                "requestRef": "20260807CRD132413525",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-07T06:24:49.906341"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "633FFD020B8FB427XXX",
+                "requestRef": "20260806CRD143558250",
+                "status": "FAILED",
+                "transactionDate": "2026-08-06T07:36:04.156618"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260806CRD143040036",
+                "status": "FAILED",
+                "transactionDate": "2026-08-06T07:30:46.509411"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260806CRD142626628",
+                "status": "FAILED",
+                "transactionDate": "2026-08-06T07:26:33.367487"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260806CRD142311839",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-06T07:23:38.236464"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "633FFD020B8FB427XXX",
+                "requestRef": "20260806CRD142154973",
+                "status": "FAILED",
+                "transactionDate": "2026-08-06T07:22:15.383547"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "633FFD020B8FB427XXX",
+                "requestRef": "20260806CRD140505279",
+                "status": "FAILED",
+                "transactionDate": "2026-08-06T07:05:24.608290"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260806CRD140447759",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-06T07:05:07.571111"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260806CRD140346543",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-06T07:04:06.727929"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "633FFD020B8FB427XXX",
+                "requestRef": "20260806CRD135905434",
+                "status": "FAILED",
+                "transactionDate": "2026-08-06T06:59:13.840807"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260806CRD112548626",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-06T04:26:05.517007"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "633FFD020B8FB427XXX",
+                "requestRef": "20260805CRD142219148",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-05T07:22:39.826848"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260805CRD141158675",
+                "status": "FAILED",
+                "transactionDate": "2026-08-05T07:12:03.468158"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260805CRD140758040",
+                "status": "FAILED",
+                "transactionDate": "2026-08-05T07:08:06.746526"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260805CRD140054886",
+                "status": "FAILED",
+                "transactionDate": "2026-08-05T07:01:00.338206"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260805CRD133153315",
+                "status": "FAILED",
+                "transactionDate": "2026-08-05T06:32:11.682465"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260805CRD132540075",
+                "status": "FAILED",
+                "transactionDate": "2026-08-05T06:26:08.282169"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260804CRD151133102",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-04T08:11:51.699916"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260804CRD145315774",
+                "status": "FAILED",
+                "transactionDate": "2026-08-04T07:53:33.539666"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260804CRD142451560",
+                "status": "FAILED",
+                "transactionDate": "2026-08-04T07:25:04.681140"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260804CRD140816369",
+                "status": "FAILED",
+                "transactionDate": "2026-08-04T07:08:28.952099"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260804CRD134704915",
+                "status": "FAILED",
+                "transactionDate": "2026-08-04T06:47:17.555367"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260803CRD214743136",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-03T14:48:06.493046"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260803CRD164328461",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-03T09:43:41.200966"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "requestRef": "20260803CRD162958985",
+                "status": "PROCESSING",
+                "transactionDate": "2026-08-03T09:30:15.890330"
+              },
+              {
+                "cardHolderName": "C69 M96X RNWGT",
+                "cardMask": "218189925E0F8054XXX",
+                "requestRef": "20260520CRD170451928",
+                "status": "PROCESSING",
+                "transactionDate": "2026-05-20T10:04:51.255769"
+              }
+            ],
+            "count": 44,
+            "total": 44
+          }

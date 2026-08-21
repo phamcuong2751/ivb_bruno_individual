@@ -1,7 +1,7 @@
 info:
-  name: TT77
+  name: Authentication Method
   type: folder
-  seq: 14
+  seq: 17
 
 request:
   auth: inherit

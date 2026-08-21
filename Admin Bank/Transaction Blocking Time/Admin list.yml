@@ -5,10 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/transaction-blocking-time/request"
+  url: "{{individual_admin_host}}/transaction-blocking-time/request?status=PENDING"
   headers:
     - name: platform
       value: WEB
+  params:
+    - name: status
+      value: PENDING
+      type: query
   body:
     type: json
     data: ""

@@ -1,0 +1,485 @@
+info:
+  name: List-Card-Block/Unblock
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/transactions/history/card?pageSize=2&numPage=0"
+  headers:
+    - name: platform
+      value: WEB
+  params:
+    - name: pageSize
+      value: "2"
+      type: query
+    - name: numPage
+      value: "0"
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260814
+    request:
+      url: "{{individual_admin_host}}/transactions/history/card?pageSize=66&numPage=0"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      params:
+        - name: pageSize
+          value: "66"
+          type: query
+        - name: numPage
+          value: "0"
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: vary
+          value: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+        - name: x-request-id
+          value: 522a08688f2b79d9bd1126336fe824a9
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "9026"
+        - name: date
+          value: Fri, 14 Aug 2026 05:04:05 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": [
+              {
+                "cardHolderName": "LIN YU HUA",
+                "cardMask": "2F4C94502D9A0CAAXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-13T08:18:30.305513"
+              },
+              {
+                "cardHolderName": "LIN YU HUA",
+                "cardMask": "2F4C94502D9A0CAAXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-13T08:18:00.558421"
+              },
+              {
+                "cardHolderName": "LIN YU HUA",
+                "cardMask": "1742BFC877843597XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-11T10:21:41.664864"
+              },
+              {
+                "cardHolderName": "LIN YU HUA",
+                "cardMask": "1742BFC877843597XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-11T10:12:17.726939"
+              },
+              {
+                "cardHolderName": "LIN YU HUA",
+                "cardMask": "1742BFC877843597XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-11T10:09:15.078666"
+              },
+              {
+                "cardHolderName": "LIN YU HUA",
+                "cardMask": "1742BFC877843597XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-11T10:07:27.497048"
+              },
+              {
+                "cardHolderName": "LIN YU HUA",
+                "cardMask": "1742BFC877843597XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-11T10:05:01.910488"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "C6D508AC7ADBC5BFXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-11T04:33:37.799870"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "09B3FCBB8917D83AXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T15:51:28.360125"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "09B3FCBB8917D83AXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T15:38:36.215670"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "09B3FCBB8917D83AXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T15:37:16.239014"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "ACD9EE78AED3D72EXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T15:35:48.078839"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "ACD9EE78AED3D72EXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T15:35:19.030146"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "119806250BC97024XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T10:08:24.701115"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "119806250BC97024XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T10:07:43.710531"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "119806250BC97024XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T10:07:25.820482"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "119806250BC97024XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T10:07:09.568174"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "119806250BC97024XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T10:06:45.061739"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "119806250BC97024XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T10:06:20.934198"
+              },
+              {
+                "cardHolderName": "NGUYEN LE MAI HOA",
+                "cardMask": "ACD9EE78AED3D72EXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T10:02:27.696671"
+              },
+              {
+                "cardHolderName": "TA THI CHINH",
+                "cardMask": "DDF3AAF760D6E54CXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T09:57:34.009068"
+              },
+              {
+                "cardHolderName": "TA THI CHINH",
+                "cardMask": "DDF3AAF760D6E54CXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T09:57:10.695902"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T06:31:52.736348"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T06:30:35.763547"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "909DA709C2399CBBXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T04:38:16.007451"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T04:34:33.276512"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T04:10:42.169389"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T04:09:10.501063"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T04:08:00.579992"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T03:44:08.832147"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T03:43:11.919385"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "909DA709C2399CBBXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T03:17:39.545907"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "909DA709C2399CBBXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T03:16:09.012701"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "909DA709C2399CBBXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-10T03:15:08.695575"
+              },
+              {
+                "cardHolderName": "TA THI CHINH",
+                "cardMask": "DDF3AAF760D6E54CXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-07T08:38:59.617666"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-06T04:11:41.446021"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-06T04:10:58.295799"
+              },
+              {
+                "cardHolderName": "LIN YU HUA",
+                "cardMask": "E45B284075265605XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-04T09:13:42.899708"
+              },
+              {
+                "cardHolderName": "LIN YU HUA",
+                "cardMask": "2F4C94502D9A0CAAXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-04T08:15:39.371221"
+              },
+              {
+                "cardHolderName": "LIN YU HUA",
+                "cardMask": "1742BFC877843597XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-04T07:33:51.138257"
+              },
+              {
+                "cardHolderName": "LIN YU HUA",
+                "cardMask": "1742BFC877843597XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-04T07:02:35.348675"
+              },
+              {
+                "cardHolderName": "LIU MEI CHEN",
+                "cardMask": "CBD9904032BAA25BXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-04T06:54:52.320498"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-04T03:42:57.841131"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-04T03:15:19.646637"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-04T03:13:15.853173"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T14:19:48.048355"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T09:06:58.023919"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T09:06:26.404609"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T08:30:40.431975"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T08:30:16.079195"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T07:09:42.084684"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T07:09:10.941599"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T06:50:51.303140"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T06:43:48.952842"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T06:34:50.112079"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T06:33:22.071480"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T03:49:08.153395"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "858FE09D57B4E435XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-08-03T03:48:36.085990"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-07-31T07:48:21.739912"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-07-31T07:43:04.333148"
+              },
+              {
+                "cardHolderName": "MAI LE HUYEN",
+                "cardMask": "9755636B50727D89XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-07-31T07:42:21.471462"
+              },
+              {
+                "cardHolderName": "NGUYEN THANH DAT",
+                "cardMask": "2CA013D30AEA1A43XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-07-23T07:47:07.302699"
+              },
+              {
+                "cardHolderName": "PHAN THI DIEM MY",
+                "cardMask": "467E3CE1388542F8XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-07-22T10:06:15.386056"
+              },
+              {
+                "cardHolderName": "PHAN THI DIEM MY",
+                "cardMask": "467E3CE1388542F8XXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-07-22T10:02:54.352428"
+              },
+              {
+                "cardHolderName": "HOANG THI DANG NGHIEM",
+                "cardMask": "DDA0E334AA0FCA5DXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-07-22T09:34:22.846182"
+              },
+              {
+                "cardHolderName": "HOANG THI DANG NGHIEM",
+                "cardMask": "DDA0E334AA0FCA5DXXX",
+                "status": "COMPLETED",
+                "transactionDate": "2026-07-22T09:32:44.606296"
+              }
+            ],
+            "count": 66,
+            "total": 66
+          }

@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{individual_host}}/transfer-services/batch-transfer"
+  url: "{{individual_host}}/transfer-services/batch-transfer?fromAmount=300000&fromAmount=400000"
   headers:
     - name: Language
       value: vi
@@ -35,6 +35,13 @@ http:
       value: application/json, text/plain, */*
     - name: Platform
       value: WEB
+  params:
+    - name: fromAmount
+      value: "300000"
+      type: query
+    - name: fromAmount
+      value: "400000"
+      type: query
   body:
     type: json
     data: ""
