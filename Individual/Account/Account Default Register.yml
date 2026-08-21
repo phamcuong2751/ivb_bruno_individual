@@ -1,7 +1,7 @@
 info:
   name: Account Default Register
   type: http
-  seq: 6
+  seq: 10
 
 http:
   method: POST

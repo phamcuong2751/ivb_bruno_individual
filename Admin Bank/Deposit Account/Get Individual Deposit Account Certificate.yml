@@ -1,0 +1,25 @@
+info:
+  name: Get Individual Deposit Account Certificate
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{individual_admin_host}}/individual-deposit-account/1023909-060/certificate"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "cifCore": "1023909"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

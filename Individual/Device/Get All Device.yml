@@ -1,0 +1,75 @@
+info:
+  name: Get All Device
+  type: http
+  seq: 12
+
+http:
+  method: GET
+  url: "{{individual_host}}/auth-services/all-device?numPage=0&pageSize=100&fromLoginTime=2026-07-24T17:00:00.000Z&toLoginTime=2026-07-29T16:59:59.999Z"
+  headers:
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Accept-Language
+      value: en-US,en;q=0.9
+    - name: Authorization
+      value: Bearer {{individual_token}}
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Device-Name
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+    - name: Language
+      value: vi
+    - name: Origin
+      value: https://dgb-uat.indovinabank.com.vn
+    - name: Platform
+      value: WEB
+    - name: Referer
+      value: https://dgb-uat.indovinabank.com.vn/corporate/transaction/fund-transfer/transfer/create
+    - name: Request-Id
+      value: bf3a15c8-be68-4089-8e70-a1c8aafee452
+    - name: Sec-Fetch-Dest
+      value: empty
+    - name: Sec-Fetch-Mode
+      value: cors
+    - name: Sec-Fetch-Site
+      value: same-origin
+    - name: Time
+      value: "1763955516079"
+    - name: User-Agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+    - name: sec-ch-ua
+      value: '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+    - name: time
+      value: "1770014796305"
+    - name: request-id
+      value: d7775e14-5100-45ec-adee-5173a9e1a21b
+  params:
+    - name: numPage
+      value: "0"
+      type: query
+    - name: pageSize
+      value: "100"
+      type: query
+    - name: fromLoginTime
+      value: 2026-07-24T17:00:00.000Z
+      type: query
+    - name: toLoginTime
+      value: 2026-07-29T16:59:59.999Z
+      type: query
+
+runtime:
+  variables:
+    - name: Token
+      value: eyJraWQiOiJhdXRoLWtleS1pZCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJ7XCJpZFwiOlwiYjIwYzk4NDEtNzU5Yi00YTUyLTk4ODItMzg4NmQ3M2Q4MTI3XCIsXCJpc090aGVyRGV2aWNlXCI6ZmFsc2UsXCJkYXRhXCI6e1wiaWRcIjpcImIyMGM5ODQxLTc1OWItNGE1Mi05ODgyLTM4ODZkNzNkODEyN1wiLFwiaXNVc2VMb2dpbkJpb21ldHJpY1wiOmZhbHNlLFwidXNlcm5hbWVcIjpcIjAzOTI5NzQyODdcIixcImN1c3RvbWVyTmFtZVwiOlwiTkdVWUVOIFRBSSBBTkhcIixcImNpZkNvcmVcIjpcIjIwMjU1ODZcIixcImRheUV4cGlyZWRTb29uXCI6OTIsXCJzdGF0dXNcIjoyLFwibmF0aW9uYWxpdHlcIjpcIlZOTVwiLFwiZW1haWxcIjpcImEqQCouY29tXCIsXCJtb2JpbGVDb250YWN0XCI6XCIwMzkyOTcqKioqODdcIixcImxvZ2luQWN0aW9uXCI6XCJOT1JNQUxcIixcInBlcm1pc3Npb25zXCI6W3tcImlkXCI6MSxcIm5hbWVcIjpcIlZpZXdcIixcImRlc2NyaXB0aW9uXCI6XCJWaWV3XCIsXCJjb2RlXCI6XCJWSUVXXCJ9LHtcImlkXCI6MixcIm5hbWVcIjpcIlF1ZXJ5XCIsXCJkZXNjcmlwdGlvblwiOlwiUXVlcnlcIixcImNvZGVcIjpcIlFVRVJZXCJ9LHtcImlkXCI6MyxcIm5hbWVcIjpcIkRvd25sb2FkXCIsXCJkZXNjcmlwdGlvblwiOlwiRG93bmxvYWRcIixcImNvZGVcIjpcIkRPV05MT0FEXCJ9LHtcImlkXCI6NCxcIm5hbWVcIjpcIkNyZWF0ZSBuZXdcIixcImRlc2NyaXB0aW9uXCI6XCJDcmVhdGUgbmV3XCIsXCJjb2RlXCI6XCJDUkVBVEVcIn0se1wiaWRcIjo1LFwibmFtZVwiOlwiVXBkYXRlXCIsXCJkZXNjcmlwdGlvblwiOlwiVXBkYXRlXCIsXCJjb2RlXCI6XCJVUERBVEVcIn0se1wiaWRcIjo2LFwibmFtZVwiOlwiUmVxdWVzdCB0byBjYW5jZWwvUmVxdWVzdCB0byBzdG9wXCIsXCJkZXNjcmlwdGlvblwiOlwiUmVxdWVzdCB0byBjYW5jZWwvUmVxdWVzdCB0byBzdG9wXCIsXCJjb2RlXCI6XCJSRVFVRVNUX1RPX0NBTkNFTF9TVE9QXCJ9LHtcImlkXCI6NyxcIm5hbWVcIjpcIkRlbGV0ZVwiLFwiZGVzY3JpcHRpb25cIjpcIkRlbGV0ZVwiLFwiY29kZVwiOlwiREVMRVRFXCJ9XSxcImlzQWNjZXB0VGVybXNcIjp0cnVlLFwiZUt5Y0luZm9cIjp7XCJiaW9tZXRyaWNTdGF0dXNcIjpcIk5PVF9DT0xMRUNURURcIixcImlkQ2FyZFN0YXR1c1wiOlwiQVZBSUxBQkxFXCIsXCJpZENhcmRUeXBlXCI6XCJDTU5EXCIsXCJpZENhcmROdW1iZXJcIjpcIjAzMTMyMTQyMTQyMTFcIixcImlkQ2FyZEV4cGlyeURhdGVcIjpcIjIwMzUtMDUtMThcIixcIm5hdGlvbmFsaXR5XCI6XCJWTk1cIn19LFwic2Vzc2lvbktleVwiOlwiYjhkMmY4ODk1YzYyZjBjYzkyYWRiMmI4NWIyNjVlODhcIixcImlwQWRkcmVzc1wiOlwiMTkyLjE2OC4xNjguOThcIn0iLCJkYXRhIjoie1wiaWRcIjpcImIyMGM5ODQxLTc1OWItNGE1Mi05ODgyLTM4ODZkNzNkODEyN1wiLFwiaXNPdGhlckRldmljZVwiOmZhbHNlLFwiZGF0YVwiOntcImlkXCI6XCJiMjBjOTg0MS03NTliLTRhNTItOTg4Mi0zODg2ZDczZDgxMjdcIixcImlzVXNlTG9naW5CaW9tZXRyaWNcIjpmYWxzZSxcInVzZXJuYW1lXCI6XCIwMzkyOTc0Mjg3XCIsXCJjdXN0b21lck5hbWVcIjpcIk5HVVlFTiBUQUkgQU5IXCIsXCJjaWZDb3JlXCI6XCIyMDI1NTg2XCIsXCJkYXlFeHBpcmVkU29vblwiOjkyLFwic3RhdHVzXCI6MixcIm5hdGlvbmFsaXR5XCI6XCJWTk1cIixcImVtYWlsXCI6XCJhKkAqLmNvbVwiLFwibW9iaWxlQ29udGFjdFwiOlwiMDM5Mjk3KioqKjg3XCIsXCJsb2dpbkFjdGlvblwiOlwiTk9STUFMXCIsXCJwZXJtaXNzaW9uc1wiOlt7XCJpZFwiOjEsXCJuYW1lXCI6XCJWaWV3XCIsXCJkZXNjcmlwdGlvblwiOlwiVmlld1wiLFwiY29kZVwiOlwiVklFV1wifSx7XCJpZFwiOjIsXCJuYW1lXCI6XCJRdWVyeVwiLFwiZGVzY3JpcHRpb25cIjpcIlF1ZXJ5XCIsXCJjb2RlXCI6XCJRVUVSWVwifSx7XCJpZFwiOjMsXCJuYW1lXCI6XCJEb3dubG9hZFwiLFwiZGVzY3JpcHRpb25cIjpcIkRvd25sb2FkXCIsXCJjb2RlXCI6XCJET1dOTE9BRFwifSx7XCJpZFwiOjQsXCJuYW1lXCI6XCJDcmVhdGUgbmV3XCIsXCJkZXNjcmlwdGlvblwiOlwiQ3JlYXRlIG5ld1wiLFwiY29kZVwiOlwiQ1JFQVRFXCJ9LHtcImlkXCI6NSxcIm5hbWVcIjpcIlVwZGF0ZVwiLFwiZGVzY3JpcHRpb25cIjpcIlVwZGF0ZVwiLFwiY29kZVwiOlwiVVBEQVRFXCJ9LHtcImlkXCI6NixcIm5hbWVcIjpcIlJlcXVlc3QgdG8gY2FuY2VsL1JlcXVlc3QgdG8gc3RvcFwiLFwiZGVzY3JpcHRpb25cIjpcIlJlcXVlc3QgdG8gY2FuY2VsL1JlcXVlc3QgdG8gc3RvcFwiLFwiY29kZVwiOlwiUkVRVUVTVF9UT19DQU5DRUxfU1RPUFwifSx7XCJpZFwiOjcsXCJuYW1lXCI6XCJEZWxldGVcIixcImRlc2NyaXB0aW9uXCI6XCJEZWxldGVcIixcImNvZGVcIjpcIkRFTEVURVwifV0sXCJpc0FjY2VwdFRlcm1zXCI6dHJ1ZSxcImVLeWNJbmZvXCI6e1wiYmlvbWV0cmljU3RhdHVzXCI6XCJOT1RfQ09MTEVDVEVEXCIsXCJpZENhcmRTdGF0dXNcIjpcIkFWQUlMQUJMRVwiLFwiaWRDYXJkVHlwZVwiOlwiQ01ORFwiLFwiaWRDYXJkTnVtYmVyXCI6XCIwMzEzMjE0MjE0MjExXCIsXCJpZENhcmRFeHBpcnlEYXRlXCI6XCIyMDM1LTA1LTE4XCIsXCJuYXRpb25hbGl0eVwiOlwiVk5NXCJ9fSxcInNlc3Npb25LZXlcIjpcImI4ZDJmODg5NWM2MmYwY2M5MmFkYjJiODViMjY1ZTg4XCIsXCJpcEFkZHJlc3NcIjpcIjE5Mi4xNjguMTY4Ljk4XCJ9Iiwic2NvcGUiOiJyZWFkIHdyaXRlIiwicm9sZXMiOiJbUk9MRV9VU0VSXSIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjgwODAiLCJleHAiOjE3Nzk5NDIzMjUsInRva2VuX3R5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Nzk5NDE0MjUsImp0aSI6ImY0MGFjOTUzLTY3NTItNDI0MC04ZGUxLWViODIwMzkwY2NhYyJ9.C8vHVzwo5vIX5ET0cSrz6TAQQQ2bAvWLq_gaknVoVMU5kHMiHPW3hUgKwAEmsclAnI1z6VYzRQHI_kR-0eUtjB8kYbir3FTz8rVfv91ORhm_NWPOecNQpzf_s7w81YkGExLwKi22WJia8iiGYL9gd9Ne8QSk7mDgQMCcsl9gsvTMjB55l0-GyVb2OWLv04tC_wdgYTWuxJIvF81QGS80idWkI6Nj3KKeyERrmyRulnkh2E7r6EFLqR4ThlRf_-KH7hvYZPIDFbgHwCLql1WKLwKTjrBhNRQ-G98X_513iRb2mDiJyJ4QfT_XCJ7oXyoSgzMM7gCtFCnBOVkG93MC3w
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

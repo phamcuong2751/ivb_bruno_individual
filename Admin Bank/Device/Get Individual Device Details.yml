@@ -1,11 +1,11 @@
 info:
-  name: Get Onboard Verification Details
+  name: Get Individual Device Details
   type: http
-  seq: 9
+  seq: 1
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-onboard-verification/01466c3b-7217-445d-bf50-115c2f33fe63"
+  url: "{{individual_admin_host}}/individual-device/284"
   headers:
     - name: platform
       value: WEB
@@ -13,7 +13,7 @@ http:
       value: Bearer {{individual_admin_token}}
 
 settings:
-  encodeUrl: false
+  encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5

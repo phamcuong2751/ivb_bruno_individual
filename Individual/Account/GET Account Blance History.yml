@@ -1,7 +1,7 @@
 info:
   name: GET Account Blance History
   type: http
-  seq: 4
+  seq: 8
 
 http:
   method: GET

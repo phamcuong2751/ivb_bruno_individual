@@ -5,12 +5,12 @@ info:
 
 http:
   method: GET
-  url: "{{individual_admin_host}}/individual-user/04e9ef71-22d1-477b-8b96-e83bc617b859"
+  url: "{{individual_admin_host}}/individual-user/da823a2a-00c2-41cb-80f8-39d7dc2a19a5"
   headers:
     - name: platform
       value: WEB
     - name: Authorization
-      value: Bearer {{individual_admin_token}}
+      value: Bearer {{individual_admin_branch_token}}
 
 settings:
   encodeUrl: true

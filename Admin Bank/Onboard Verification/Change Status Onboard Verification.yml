@@ -1,0 +1,28 @@
+info:
+  name: Change Status Onboard Verification
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{individual_admin_host}}/individual-onboard-verification/01466c3b-7217-445d-bf50-115c2f33fe63/change-status"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "postVerificationStatus": "OCR_ERROR",
+        "postVerificationErrorReason": "Others",
+        "postVerificationSpecificReason": "Sai",
+        "postVerificationDescription": "Sai họ tên kìa"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

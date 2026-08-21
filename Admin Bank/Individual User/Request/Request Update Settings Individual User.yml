@@ -1,0 +1,27 @@
+info:
+  name: Request Update Settings Individual User
+  type: http
+  seq: 13
+
+http:
+  method: post
+  url: "{{individual_admin_host}}/individual-user-request/settings"
+  headers:
+    - name: platform
+      value: WEB
+    - name: Authorization
+      value: Bearer {{individual_admin_branch_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "userId": "da823a2a-00c2-41cb-80f8-39d7dc2a19a5",
+        "useSmsOtp": false,
+        "tabType": "SECURITY_DEVICES"
+      }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

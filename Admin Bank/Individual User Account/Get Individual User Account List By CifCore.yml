@@ -10,7 +10,7 @@ http:
     - name: platform
       value: WEB
     - name: Authorization
-      value: Bearer {{individual_admin_token}}
+      value: Bearer {{individual_admin_branch_token}}
   params:
     - name: cifCore
       value: "4009866"
@@ -24,7 +24,7 @@ http:
     type: json
     data: |-
       {
-        "cifCore": "3337046" // 4009866 5037585 2025586 1023909 3337046 2021688
+        "cifCore": "2029734" // 4009866 5037585 2025586 1023909 3337046 2021688 3337046
       }
 
 runtime:
