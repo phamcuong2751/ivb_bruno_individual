@@ -1,0 +1,274 @@
+info:
+  name: Individual List
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/exchange-rate"
+  headers:
+    - name: platform
+      value: WEB
+  params:
+    - name: pageSize
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260724
+    request:
+      url: "{{individual_admin_host}}/exchange-rate"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      params:
+        - name: pageSize
+          value: ""
+          type: query
+          disabled: true
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 5062addb06360e6c220754d52c0962b1
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "4232"
+        - name: date
+          value: Fri, 24 Jul 2026 09:14:10 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": [
+              {
+                "baseCcy": "CNY",
+                "buyRate": 3583,
+                "centralRate": 3363,
+                "createdAt": "2025-06-13T16:01:19.509075Z",
+                "endTrading": "000000",
+                "id": "253152a6-beb3-481d-b9d3-67a84e260e04",
+                "isActive": true,
+                "maxBuyRate": 3762.15,
+                "maxCentralRate": 3531.15,
+                "maxSaleRate": 4096.05,
+                "minBuyRate": 3403.85,
+                "minCentralRate": 3194.85,
+                "minSaleRate": 3705.95,
+                "rateType": "STANDARD",
+                "saleRate": 3901,
+                "startTrading": "000000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.509076Z"
+              },
+              {
+                "baseCcy": "SGD",
+                "buyRate": 17953,
+                "centralRate": 17953,
+                "createdAt": "2025-06-13T16:01:19.509959Z",
+                "endTrading": "100000",
+                "id": "ccd2eeb9-9234-4ca9-a97e-146c4e936f67",
+                "isActive": true,
+                "maxBuyRate": 18850.65,
+                "maxCentralRate": 18850.65,
+                "maxSaleRate": 19397.7,
+                "minBuyRate": 17055.35,
+                "minCentralRate": 17055.35,
+                "minSaleRate": 17550.3,
+                "rateType": "STANDARD",
+                "saleRate": 18474,
+                "startTrading": "080000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.50996Z"
+              },
+              {
+                "baseCcy": "TWD",
+                "buyRate": 770,
+                "centralRate": 770,
+                "createdAt": "2025-06-13T16:01:19.510232Z",
+                "endTrading": "000000",
+                "id": "d7c592cd-ee32-4246-bbc8-6ca66c0bec82",
+                "isActive": true,
+                "maxBuyRate": 808.5,
+                "maxCentralRate": 808.5,
+                "maxSaleRate": 877.8,
+                "minBuyRate": 731.5,
+                "minCentralRate": 731.5,
+                "minSaleRate": 794.2,
+                "rateType": "STANDARD",
+                "saleRate": 836,
+                "startTrading": "000000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.510233Z"
+              },
+              {
+                "baseCcy": "THB",
+                "buyRate": 679.3,
+                "centralRate": 679.3,
+                "createdAt": "2025-06-13T16:01:19.510175Z",
+                "endTrading": "000000",
+                "id": "7dcf22e0-207d-4a55-89cc-9671178a2f8b",
+                "isActive": true,
+                "maxBuyRate": 713.265,
+                "maxCentralRate": 713.265,
+                "maxSaleRate": 744.45,
+                "minBuyRate": 645.335,
+                "minCentralRate": 645.335,
+                "minSaleRate": 673.55,
+                "rateType": "STANDARD",
+                "saleRate": 709,
+                "startTrading": "000000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.510176Z"
+              },
+              {
+                "baseCcy": "HKD",
+                "buyRate": 3045,
+                "centralRate": 3045,
+                "createdAt": "2025-06-13T16:01:19.510121Z",
+                "endTrading": "000000",
+                "id": "0abae430-58fe-4271-a63e-761812e4a326",
+                "isActive": true,
+                "maxBuyRate": 3197.25,
+                "maxCentralRate": 3197.25,
+                "maxSaleRate": 3339.0,
+                "minBuyRate": 2892.75,
+                "minCentralRate": 2892.75,
+                "minSaleRate": 3021.0,
+                "rateType": "STANDARD",
+                "saleRate": 3180,
+                "startTrading": "000000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.510122Z"
+              },
+              {
+                "baseCcy": "JPY",
+                "buyRate": 162.4,
+                "centralRate": 162.4,
+                "createdAt": "2025-06-13T16:01:19.50931Z",
+                "endTrading": "090000",
+                "id": "b5b11fa2-7fad-4140-9da8-8303a3426fe0",
+                "isActive": true,
+                "maxBuyRate": 170.52,
+                "maxCentralRate": 170.52,
+                "maxSaleRate": 173.8275,
+                "minBuyRate": 154.28,
+                "minCentralRate": 154.28,
+                "minSaleRate": 157.2725,
+                "rateType": "STANDARD",
+                "saleRate": 165.55,
+                "startTrading": "080000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.509311Z"
+              },
+              {
+                "baseCcy": "GBP",
+                "buyRate": 30442,
+                "centralRate": 30442,
+                "createdAt": "2025-06-13T16:01:19.509257Z",
+                "endTrading": "170000",
+                "id": "d271f1a4-13e8-4b38-9858-8fca0783a12a",
+                "isActive": true,
+                "maxBuyRate": 31964.1,
+                "maxCentralRate": 31964.1,
+                "maxSaleRate": 32590.95,
+                "minBuyRate": 28919.9,
+                "minCentralRate": 28919.9,
+                "minSaleRate": 29487.05,
+                "rateType": "STANDARD",
+                "saleRate": 31039,
+                "startTrading": "080000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.509258Z"
+              },
+              {
+                "baseCcy": "USD",
+                "buyRate": 23954,
+                "centralRate": 23954,
+                "createdAt": "2025-06-13T16:01:19.508968Z",
+                "endTrading": "170000",
+                "id": "6e68bcf1-1660-4a79-99bc-1f093092e82d",
+                "isActive": true,
+                "maxBuyRate": 25151.7,
+                "maxCentralRate": 25151.7,
+                "maxSaleRate": 25714.5,
+                "minBuyRate": 22756.3,
+                "minCentralRate": 22756.3,
+                "minSaleRate": 23265.5,
+                "rateType": "STANDARD",
+                "saleRate": 24490,
+                "startTrading": "080000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-18T15:35:43Z"
+              },
+              {
+                "baseCcy": "VND",
+                "createdAt": "2025-06-13T16:01:19.509075Z",
+                "endTrading": "000000",
+                "id": "0b605ab8-3514-49d9-8663-865ab20f1d62",
+                "isActive": true,
+                "rateType": "STANDARD",
+                "startTrading": "000000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.509076Z"
+              },
+              {
+                "baseCcy": "EUR",
+                "buyRate": 26005,
+                "centralRate": 26005,
+                "createdAt": "2025-06-13T16:01:19.509139Z",
+                "endTrading": "170000",
+                "id": "f79463dc-92f2-4b98-9f6c-e6f46599925c",
+                "isActive": true,
+                "maxBuyRate": 27305.25,
+                "maxCentralRate": 27305.25,
+                "maxSaleRate": 27813.45,
+                "minBuyRate": 24704.75,
+                "minCentralRate": 24704.75,
+                "minSaleRate": 25164.55,
+                "rateType": "STANDARD",
+                "saleRate": 26489,
+                "startTrading": "080000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.50914Z"
+              }
+            ],
+            "count": 10,
+            "message": "Get exchange rate list successfully"
+          }

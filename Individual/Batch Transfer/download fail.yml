@@ -1,0 +1,53 @@
+info:
+  name: download fail
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{individual_host}}/transfer-services/batch-transfer/{{id}}/download/fail"
+  headers:
+    - name: Language
+      value: vi
+    - name: X-Request-Id
+      value: 91d7c3f5-eab5-417d-975b-21da4f8dcaba
+    - name: Cache-Control
+      value: no-cache
+      disabled: true
+    - name: X-Request-Timestamp
+      value: "1778645804159"
+    - name: Referer
+      value: http://localhost:3000/auth/login
+    - name: X-Checksum
+      value: e168cf0a86ea54eb473c8152c25842f581d3448a717ea6e53d3606a5da2d5ad9
+      disabled: true
+    - name: Pragma
+      value: no-cache
+    - name: sec-ch-ua
+      value: '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+    - name: User-Agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Platform
+      value: WEB
+  body:
+    type: multipart-form
+  auth:
+    type: bearer
+    token: "{{individual_token}}"
+
+runtime:
+  variables:
+    - name: id
+      value: bdde054e-6cbe-4798-b579-e09d4ebb03c6
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,327 @@
+info:
+  name: Admin Exchange Rate
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{individual_host}}/other-services/admin-exchange-rate"
+  headers:
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Accept-Language
+      value: en-US,en;q=0.9
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Device-Name
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+    - name: Language
+      value: vi
+    - name: Origin
+      value: https://dgb-uat.indovinabank.com.vn
+    - name: Platform
+      value: WEB
+    - name: Referer
+      value: https://dgb-uat.indovinabank.com.vn/corporate/transaction/fund-transfer/transfer/create
+    - name: Sec-Fetch-Dest
+      value: empty
+    - name: Sec-Fetch-Mode
+      value: cors
+    - name: Sec-Fetch-Site
+      value: same-origin
+    - name: Time
+      value: "1763955516079"
+    - name: User-Agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+    - name: sec-ch-ua
+      value: '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260724
+    request:
+      url: "{{individual_host}}/other-services/admin-exchange-rate"
+      method: GET
+      headers:
+        - name: Accept
+          value: application/json, text/plain, */*
+        - name: Accept-Language
+          value: en-US,en;q=0.9
+        - name: Connection
+          value: keep-alive
+        - name: Content-Type
+          value: application/json
+        - name: Device-Name
+          value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+        - name: Language
+          value: vi
+        - name: Origin
+          value: https://dgb-uat.indovinabank.com.vn
+        - name: Platform
+          value: WEB
+        - name: Referer
+          value: https://dgb-uat.indovinabank.com.vn/corporate/transaction/fund-transfer/transfer/create
+        - name: Sec-Fetch-Dest
+          value: empty
+        - name: Sec-Fetch-Mode
+          value: cors
+        - name: Sec-Fetch-Site
+          value: same-origin
+        - name: Time
+          value: "1763955516079"
+        - name: User-Agent
+          value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+        - name: sec-ch-ua
+          value: '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"'
+        - name: sec-ch-ua-mobile
+          value: ?0
+        - name: sec-ch-ua-platform
+          value: '"macOS"'
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: transfer-encoding
+          value: chunked
+        - name: vary
+          value: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+        - name: access-control-allow-origin
+          value: https://dgb-uat.indovinabank.com.vn
+        - name: access-control-expose-headers
+          value: Authorization, Content-Type, X-Request-Id
+        - name: access-control-allow-credentials
+          value: "true"
+        - name: x-request-id
+          value: d5d9ac52-2527-4bd3-af0f-b2253e1cd660
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: strict-transport-security
+          value: max-age=31536000 ; includeSubDomains
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: date
+          value: Fri, 24 Jul 2026 08:55:42 GMT
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": [
+              {
+                "baseCcy": "CNY",
+                "buyRate": 3583,
+                "centralRate": 3363,
+                "createdAt": "2025-06-13T16:01:19.509075Z",
+                "endTrading": "000000",
+                "id": "253152a6-beb3-481d-b9d3-67a84e260e04",
+                "isActive": true,
+                "maxBuyRate": 3762.1500,
+                "maxCentralRate": 3531.1500,
+                "maxSaleRate": 4096.0500,
+                "minBuyRate": 3403.8500,
+                "minCentralRate": 3194.8500,
+                "minSaleRate": 3705.9500,
+                "rateType": "STANDARD",
+                "saleRate": 3901,
+                "startTrading": "000000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.509076Z"
+              },
+              {
+                "baseCcy": "SGD",
+                "buyRate": 17953,
+                "centralRate": 17953,
+                "createdAt": "2025-06-13T16:01:19.509959Z",
+                "endTrading": "100000",
+                "id": "ccd2eeb9-9234-4ca9-a97e-146c4e936f67",
+                "isActive": true,
+                "maxBuyRate": 18850.6500,
+                "maxCentralRate": 18850.6500,
+                "maxSaleRate": 19397.7000,
+                "minBuyRate": 17055.3500,
+                "minCentralRate": 17055.3500,
+                "minSaleRate": 17550.3000,
+                "rateType": "STANDARD",
+                "saleRate": 18474,
+                "startTrading": "080000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.50996Z"
+              },
+              {
+                "baseCcy": "TWD",
+                "buyRate": 770,
+                "centralRate": 770,
+                "createdAt": "2025-06-13T16:01:19.510232Z",
+                "endTrading": "000000",
+                "id": "d7c592cd-ee32-4246-bbc8-6ca66c0bec82",
+                "isActive": true,
+                "maxBuyRate": 808.5000,
+                "maxCentralRate": 808.5000,
+                "maxSaleRate": 877.8000,
+                "minBuyRate": 731.5000,
+                "minCentralRate": 731.5000,
+                "minSaleRate": 794.2000,
+                "rateType": "STANDARD",
+                "saleRate": 836,
+                "startTrading": "000000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.510233Z"
+              },
+              {
+                "baseCcy": "THB",
+                "buyRate": 679.3,
+                "centralRate": 679.3,
+                "createdAt": "2025-06-13T16:01:19.510175Z",
+                "endTrading": "000000",
+                "id": "7dcf22e0-207d-4a55-89cc-9671178a2f8b",
+                "isActive": true,
+                "maxBuyRate": 713.26500,
+                "maxCentralRate": 713.26500,
+                "maxSaleRate": 744.4500,
+                "minBuyRate": 645.33500,
+                "minCentralRate": 645.33500,
+                "minSaleRate": 673.5500,
+                "rateType": "STANDARD",
+                "saleRate": 709,
+                "startTrading": "000000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.510176Z"
+              },
+              {
+                "baseCcy": "HKD",
+                "buyRate": 3045,
+                "centralRate": 3045,
+                "createdAt": "2025-06-13T16:01:19.510121Z",
+                "endTrading": "000000",
+                "id": "0abae430-58fe-4271-a63e-761812e4a326",
+                "isActive": true,
+                "maxBuyRate": 3197.2500,
+                "maxCentralRate": 3197.2500,
+                "maxSaleRate": 3339.0000,
+                "minBuyRate": 2892.7500,
+                "minCentralRate": 2892.7500,
+                "minSaleRate": 3021.0000,
+                "rateType": "STANDARD",
+                "saleRate": 3180,
+                "startTrading": "000000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.510122Z"
+              },
+              {
+                "baseCcy": "JPY",
+                "buyRate": 162.4,
+                "centralRate": 162.4,
+                "createdAt": "2025-06-13T16:01:19.50931Z",
+                "endTrading": "090000",
+                "id": "b5b11fa2-7fad-4140-9da8-8303a3426fe0",
+                "isActive": true,
+                "maxBuyRate": 170.52000,
+                "maxCentralRate": 170.52000,
+                "maxSaleRate": 173.827500,
+                "minBuyRate": 154.28000,
+                "minCentralRate": 154.28000,
+                "minSaleRate": 157.272500,
+                "rateType": "STANDARD",
+                "saleRate": 165.55,
+                "startTrading": "080000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.509311Z"
+              },
+              {
+                "baseCcy": "GBP",
+                "buyRate": 30442,
+                "centralRate": 30442,
+                "createdAt": "2025-06-13T16:01:19.509257Z",
+                "endTrading": "170000",
+                "id": "d271f1a4-13e8-4b38-9858-8fca0783a12a",
+                "isActive": true,
+                "maxBuyRate": 31964.1000,
+                "maxCentralRate": 31964.1000,
+                "maxSaleRate": 32590.9500,
+                "minBuyRate": 28919.9000,
+                "minCentralRate": 28919.9000,
+                "minSaleRate": 29487.0500,
+                "rateType": "STANDARD",
+                "saleRate": 31039,
+                "startTrading": "080000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.509258Z"
+              },
+              {
+                "baseCcy": "USD",
+                "buyRate": 23954,
+                "centralRate": 23954,
+                "createdAt": "2025-06-13T16:01:19.508968Z",
+                "endTrading": "170000",
+                "id": "6e68bcf1-1660-4a79-99bc-1f093092e82d",
+                "isActive": true,
+                "maxBuyRate": 25151.7000,
+                "maxCentralRate": 25151.7000,
+                "maxSaleRate": 25714.5000,
+                "minBuyRate": 22756.3000,
+                "minCentralRate": 22756.3000,
+                "minSaleRate": 23265.5000,
+                "rateType": "STANDARD",
+                "saleRate": 24490,
+                "startTrading": "080000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-18T15:35:43Z"
+              },
+              {
+                "baseCcy": "VND",
+                "createdAt": "2025-06-13T16:01:19.509075Z",
+                "endTrading": "000000",
+                "id": "0b605ab8-3514-49d9-8663-865ab20f1d62",
+                "isActive": true,
+                "rateType": "STANDARD",
+                "startTrading": "000000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.509076Z"
+              },
+              {
+                "baseCcy": "EUR",
+                "buyRate": 26005,
+                "centralRate": 26005,
+                "createdAt": "2025-06-13T16:01:19.509139Z",
+                "endTrading": "170000",
+                "id": "f79463dc-92f2-4b98-9f6c-e6f46599925c",
+                "isActive": true,
+                "maxBuyRate": 27305.2500,
+                "maxCentralRate": 27305.2500,
+                "maxSaleRate": 27813.4500,
+                "minBuyRate": 24704.7500,
+                "minCentralRate": 24704.7500,
+                "minSaleRate": 25164.5500,
+                "rateType": "STANDARD",
+                "saleRate": 26489,
+                "startTrading": "080000",
+                "targetCcy": "VND",
+                "updatedAt": "2025-06-13T16:01:19.50914Z"
+              }
+            ],
+            "count": 10,
+            "message": "Get exchange rate list successfully",
+            "total": 13
+          }

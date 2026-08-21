@@ -1,0 +1,256 @@
+info:
+  name: Detail-Batch Transfer
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/batch-transfer/{{id}}"
+  headers:
+    - name: platform
+      value: WEB
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+runtime:
+  variables:
+    - name: id
+      value: 253294e0-3e5a-4177-90c6-5c63ab06e7d8
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260803
+    request:
+      url: "{{individual_admin_host}}/batch-transfer/{{id}}"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 0898ff1d6503e3a66cf83a5c81a57e82
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "5107"
+        - name: date
+          value: Mon, 03 Aug 2026 07:06:55 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": {
+              "amount": 165218888,
+              "batchName": "batch_transfer_template_success_29",
+              "batchStatus": "WAITING_PROCESS",
+              "ccy": "VND",
+              "cif": "1015663",
+              "createdAt": "2026-08-03T03:46:43.33138Z",
+              "detailTotalCount": 8,
+              "details": [
+                {
+                  "amount": 324000,
+                  "bankCode": "307",
+                  "beneficiaryAccountNo": "53024139",
+                  "beneficiaryBank": "NH TMCP A Chau Hoi so chinh",
+                  "beneficiaryName": "CONG TY CO PHAN KHANH AN",
+                  "billingAddress": "LO DAT J1, KCN NHAT BAN - HAI PHONG, PHUONG HONG AN, TP. HAI PHONG, VIET NAM",
+                  "description": "THANH TOAN HD 103",
+                  "errorCode": [],
+                  "errorMessage": [],
+                  "fee": "SENDER_PAY",
+                  "feeAmount": 5000,
+                  "id": "15478526-5f51-4e8c-8646-673d58d46888",
+                  "invoiceEmail": "thu.can.7kx@tetsugen.co.jp",
+                  "lineNo": 1,
+                  "status": "SUCCESS",
+                  "taxCode": "0349223911",
+                  "vatAmount": 500
+                },
+                {
+                  "amount": 355104,
+                  "bankCode": "310",
+                  "beneficiaryAccountNo": "19025391114017",
+                  "beneficiaryBank": "NHTMCP Ky Thuong Viet Nam Hoi so chinh",
+                  "beneficiaryName": "CONG TY TNHH THUONG MAI DICH VU VAN CHUYEN ASEAX",
+                  "billingAddress": "LO DAT J1, KCN NHAT BAN - HAI PHONG, PHUONG HONG AN, TP. HAI PHONG, VIET NAM",
+                  "description": "THANH TOAN HD 205",
+                  "errorCode": [],
+                  "errorMessage": [],
+                  "fee": "SENDER_PAY",
+                  "feeAmount": 5000,
+                  "id": "7d436c1a-0e66-4caf-816a-bfb9016630f2",
+                  "invoiceEmail": "thu.can.7kx@tetsugen.co.jp",
+                  "lineNo": 2,
+                  "status": "SUCCESS",
+                  "taxCode": "0349223911",
+                  "vatAmount": 500
+                },
+                {
+                  "amount": 5223200,
+                  "bankCode": "310",
+                  "beneficiaryAccountNo": "10920595959012",
+                  "beneficiaryBank": "NHTMCP Ky Thuong Viet Nam Hoi so chinh",
+                  "beneficiaryName": "CONG TY TNHH TM VA DVDL HAI THANH",
+                  "billingAddress": "LO DAT J1, KCN NHAT BAN - HAI PHONG, PHUONG HONG AN, TP. HAI PHONG, VIET NAM",
+                  "description": "THANH TOAN HD 904",
+                  "errorCode": [],
+                  "errorMessage": [],
+                  "fee": "SENDER_PAY",
+                  "feeAmount": 5000,
+                  "id": "9459daa1-56d9-40f1-9902-79c8a2d16f28",
+                  "invoiceEmail": "thu.can.7kx@tetsugen.co.jp",
+                  "lineNo": 3,
+                  "status": "SUCCESS",
+                  "taxCode": "0349223911",
+                  "vatAmount": 500
+                },
+                {
+                  "amount": 10000800,
+                  "bankCode": "201",
+                  "beneficiaryAccountNo": "113000109074",
+                  "beneficiaryBank": "NH TMCP Cong thuong Viet Nam",
+                  "beneficiaryName": "CONG TY TNHH TUONG SON LAM",
+                  "billingAddress": "LO DAT J1, KCN NHAT BAN - HAI PHONG, PHUONG HONG AN, TP. HAI PHONG, VIET NAM",
+                  "description": "THANH TOAN HD 1, 2",
+                  "errorCode": [],
+                  "errorMessage": [],
+                  "fee": "SENDER_PAY",
+                  "feeAmount": 5000,
+                  "id": "d0781edb-3313-4ec8-9750-1d908f38946f",
+                  "invoiceEmail": "thu.can.7kx@tetsugen.co.jp",
+                  "lineNo": 4,
+                  "status": "SUCCESS",
+                  "taxCode": "0349223911",
+                  "vatAmount": 500
+                },
+                {
+                  "amount": 10260000,
+                  "bankCode": "305",
+                  "beneficiaryAccountNo": "170314851009100",
+                  "beneficiaryBank": "NH Eximbank Hoi so",
+                  "beneficiaryName": "CONG TY CO PHAN DAU TU VA PHAT TRIEN QUANG HAI",
+                  "billingAddress": "LO DAT J1, KCN NHAT BAN - HAI PHONG, PHUONG HONG AN, TP. HAI PHONG, VIET NAM",
+                  "description": "THANH TOAN HD 227",
+                  "errorCode": [],
+                  "errorMessage": [],
+                  "fee": "SENDER_PAY",
+                  "feeAmount": 5000,
+                  "id": "9e3cab20-ebcb-41b1-9da5-a85db163cf82",
+                  "invoiceEmail": "thu.can.7kx@tetsugen.co.jp",
+                  "lineNo": 5,
+                  "status": "SUCCESS",
+                  "taxCode": "0349223911",
+                  "vatAmount": 500
+                },
+                {
+                  "amount": 30000000,
+                  "bankCode": "310",
+                  "beneficiaryAccountNo": "19070961346011",
+                  "beneficiaryBank": "NHTMCP Ky Thuong Viet Nam Hoi so chinh",
+                  "beneficiaryName": "CAN THI THU",
+                  "billingAddress": "LO DAT J1, KCN NHAT BAN - HAI PHONG, PHUONG HONG AN, TP. HAI PHONG, VIET NAM",
+                  "description": "TAM UNG",
+                  "errorCode": [],
+                  "errorMessage": [],
+                  "fee": "SENDER_PAY",
+                  "feeAmount": 5000,
+                  "id": "6a403245-decf-43ac-a78d-88571a46f4ab",
+                  "invoiceEmail": "thu.can.7kx@tetsugen.co.jp",
+                  "lineNo": 6,
+                  "status": "SUCCESS",
+                  "taxCode": "0349223911",
+                  "vatAmount": 500
+                },
+                {
+                  "amount": 95015784,
+                  "bankCode": "307",
+                  "beneficiaryAccountNo": "568968968",
+                  "beneficiaryBank": "NH TMCP A Chau Hoi so chinh",
+                  "beneficiaryName": "CONG TY TNHH CONG NGHE XUAN TRUONG",
+                  "billingAddress": "LO DAT J1, KCN NHAT BAN - HAI PHONG, PHUONG HONG AN, TP. HAI PHONG, VIET NAM",
+                  "description": "THANH TOAN HD 119, 118, 148, 153",
+                  "errorCode": [],
+                  "errorMessage": [],
+                  "fee": "SENDER_PAY",
+                  "feeAmount": 5000,
+                  "id": "d57f6db7-ec0a-43d9-aa17-3a9bc1231b1f",
+                  "invoiceEmail": "thu.can.7kx@tetsugen.co.jp",
+                  "lineNo": 7,
+                  "status": "SUCCESS",
+                  "taxCode": "0349223911",
+                  "vatAmount": 500
+                },
+                {
+                  "amount": 14040000,
+                  "bankCode": "204",
+                  "beneficiaryAccountNo": "2102202928105",
+                  "beneficiaryBank": "NH No&PTNT Viet Nam Hoi so chinh",
+                  "beneficiaryName": "BAO HIEM XA HOI CO SO AN DUONG",
+                  "billingAddress": "LO DAT J1, KCN NHAT BAN - HAI PHONG, PHUONG HONG AN, TP. HAI PHONG, VIET NAM",
+                  "description": "NOP BHXH, BHYT, BHTN T3/2026 - MA YN0005H",
+                  "errorCode": [],
+                  "errorMessage": [],
+                  "fee": "SENDER_PAY",
+                  "feeAmount": 5000,
+                  "id": "43ab06a5-6bbb-4592-9a09-aa15bf48c62f",
+                  "invoiceEmail": "thu.can.7kx@tetsugen.co.jp",
+                  "lineNo": 8,
+                  "status": "SUCCESS",
+                  "taxCode": "0349223911",
+                  "vatAmount": 500
+                }
+              ],
+              "errorCode": [],
+              "errorMessage": [],
+              "failedRecord": 0,
+              "feeServiceAmount": 0,
+              "fileName": "batch_transfer_template_success_29.xlsx",
+              "id": "720fcebc-d448-4e78-88d1-1874b82c6517",
+              "phoneNumber": "+84909015594",
+              "processedAt": "2026-08-03T03:46:43.33138Z",
+              "requestRef": "20260803TRF104633103",
+              "senderAccountId": "7aab175d-74c9-4d40-a53f-346216a063f9",
+              "status": "PROCESSING",
+              "successRecord": 8,
+              "totalAmount": 165218888,
+              "totalFeeAmount": 40000,
+              "totalRecord": 8,
+              "totalVatAmount": 4000,
+              "uploadedAt": "2026-08-03T03:46:33.915583Z",
+              "vatServiceAmount": 0
+            },
+            "message": "Get batch transfer request successfully"
+          }

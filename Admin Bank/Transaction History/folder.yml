@@ -1,0 +1,7 @@
+info:
+  name: Transaction History
+  type: folder
+  seq: 19
+
+request:
+  auth: inherit

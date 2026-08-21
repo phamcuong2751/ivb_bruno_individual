@@ -1,0 +1,57 @@
+info:
+  name: cancel
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{individual_admin_host}}/blocked-transaction-request/request/cancel"
+  headers:
+    - name: accept
+      value: application/json, text/plain, */*
+    - name: accept-language
+      value: en-US,en;q=0.9
+    - name: content-type
+      value: application/json
+    - name: language
+      value: vi
+    - name: platform
+      value: WEB
+    - name: priority
+      value: u=1, i
+    - name: referer
+      value: http://localhost:4000/
+    - name: request-id
+      value: 466bb82a-f2f1-46fa-bf3a-ed1159f93db8
+    - name: sec-ch-ua
+      value: '"Google Chrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"macOS"'
+    - name: sec-fetch-dest
+      value: empty
+    - name: sec-fetch-mode
+      value: cors
+    - name: sec-fetch-site
+      value: cross-site
+    - name: time
+      value: "1786429318880"
+    - name: user-agent
+      value: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+  body:
+    type: json
+    data: |-
+      {
+        "workflowId": "c83f43b6-2f65-49a7-afeb-54066162af20",
+        "comment": "Cancel request d11b5773-b53c-4ce0-917e-7a591cdfdb22 by hs_maker"
+      }
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

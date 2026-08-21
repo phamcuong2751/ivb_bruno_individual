@@ -1,0 +1,88 @@
+info:
+  name: EDIT
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{individual_admin_host}}/exchange-rate/set-priority"
+  headers:
+    - name: platform
+      value: WEB
+  params:
+    - name: pageSize
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "ccy": "CAD",
+        "priority": 10
+      }
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260724
+    request:
+      url: "{{individual_admin_host}}/exchange-rate/set-priority"
+      method: POST
+      headers:
+        - name: platform
+          value: WEB
+      params:
+        - name: pageSize
+          value: ""
+          type: query
+          disabled: true
+      body:
+        type: json
+        data: |-
+          {
+            "ccy": "CAD",
+            "priority": 10
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: b756951b199decf5268a4f9cf0b3405e
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "64"
+        - name: date
+          value: Fri, 24 Jul 2026 09:28:42 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "message": "Set exchange rate priority successfully"
+          }

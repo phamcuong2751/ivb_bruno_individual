@@ -13,8 +13,8 @@ http:
     type: json
     data: |-
       {
-        "entityId": "937919fe-0fda-4ab8-a507-68b5e12cb67a",
-        "workflowId": "a01ece2f-198c-465d-8d1e-61e3879168a0",
+        "entityId": "3d655431-d05b-40f8-99b9-762d131447fb",
+        "workflowId": "5cbb9cbc-6f14-46e2-a657-df52025c9dfe",
         "comment": "Approved"
       }
   auth:

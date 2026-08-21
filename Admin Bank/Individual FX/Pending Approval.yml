@@ -1,0 +1,91 @@
+info:
+  name: Pending Approval
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{individual_admin_host}}/fx/request/pending"
+  headers:
+    - name: platform
+      value: WEB
+  params:
+    - name: status
+      value: SENT_TO_BANK
+      type: query
+      disabled: true
+    - name: search
+      value: 20260716FEX155339770
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{individual_admin_branch_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: TST 20260727
+    request:
+      url: "{{individual_admin_host}}/fx/request/pending"
+      method: GET
+      headers:
+        - name: platform
+          value: WEB
+      params:
+        - name: status
+          value: SENT_TO_BANK
+          type: query
+          disabled: true
+        - name: search
+          value: 20260716FEX155339770
+          type: query
+          disabled: true
+      body:
+        type: json
+        data: ""
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: x-request-id
+          value: 4dd61f14f0ca0e29fc7d3d3cb4f614e5
+        - name: x-content-type-options
+          value: nosniff
+        - name: x-xss-protection
+          value: "0"
+        - name: cache-control
+          value: no-cache, no-store, max-age=0, must-revalidate
+        - name: pragma
+          value: no-cache
+        - name: expires
+          value: "0"
+        - name: x-frame-options
+          value: DENY
+        - name: content-type
+          value: application/json
+        - name: content-length
+          value: "86"
+        - name: date
+          value: Mon, 27 Jul 2026 06:32:16 GMT
+        - name: keep-alive
+          value: timeout=60
+        - name: connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+            "code": 200,
+            "data": {
+              "isPending": true
+            },
+            "message": "Check FX request pending successful"
+          }

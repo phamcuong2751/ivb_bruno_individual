@@ -13,9 +13,14 @@ http:
     type: json
     data: |-
       {
-        "id" : "a48d0449-338a-417e-8661-850639bb1f60",
         "requestType": "UPDATE_REQUEST",
-        "limitAmount": 5500000
+        "id": "f3219b35-201a-40f3-b4fd-20fbfc31cb91",
+        "ccy": "CNY",
+        "featureId": 0,
+        "branchCode": "100",
+        "limitAmount": 20001,
+        "startTime": "17:00:00",
+        "endTime": "13:00:00"
       }
   auth:
     type: bearer
